@@ -1,11 +1,12 @@
 {
-  "name": "generator-mxgenerator",
+  "name": "generator-minxing",
   "version": "0.0.1",
-  "description": "",
+  "description": "generator-minxing",
+  "repository": "yeoman/generator-minxing",
   "homepage": "",
   "author": {
-    "name": "wangzhe11",
-    "email": "940194534@qq.com",
+    "name": "minxing",
+    "email": "dev@dehuinet.com",
     "url": ""
   },
   "files": [
