@@ -1,6 +1,6 @@
 {
   "name": "generator-minxing",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "generator-minxing",
   "repository": "yeoman/generator-minxing",
   "homepage": "",
@@ -10,9 +10,9 @@
     "url": ""
   },
   "files": [
-    "generators"
+    "app"
   ],
-  "main": "generators\\index.js",
+  "main": "app/index.js",
   "keywords": [
     "yeoman-generator"
   ],
