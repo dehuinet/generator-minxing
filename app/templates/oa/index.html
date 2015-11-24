@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>OA</title>
+        <link rel="stylesheet" href="styles/reset.css"/>
+        <link rel="stylesheet" href="styles/main.css"/>
+        <link rel="stylesheet" href="styles/amazeui.css" />
+        <link rel="stylesheet" href="styles/view/layout.css" />
+        <link rel="stylesheet" href="styles/view/search.css" />
+        <link rel="stylesheet" href="styles/view/common.css" />
+    </head>
+    <body>
+    <div class="warp">
+        <!-- 页面内容 -->
+        <div class="MX-pages">
+          <div class="load-page mx_page">
+            <header data-am-widget="header" class="am-header am-header-default">
+              <div class="am-header-left am-header-nav">
+                  <a class="am-btn am-btn-primary doc-oc-js" data-rel="open">
+                    <i class="am-header-icon am-icon-bars"></i>
+                  </a>
+              </div>
+              <h1 class="am-header-title">
+                  我的工作
+              </h1>
+              <div class="am-header-right am-header-nav">
+                  <a class="am-btn search-btn am-btn-primary js-modal-open">
+                    <i class="am-icon-search"></i>
+                  </a>
+                  <a href="#" class="am-btn">
+                    <i class="am-icon-close" onclick="MXWebui.closeWindow();"></i>
+                  </a>
+              </div>
+            </header>
+              <div class="am-list-news-bd doc-content widget-list list">
+                  <ul class="am-list m-widget-list">
+                      <li class="am-g am-list-item-desce" pageUrl="content.html">
+                          <a href="#content" class="am-list-item-hd p_1_rem"> 
+                              <i class="am-icon-building"></i>
+                              短信平台开发总结报告
+                              <div class="am-list-item-text p_1_rem">
+                              <ul>
+                                  <li>发件人：李刚11</li>
+                                  <li>当前环节：主办部门内部审核</li>
+                                  <li>来文日期：09-12 15:46</li>
+                              </ul>
+                              </div>
+                              <i class="am-icon-chevron-right nav_list_check"></i>
+                          </a>
+                      </li>
+                      <li class="am-g am-list-item-desce" pageUrl="content.html">
+                          <a href="#content" class="am-list-item-hd p_1_rem"> 
+                              <i class="am-icon-building"></i>
+                              短信平台开发总结报告
+                              <div class="am-list-item-text p_1_rem">
+                              <ul>
+                                  <li>发件人：李刚11</li>
+                                  <li>当前环节：主办部门内部审核</li>
+                                  <li>来文日期：09-12 15:46</li>
+                              </ul>
+                              </div>
+                              <i class="am-icon-chevron-right nav_list_check"></i>
+                          </a>
+                      </li>
+                      <li class="am-g am-list-item-desce">
+                          <a  href="#content" class="am-list-item-hd p_1_rem"> 
+                              <i class="am-icon-building"></i>
+                              短信平台开发总结报告
+                              <div class="am-list-item-text p_1_rem">
+                              <ul>
+                                  <li>发件人：李刚11</li>
+                                  <li>当前环节：主办部门内部审核</li>
+                                  <li>来文日期：09-12 15:46</li>
+                              </ul>
+                              </div>
+                              <i class="am-icon-chevron-right nav_list_check"></i>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+        </div>
+
+        <!-- 侧边栏内容 -->
+        <div id="my-offcanvas" class="am-offcanvas">
+          <div class="am-offcanvas-bar">
+            <div class="am-offcanvas-content">
+                <div class="nav_list_top">
+                    <span class="am-list-news-bd doc-content">
+                        <img src="images/oa.png" height="52" width="52">
+                    </span>
+                    <a href="##" class="am-list-item-hd p_1_rem current"> OA综合系统
+                    </a>
+                </div>
+                <div class="am-list-news-bd doc-content widget-list left_nav">
+                    <ul class="am-list m-widget-list">
+                      <li class="am-g am-list-item-desce current" data-rel="close">
+                          <a href="#" class="am-list-item-hd am-icon-building p_1_rem"> <span>我的工作</span> <i class="am-icon-circle font_12rem"></i>
+                          </a>
+                          <i class="am-icon-check nav_list_check"></i>
+                      </li>
+                      <li class="am-g am-list-item-desce" data-rel="close">
+                          <a href="#" class="am-list-item-hd am-icon-building p_1_rem"> <span>待办事宜</span> <i class="am-icon-circle font_12rem hide"></i>
+                          </a>
+                          <i class="am-icon-check nav_list_check"></i>
+                      </li>
+                      <li class="am-g am-list-item-desce" data-rel="close">
+                          <a href="#" class="am-list-item-hd am-icon-building p_1_rem"> <span>待阅事宜</span> <i class="am-icon-circle font_12rem hide"></i>
+                          </a>
+                          <i class="am-icon-check nav_list_check"></i>
+                      </li>
+                      <li class="am-g am-list-item-desce" data-rel="close">
+                          <a href="#" class="am-list-item-hd am-icon-building p_1_rem"> <span>发文管理</span> <i class="am-icon-circle font_12rem hide"></i>
+                          </a>
+                          <i class="am-icon-check nav_list_check"></i>
+                      </li>
+                      <li class="am-g am-list-item-desce" data-rel="close">
+                          <a href="#" class="am-list-item-hd am-icon-building p_1_rem"> <span>收文管理</span> <i class="am-icon-circle font_12rem"></i>
+                          </a>
+                          <i class="am-icon-check nav_list_check"></i>
+                      </li>
+                      <li class="am-g am-list-item-desce" data-rel="close">
+                          <a href="#" class="am-list-item-hd am-icon-building p_1_rem"> <span>通知公告</span> <i class="am-icon-circle font_12rem"></i>
+                          </a>
+                          <i class="am-icon-check nav_list_check"></i>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 搜索 dialog -->
+        <div class="am-modal search-dialog am-modal-no-btn" tabindex="-1" id="your-modal">
+          <div class="am-modal-dialog">
+            <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>×</a>
+            <div class="am-modal-bd">
+                <div class="search">
+                  <form>
+                    <label for="title">文件标题</label>
+                    <input type="text" id="title" placeholder="请输入文件标题">
+                    <label for="time">文件时间</label>
+                    <div class="time">
+                      <span>文件开始时间</span>
+                      <time id="beginTime" class="am-icon-chevron-right"></time>
+                    </div>
+                    <div class="time time2">
+                      <span>文件结束时间</span>
+                      <time id="endTime" class="am-icon-chevron-right"></time>
+                    </div>
+                    <div id="datePlugin"></div>
+                    <label for="type">文件类型</label>
+                    <ul>
+                      <li>
+                        <label for ="send">发文</label>
+                        <i class="am-icon-check-circle-o" id="send" class="styled"></i>
+                      </li>
+                      <li>
+                        <label for ="receive">收文</label>
+                        <i class="am-icon-check-circle-o" id="receive" class="styled"></i>
+                      </li>
+                      <li>
+                        <label for ="sign">签报</label>
+                        <i class="am-icon-check-circle-o" id="sign" class="styled"></i>
+                      </li>
+                      <li>
+                        <label for ="meeting">会议</label>
+                        <i class="am-icon-check-circle-o" id="meeting" class="styled"></i>
+                      </li>
+                      <li>
+                        <label for ="exam">事务审批</label>
+                        <i class="am-icon-check-circle-o" id="exam" class="styled"></i>
+                      </li>
+                    </ul>
+                    <a class="btn-search"href="#"><i class="am-icon-search"></i>  查 询</a>
+                  </form>
+                </div>
+                
+            </div>
+          </div>
+        </div>
+
+    </div>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery.hashchange.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/amazeui.js"></script>
+    <script src="scripts/view/date.js"></script>
+    <script src="scripts/view/iscroll.js"></script>
+    <script src="scripts/view/checkbox.js"></script>
+    <script src="scripts/view/oa.js"></script>
+    <script src="scripts/jump.js"></script>
+    <script src="scripts/view/jquery.magnific-popup.js"></script>
+    <script>
+        $(function() {
+            var id = '#my-offcanvas';
+            var $myOc = $(id);
+            $(document).on('click','.doc-oc-js', function() {
+              $myOc.offCanvas($(this).data('rel'));
+            });
+
+            $myOc.on('open.offcanvas.amui', function() {
+              console.log(id + ' 打开了。');
+            }).on('close.offcanvas.amui', function() {
+              console.log(id + ' 关闭了。');
+            });
+
+            $(document).on('click','.left_nav li',function(){
+                $(".left_nav li").removeClass('current');
+                $(this).addClass('current');
+                $myOc.offCanvas($(this).data('rel'));
+            });
+
+            var $modal = $('#your-modal');
+            $(document).on('click','.search-btn' , function(e) {
+              var $target = $(e.target);
+              if (($target).hasClass('js-modal-open')) {
+                $modal.modal();
+              } else if (($target).hasClass('js-modal-close')) {
+                $modal.modal('close');
+              } else {
+                $modal.modal('toggle');
+              }
+            });
+
+            $('#beginTime').date();
+            $('#endTime').date();
+
+            $('.search ul li').click(function(e) {
+                if (!$(this).find('i').hasClass('am-icon-check-circle')) {
+                  $(this).find('i').removeClass('am-icon-check-circle-o');
+                  $(this).find('i').addClass('am-icon-check-circle');
+                } else {
+                  $(this).find('i').removeClass('am-icon-check-circle');
+                  $(this).find('i').addClass('am-icon-check-circle-o');
+                }
+            });
+        });
+    </script>
+    <!--解决在ios header中显示bug，增加ios单独的样式-->
+    <script type="text/javascript">
+      (function() {
+        var agent = navigator.userAgent;
+        if (/iphone|ipad|ipod/i.test(agent)) {
+            $('body').addClass('ios');
+        }
+      }());
+    </script>
+    </body>
+</html>

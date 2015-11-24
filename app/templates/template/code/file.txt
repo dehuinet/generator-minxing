@@ -1,0 +1,56 @@
+<pre class="prettyprint lang-java">
+&lt;link rel="stylesheet" href="styles/view/file.css" />
+&lt;div class="file">
+  &lt;ul>
+    &lt;li>
+      &lt;img src="images/doc.png">
+      &lt;span>
+        &lt;i>名称：关于二代支付系统网络延时环境优化调整&lt;/i>
+        &lt;i>上传人：于敏&lt;/i>
+        &lt;time>时间：12-09 12:05&lt;/time>
+      &lt;/span>
+      &lt;a href="#">下载&lt;/a>
+    &lt;/li>
+    &lt;li>
+      &lt;img src="images/pdf.png">
+      &lt;span>
+        &lt;i>名称：关于召开2015年宣传思想专业会议的通知&lt;/i>
+        &lt;i>上传人：许文&lt;/i>
+        &lt;time>时间：09-13 08:52&lt;/time>
+      &lt;/span>
+      &lt;a href="#">下载&lt;/a>
+    &lt;/li>
+    &lt;li>
+      &lt;img src="images/text.png">
+      &lt;span>
+        &lt;i>名称：关于内部整体问题&lt;/i>
+        &lt;i>上传人：李楠&lt;/i>
+        &lt;time>时间：08-04 13:14&lt;/time>
+      &lt;/span>
+      &lt;a href="#">下载&lt;/a>
+    &lt;/li>
+    &lt;li>
+      &lt;img src="images/text.png">
+      &lt;span>
+        &lt;i>名称：综合办公平台推广应用工作信息副刊信息&lt;/i>
+        &lt;i>上传人：焦俊&lt;/i>
+        &lt;time>时间：01-23 16:30&lt;/time>
+      &lt;/span>
+      &lt;a href="#">下载&lt;/a>
+    &lt;/li>
+    &lt;li>
+      &lt;img src="images/file.png">
+      &lt;span>
+        &lt;i>名称：关于为软件维护公司方人员配置更衣柜的函&lt;/i>
+        &lt;i>上传人：赵瑾&lt;/i>
+        &lt;time>时间：01-27 18：30&lt;/time>
+      &lt;/span>
+      &lt;a href="#">下载&lt;/a>
+    &lt;/li>
+  &lt;/ul>
+&lt;/div>
+</pre>
+<script src="scripts/prettify.min.js"></script>
+<script>
+    prettyPrint();
+</script>

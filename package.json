@@ -1,33 +1,22 @@
 {
-  "name": "generator-gulp-webapp",
-  "version": "1.0.3",
-  "description": "Scaffold out a front-end web app",
-  "license": "BSD",
-  "repository": "yeoman/generator-gulp-webapp",
-  "author": "The Yeoman Team",
-  "main": "app/index.js",
-  "engines": {
-    "node": ">=0.10.0",
-    "npm": ">=1.3"
-  },
-  "scripts": {
-    "test": "mocha --reporter spec --timeout 3000"
+  "name": "generator-mxgenerator",
+  "version": "0.0.1",
+  "description": "",
+  "homepage": "",
+  "author": {
+    "name": "wangzhe11",
+    "email": "940194534@qq.com",
+    "url": ""
   },
   "files": [
-    "app"
+    "generators"
   ],
+  "main": "generators\\index.js",
   "keywords": [
-    "yeoman-generator",
-    "web",
-    "app",
-    "front-end",
-    "h5bp",
-    "modernizr",
-    "jquery",
-    "gulp"
+    "yeoman-generator"
   ],
   "dependencies": {
-    "chalk": "^1.0.0",
+     "chalk": "^1.0.0",
     "generator-jasmine": "^0.2.1",
     "generator-mocha": "^0.2.0",
     "mkdirp": "^0.5.1",
@@ -38,6 +27,19 @@
     "yosay": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "*"
-  }
+    "yeoman-assert": "^2.0.0",
+    "gulp": "^3.6.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.9.0",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-coveralls": "^0.1.0"
+  },
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  },
+  "license": "Apache-2.0"
 }

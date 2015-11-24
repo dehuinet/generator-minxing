@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta property="og:app_url" content="launchApp://HotView">
+    <link href="styles/index.css" rel="stylesheet">
+    <title>热度榜</title>
+  </head>
+  <body ng-app="starter">
+    <div class="container">
+      <header class="head">
+        <img class="head-img" src="images/logo.png" height="150" width="160">
+      </header>
+      <!--没有数据显示暂无排名-->
+      <section class="wrapper">
+        <div class="emptyImg" style="display:none">当前暂无排名</div>
+        <ol>
+        </ol>
+      </section>
+    </div>
+    <!--解决在ios header中显示bug，增加ios单独的样式-->
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript">
+      //当进入热度榜的页面时就获取服务器地址onDeviceReady确保加载以下方法
+      function onDeviceReady() {
+        //这是应用ID，要与配置的插件应用ID一致
+         getSSOToken('HotView');
+
+        //通过获取ssoToken方法
+        function getSSOToken(ocuID) {
+          MXCommon.getSSOToken(
+            ocuID,
+            tokenCallBack
+          );
+        }
+        function tokenCallBack(token) {
+          //将获取到的token数据放到header中的Authorization字段中
+         $.ajaxSetup({
+             headers: {'Authorization': token}
+          });
+         //调用获取服务器地址方法
+          getServerUrl();
+        }
+        //获取服务器地址方法
+        function getServerUrl() {
+          MXCommon.getServerUrl(
+            urlCallBack
+          );
+        }
+        function urlCallBack(serverUrl) {
+          var request_url = serverUrl + '/mxpp/view_ranking';
+             $.ajax({
+              type: "GET",
+              url: request_url,
+              dataType: "text",
+              async: false,
+               success: function (data) {
+                  var contentHtml = '';
+                  var data = JSON.parse(data);
+                  if (data.length==0) {
+                    $('.emptyImg').css('display','block');
+                  };
+                  //根据请求返回的结果动态拼出模版li
+                  for (var i = 0; i < data.length; i++) {
+                      var img_url = serverUrl + data[i].avatar_url;
+                      var link_url = serverUrl + data[i].url;
+                      contentHtml += '<li>\
+                                         <div class="rank">\
+                                            <img src="' + img_url + '" alt="头像">\
+                                            <span title="'+data.ocu_name+'"></span>\
+                                        </div>\
+                                        <a href="'+link_url+'">' +data[i].title + '</a>\
+                                    </li>';
+                  }
+                  //将模版追加到ol中
+                  $('ol').html(contentHtml)
+              },
+          })
+          //定义获取到的服务器地址
+           window.serverUrl = serverUrl;
+          //调用发起API请求方法
+          api({'method':'GET','url':serverUrl+'/connect/sso_login','params':'','headers':''})
+        }
+        //根据method,url地址,params,https的headers发起API请求
+        function api(content) {
+            MXCommon.api(
+              content ,
+              apiCallBack
+          );
+        }
+        function apiCallBack(result) {
+          $.get(serverUrl+'/connect/sso_login?mx_sso_token='+JSON.parse(result).mx_sso_token);
+        }
+      }
+      document.addEventListener("deviceready", onDeviceReady, false);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<pre class="prettyprint lang-java">
+&lt;link rel="stylesheet" href="styles/view/layout.css" />
+&lt;div class="nav_list_top">
+    &lt;span class="am-list-news-bd doc-content">
+        &lt;img src="images/oa.png" height="52" width="52">
+    &lt;/span>
+    &lt;a href="##" class="am-list-item-hd p_1_rem current"> OA综合系统
+          &lt;/a>
+&lt;/div>
+&lt;div class="am-list-news-bd doc-content widget-list left_nav">
+    &lt;ul class="am-list m-widget-list">
+      &lt;li class="am-g am-list-item-desce current">
+          &lt;a href="##" class="am-list-item-hd am-icon-building p_1_rem"> 我的工作 &lt;i class="am-icon-circle font_12rem">&lt;/i>
+          &lt;/a>
+          &lt;i class="am-icon-check nav_list_check">&lt;/i>
+      &lt;/li>
+      &lt;li class="am-g am-list-item-desce">
+          &lt;a href="##" class="am-list-item-hd am-icon-building p_1_rem"> 待办事宜 &lt;i class="am-icon-circle font_12rem hide">&lt;/i>
+          &lt;/a>
+          &lt;i class="am-icon-check nav_list_check">&lt;/i>
+      &lt;/li>
+      &lt;li class="am-g am-list-item-desce">
+          &lt;a href="##" class="am-list-item-hd am-icon-building p_1_rem"> 发文管理 &lt;i class="am-icon-circle font_12rem">&lt;/i>
+          &lt;/a>
+          &lt;i class="am-icon-check nav_list_check">&lt;/i>
+      &lt;/li>
+    &lt;/ul>
+&lt;/div>
+&lt;script>
+$(".left_nav li").click(function(){
+    $(".left_nav li").removeClass('current');
+    $(this).addClass('current')
+});
+&lt;/script>
+</pre>
+<script src="scripts/prettify.min.js"></script>
+<script>
+    prettyPrint();
+</script>

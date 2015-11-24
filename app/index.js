@@ -13,7 +13,7 @@ module.exports = generators.Base.extend({
     generators.Base.apply(this, arguments);
 
     this.option('skip-welcome-message', {
-      desc: 'Skips the welcome message',
+      desc: 'Skips the welcome message', 
       type: Boolean
     });
 
@@ -51,7 +51,7 @@ module.exports = generators.Base.extend({
     var done = this.async();
 
     if (!this.options['skip-welcome-message']) {
-      this.log(yosay('\'Allo \'allo! Out of the box I include HTML5 Boilerplate, jQuery, and a gulpfile to build your app.'));
+      this.log(yosay('welcome to minxing'));
     }
 
     var prompts = [{
@@ -59,26 +59,19 @@ module.exports = generators.Base.extend({
       name: 'features',
       message: 'What more would you like?',
       choices: [{
-        name: 'Sass',
-        value: 'includeSass',
+        name: 'oa',
+        value: 'includeOA',
         checked: true
       }, {
-        name: 'Bootstrap',
-        value: 'includeBootstrap',
-        checked: true
-      }, {
-        name: 'Modernizr',
-        value: 'includeModernizr',
+        name: 'hotview',
+        value: 'includeHotView',
         checked: true
       }]
     }, {
       type: 'confirm',
-      name: 'includeJQuery',
-      message: 'Would you like to include jQuery?',
-      default: true,
-      when: function (answers) {
-        return answers.features.indexOf('includeBootstrap') === -1;
-      }
+      name: 'includeZepto',
+      message: 'Would you like to include zepto?',
+      default: true
     }];
 
     this.prompt(prompts, function (answers) {
@@ -90,10 +83,9 @@ module.exports = generators.Base.extend({
 
       // manually deal with the response, get back and store the results.
       // we change a bit this way of doing to automatically do this in the self.prompt() method.
-      this.includeSass = hasFeature('includeSass');
-      this.includeBootstrap = hasFeature('includeBootstrap');
-      this.includeModernizr = hasFeature('includeModernizr');
-      this.includeJQuery = answers.includeJQuery;
+      this.includeOA = hasFeature('includeOA');
+      this.includeHotView = hasFeature('includeHotView');
+      this.includeZepto = answers.includeZepto;
 
       done();
     }.bind(this));
@@ -108,8 +100,8 @@ module.exports = generators.Base.extend({
           date: (new Date).toISOString().split('T')[0],
           name: this.pkg.name,
           version: this.pkg.version,
-          includeSass: this.includeSass,
-          includeBootstrap: this.includeBootstrap,
+          includeOA: this.includeOA,
+          includeHotView: this.includeHotView,
           testFramework: this.options['test-framework']
         }
       );
@@ -118,11 +110,7 @@ module.exports = generators.Base.extend({
     packageJSON: function () {
       this.fs.copyTpl(
         this.templatePath('_package.json'),
-        this.destinationPath('package.json'),
-        {
-          includeSass: this.includeSass
-        }
-      );
+        this.destinationPath('package.json'));
     },
 
     git: function () {
@@ -142,37 +130,8 @@ module.exports = generators.Base.extend({
         dependencies: {}
       };
 
-      if (this.includeBootstrap) {
-        if (this.includeSass) {
-          bowerJson.dependencies['bootstrap-sass'] = '~3.3.5';
-          bowerJson.overrides = {
-            'bootstrap-sass': {
-              'main': [
-                'assets/stylesheets/_bootstrap.scss',
-                'assets/fonts/bootstrap/*',
-                'assets/javascripts/bootstrap.js'
-              ]
-            }
-          };
-        } else {
-          bowerJson.dependencies['bootstrap'] = '~3.3.5';
-          bowerJson.overrides = {
-            'bootstrap': {
-              'main': [
-                'less/bootstrap.less',
-                'dist/css/bootstrap.css',
-                'dist/js/bootstrap.js',
-                'dist/fonts/*'
-              ]
-            }
-          };
-        }
-      } else if (this.includeJQuery) {
-        bowerJson.dependencies['jquery'] = '~2.1.1';
-      }
-
-      if (this.includeModernizr) {
-        bowerJson.dependencies['modernizr'] = '~2.8.1';
+      if (this.includeZepto) {
+        bowerJson.dependencies['zepto'] = '~1.1.6';
       }
 
       this.fs.writeJSON('bower.json', bowerJson);
@@ -189,44 +148,58 @@ module.exports = generators.Base.extend({
       );
     },
 
-    h5bp: function () {
+    config: function () {
       this.fs.copy(
-        this.templatePath('favicon.ico'),
-        this.destinationPath('app/favicon.ico')
+        this.templatePath('config.properties'),
+        this.destinationPath('app/www/config.properties')
       );
-
-      this.fs.copy(
-        this.templatePath('apple-touch-icon.png'),
-        this.destinationPath('app/apple-touch-icon.png')
-      );
-
-      this.fs.copy(
-        this.templatePath('robots.txt'),
-        this.destinationPath('app/robots.txt'));
     },
 
-    styles: function () {
-      var css = 'main';
+    plugin: function () {
+      this.fs.copy(
+        this.templatePath('plugin.properties'),
+        this.destinationPath('app/plugin.properties')
+      );
+    },
 
-      if (this.includeSass) {
-        css += '.scss';
-      } else {
-        css += '.css';
+    oa: function () {
+      if (this.includeOA) {
+        this.fs.copy(
+          this.templatePath('oa'),
+          this.destinationPath('app/www/oa')
+        );
       }
+    },
 
-      this.fs.copyTpl(
-        this.templatePath(css),
-        this.destinationPath('app/styles/' + css),
-        {
-          includeBootstrap: this.includeBootstrap
-        }
+    hotview: function () {
+      if (this.includeHotView) {
+        this.fs.copy(
+          this.templatePath('hotview'),
+          this.destinationPath('app/www/hotview')
+        );
+      }
+    },
+
+    widget: function () {
+      if (!this.includeOA && !this.includeHotView || (this.includeOA && this.includeHotView)) {
+        this.fs.copy(
+          this.templatePath('widget'),
+          this.destinationPath('app/www/widget')
+        );
+      }
+    },
+
+    welcome: function () {
+      this.fs.copy(
+        this.templatePath('welcome'),
+        this.destinationPath('app/www/welcome')
       );
     },
 
-    scripts: function () {
+    debugGap: function () {
       this.fs.copy(
-        this.templatePath('main.js'),
-        this.destinationPath('app/scripts/main.js')
+        this.templatePath('debugGap'),
+        this.destinationPath('app/www/debugGap')
       );
     },
 
@@ -234,48 +207,123 @@ module.exports = generators.Base.extend({
       var bsPath;
 
       // path prefix for Bootstrap JS files
-      if (this.includeBootstrap) {
+      if (this.includeOA || this.includeHotView) {
         bsPath = '/bower_components/';
 
-        if (this.includeSass) {
-          bsPath += 'bootstrap-sass/assets/javascripts/bootstrap/';
-        } else {
-          bsPath += 'bootstrap/js/';
-        }
       }
-
-      this.fs.copyTpl(
-        this.templatePath('index.html'),
-        this.destinationPath('app/index.html'),
-        {
-          appname: this.appname,
-          includeSass: this.includeSass,
-          includeBootstrap: this.includeBootstrap,
-          includeModernizr: this.includeModernizr,
-          includeJQuery: this.includeJQuery,
-          bsPath: bsPath,
-          bsPlugins: [
-            'affix',
-            'alert',
-            'dropdown',
-            'tooltip',
-            'modal',
-            'transition',
-            'button',
-            'popover',
-            'carousel',
-            'scrollspy',
-            'collapse',
-            'tab'
-          ]
-        }
-      );
+      if(this.includeOA){
+        this.fs.copyTpl(
+          this.templatePath('index.html'),
+          this.destinationPath('app/www/index.html'),
+          {
+            appname: this.appname,
+            includeZepto: this.includeZepto,
+            widget: true,
+            oa: true,
+            hotview: false,
+            bsPath: bsPath,
+            bsPlugins: [
+              'affix',
+              'alert',
+              'dropdown',
+              'tooltip',
+              'modal',
+              'transition',
+              'button',
+              'popover',
+              'carousel',
+              'scrollspy',
+              'collapse',
+              'tab'
+            ]
+          }
+        );
+      }
+      if(this.includeHotView){
+        this.fs.copyTpl(
+          this.templatePath('index.html'),
+          this.destinationPath('app/www/index.html'),
+          {
+            appname: this.appname,
+            includeZepto: this.includeZepto,
+            widget: true,
+            oa: false,
+            hotview: true,
+            bsPath: bsPath,
+            bsPlugins: [
+              'affix',
+              'alert',
+              'dropdown',
+              'tooltip',
+              'modal',
+              'transition',
+              'button',
+              'popover',
+              'carousel',
+              'scrollspy',
+              'collapse',
+              'tab'
+            ]
+          }
+        );
+      }
+      if(this.includeOA && this.includeHotView){
+        this.fs.copyTpl(
+          this.templatePath('index.html'),
+          this.destinationPath('app/www/index.html'),
+          {
+            appname: this.appname,
+            includeZepto: this.includeZepto,
+            widget: true,
+            oa: true,
+            hotview: true,
+            bsPath: bsPath,
+            bsPlugins: [
+              'affix',
+              'alert',
+              'dropdown',
+              'tooltip',
+              'modal',
+              'transition',
+              'button',
+              'popover',
+              'carousel',
+              'scrollspy',
+              'collapse',
+              'tab'
+            ]
+          }
+        );
+      }
+      if(!this.includeOA && !this.includeHotView){
+        this.fs.copyTpl(
+          this.templatePath('index.html'),
+          this.destinationPath('app/www/index.html'),
+          {
+            appname: this.appname,
+            includeZepto: this.includeZepto,
+            widget: true,
+            oa: false,
+            hotview: false,
+            bsPath: bsPath,
+            bsPlugins: [
+              'affix',
+              'alert',
+              'dropdown',
+              'tooltip',
+              'modal',
+              'transition',
+              'button',
+              'popover',
+              'carousel',
+              'scrollspy',
+              'collapse',
+              'tab'
+            ]
+          }
+        );
+      }
     },
-
-    misc: function () {
-      mkdirp('app/images');
-      mkdirp('app/fonts');
-    }
   },
 
   install: function () {
@@ -304,19 +352,8 @@ module.exports = generators.Base.extend({
     wiredep({
       bowerJson: bowerJson,
       directory: 'bower_components',
-      exclude: ['bootstrap-sass', 'bootstrap.js'],
       ignorePath: /^(\.\.\/)*\.\./,
-      src: 'app/index.html'
+      src: 'app/www/index.html'
     });
-
-    if (this.includeSass) {
-      // wire Bower packages to .scss
-      wiredep({
-        bowerJson: bowerJson,
-        directory: 'bower_components',
-        ignorePath: /^(\.\.\/)+/,
-        src: 'app/styles/*.scss'
-      });
-    }
   }
 });

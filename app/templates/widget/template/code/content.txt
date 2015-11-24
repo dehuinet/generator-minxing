@@ -1,0 +1,195 @@
+<pre class="prettyprint lang-java">
+&lt;link rel="stylesheet" href="styles/view/content.css" />
+&lt;link rel="stylesheet" href="styles/view/magnific-popup.css" />
+&lt;style>
+footer{
+  position: fixed;
+  width: 100%;
+  padding: 1em 0;
+  margin-left: -1em;
+  background: #fff;
+  bottom: 0;
+  border-top: 1px solid #e0e0e0;
+}
+&lt;/style>
+&lt;div class="index">
+  &lt;form>
+    &lt;ul>
+      &lt;li class="singular">
+        &lt;h3>发文处理单&lt;/h3>
+      &lt;/li>
+      &lt;li>
+        &lt;label for="number">发文字号&lt;/label>
+        &lt;select id="number">
+          &lt;option value="number" style="display:none" data-theme="none">办综&lt;/option>
+        &lt;/select>
+        &lt;i>[2014]号&lt;/i>
+      &lt;/li>
+      &lt;li class="singular">
+        &lt;label for="department">主办部门&lt;/label>
+        &lt;input type="text" name="department" id="department" value="信息科技部">
+      &lt;/li>
+      &lt;li class="singular">
+        &lt;label for="degree">紧急程度&lt;/label>
+        &lt;select id="degree">
+          &lt;option value="degree" style="display:none">无&lt;/option>
+        &lt;/select>
+      &lt;/li>
+      &lt;li>
+        &lt;label for="level">秘密等级&lt;/label>
+        &lt;select id="level">
+          &lt;option value="level" style="display:none">无&lt;/option>
+        &lt;/select>
+      &lt;/li>
+      &lt;li class="singular">
+        &lt;label for="count">份数&lt;/label>
+        &lt;input class="subtext" type="text" name="count" id="count" value="1">
+      &lt;/li>
+      &lt;li>
+        &lt;label for="title">标题&lt;/label>
+        &lt;input type="text" name="title" id="title" value="关于机房监控系统研发立项的批复">
+      &lt;/li>
+      &lt;li class="singular">
+        &lt;label for="subtitle">附件标题&lt;/label>
+        &lt;input type="text" name="title" id="title" >
+      &lt;/li>
+      &lt;li>
+        &lt;label for="sign">签发意见&lt;/label>
+        &lt;span class="wrap">
+          &lt;textarea name="sign" id ="sign">同意&lt;/textarea>
+          &lt;/br>&lt;/br>&lt;/br>&lt;/br>
+          &lt;a data-id="" href="javascript:" class="am-icon-comment">&nbsp;&lt;/a>
+          &lt;time>12-27 11:07&lt;/time>
+        &lt;/span>
+      &lt;/li>
+      &lt;li>
+        &lt;label for="exam">审核意见&lt;/label>
+        &lt;span class="wrap">
+          &lt;textarea name="exam" id ="exam">同意：请李总审阅&lt;/textarea>
+          &lt;/br>&lt;/br>&lt;/br>&lt;/br>
+          &lt;a data-id="" href="javascript:" class="am-icon-comment">&nbsp;&lt;/a>
+          &lt;time>12-29 8:52&lt;/time>
+        &lt;/span>
+      &lt;/li>
+      &lt;li class="singular">
+        &lt;label for="leader">办公室领导审核&lt;/label>
+        &lt;span class="wrap">
+          &lt;textarea name="leader" id ="leader">同意&lt;/textarea>
+          &lt;/br>&lt;/br>&lt;/br>&lt;/br>
+          &lt;a data-id="" href="javascript:" class="am-icon-comment">&nbsp;&lt;/a>
+          &lt;time>12-29 11:11&lt;/time>
+        &lt;/span>
+      &lt;/li>
+      &lt;li>
+        &lt;label for="office">办公室核稿&lt;/label>
+        &lt;span class="wrap">
+          &lt;textarea name="office" id="office">&lt;/textarea>
+          &lt;/br>&lt;/br>&lt;/br>&lt;/br>
+          &lt;i id="officename" style="display:none">总行核稿员&lt;/i>
+          &lt;time id="time" style="display:none">&lt;/time>
+        &lt;/span>  
+      &lt;/li>
+    &lt;/ul>
+    &lt;footer>
+      &lt;div class="foot">
+        &lt;a href="#popup-page" class="btn-popup">填写意见&lt;/a>
+        &lt;!-- 弹窗页面 -->
+        &lt;div class="mx-popup mfp-hide popup" id="popup-page">
+          &lt;form>
+            &lt;label for ="audit">办公室核稿&lt;/label>
+            &lt;textarea name="audit" id="audit">同意&lt;/textarea>
+            &lt;a href="#" class="mfp-close">取消&lt;/a>
+            &lt;a href="#" id="yes" class="mfp-close">确定&lt;/a>
+          &lt;/form>
+        &lt;/div>
+        &lt;a href="javascript:" id="commit">提交&lt;/a>
+        &lt;a href="content.jsp">查看正文&lt;/a>
+        &lt;a href="file.html">查看附件&lt;/a>
+      &lt;/div>
+    &lt;/footer>
+  &lt;/form>
+&lt;/div>
+&lt;script src="scripts/view/query.magnific-popup.js">&lt;/script>
+&lt;script>
+  var onDeviceReady = function(){
+    MXWebui.showToolbar();
+  };
+  document.addEventListener("deviceready", onDeviceReady, false);
+  $(document).ready(function(){
+    $("#commit").on("click",function(){
+      var current_user_login_name="";
+      var network_id="";
+      MXCommon.getCurrentUser(function(d){
+        current_user_login_name=d.login_name;
+        MXCommon.api({'method':'get','url':'/api/v1/users/current'},function(r){
+          network_id=eval('('+r+')').network_id;
+          MXContacts.selectUsers(function(a){
+            var _login_names=new Array();
+            for(var i=0;i<a.data.length;i++){
+                _login_names.push(a.data[i].login_name);
+            }
+            _login_names.push(current_user_login_name);
+          $.post("/oa/push"
+            ,{title:$("#title").val(),
+              desc:"当前环节：办公室核稿<br>提交人：马青冈<br>提交时间：2015-1-25",
+              picurl:"",
+              url:window.location.href,//"/oa/mobile/app/index.jsp",
+              login_names:_login_names,
+              network_id:network_id
+              }
+              ,function(data){
+                var r = eval("("+data+")");
+                if(r.success){
+                  alert("提交成功");
+                  window.history.back();
+                }else{
+                  //alert("提交失败");
+                }
+              });
+        },false);
+      });
+     });
+    });
+    $("a[data-id]").click(function(e){
+      e.preventDefault();
+      var login_name = $(e.currentTarget).attr("data-id");
+      var arr = new Array(login_name);
+      MXChat.chat(arr);
+    });
+  });
+  $(function() {
+      //初始化弹窗
+      $('.btn-popup').magnificPopup({
+          type: 'inline',
+          closeBtnInside: true,
+          fixedContentPos: false,
+          fixedBgPos: true,
+          overflowY: 'auto',
+          closeBtnInside: true,
+          preloader: false,
+          midClick: true,
+          removalDelay: 300,
+          mainClass: 'my-mfp-slide-bottom'
+      });
+
+      $("a#yes").click(function(){
+          $("textarea#office").val($("textarea#audit").val());
+          $("#time").css({ 'display': 'block' });
+          $("#officename").css({ 'display': 'block' });
+      });
+      //显示时间
+      var d = new Date();
+      var day = d.getDate();
+      var month = d.getMonth() + 1;
+      var hour = d.getHours();
+      var minute = d.getMinutes();
+      if (minute < 10){
+        minute = "0"+ minute;
+      }
+      document.getElementById("time").innerHTML = month + "-" + day + " " + hour + ":" + minute;
+  });
+&lt;/script>
+<script src="scripts/prettify.min.js"></script>
+<script>
+    prettyPrint();
+</script>

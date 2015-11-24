@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="styles/view/search.css" />
+<link rel="stylesheet" href="styles/view/common.css" />
+<div class="search">
+  <form>
+    <label for="title">文件标题</label>
+    <input type="text" id="title" placeholder="请输入文件标题">
+    <label for="time">文件时间</label>
+    <div class="time">
+      <span>文件开始时间</span>
+      <time id="beginTime" class="am-icon-chevron-right"></time>
+    </div>
+    <div class="time time2">
+      <span>文件结束时间</span>
+      <time id="endTime" class="am-icon-chevron-right"></time>
+    </div>
+    <div id="datePlugin"></div>
+    <label for="type">文件类型</label>
+    <ul>
+      <li>
+        <label for ="send">发文</label>
+        <i class="am-icon-check-circle-o" id="send" class="styled"></i>
+      </li>
+      <li>
+        <label for ="receive">收文</label>
+        <i class="am-icon-check-circle-o" id="receive" class="styled"></i>
+      </li>
+      <li>
+        <label for ="sign">签报</label>
+        <i class="am-icon-check-circle-o" id="sign" class="styled"></i>
+      </li>
+      <li>
+        <label for ="meeting">会议</label>
+        <i class="am-icon-check-circle-o" id="meeting" class="styled"></i>
+      </li>
+      <li>
+        <label for ="exam">事务审批</label>
+        <i class="am-icon-check-circle-o" id="exam" class="styled"></i>
+      </li>
+    </ul>
+    <a class="btn-search"href="#"><i class="am-icon-search"></i>  查 询</a>
+  </form>
+</div>
+<script src="scripts/view/date.js"></script>
+<script src="scripts/view/iscroll.js"></script>
+<script src="scripts/view/checkbox.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $('#beginTime').date();
+    $('#endTime').date();
+    $('.search ul li').click(function(e) {
+        if (!$(this).find('i').hasClass('am-icon-check-circle')) {
+            $(this).find('i').removeClass('am-icon-check-circle-o');
+            $(this).find('i').addClass('am-icon-check-circle');
+        } else {
+            $(this).find('i').removeClass('am-icon-check-circle');
+            $(this).find('i').addClass('am-icon-check-circle-o');
+        }
+    });
+  });
+</script>

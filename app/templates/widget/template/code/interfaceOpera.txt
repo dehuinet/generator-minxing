@@ -1,0 +1,38 @@
+<pre class="prettyprint lang-java">
+&lt;!--隐藏右上角分享按钮接口-->
+&lt;script type="text/javascript">
+  MXWebui.hideOptionMenu();
+&lt;/script>
+&lt;!--显示右上角分享按钮接口-->
+&lt;script type="text/javascript">
+  MXWebui.showOptionMenu();
+&lt;/script>
+&lt;!--隐藏页面上部标题栏接口-->
+&lt;script type="text/javascript">
+  MXWebui.hideWebViewTitle();
+&lt;/script>
+&lt;!--显示页面上部标题栏接口-->
+&lt;script type="text/javascript">
+  MXWebui.showWebViewTitle(title);
+&lt;/script>
+&lt;!--隐藏页面下部工具栏接口-->
+&lt;script type="text/javascript">
+  MXWebui.hideToolbar();
+&lt;/script>
+&lt;!--显示页面下部工具栏接口-->
+&lt;script type="text/javascript">
+  MXWebui.showToolbar();
+&lt;/script>
+&lt;!--关闭当前页面接口-->
+&lt;script type="text/javascript">
+  MXWebui.closeWindow();
+&lt;/script>
+&lt;!--禁用android back键接口-->
+&lt;script type="text/javascript">
+  MXWebui.disableBackKey();
+&lt;/script>
+</pre>
+<script src="scripts/prettify.min.js"></script>
+<script>
+    prettyPrint();
+</script>

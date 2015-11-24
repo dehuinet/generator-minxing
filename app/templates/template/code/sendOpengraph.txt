@@ -1,0 +1,17 @@
+<pre class="prettyprint lang-java">
+&lt;!--根据title,缩略图url,url,app_url,描述,用户登录名发送opengraph-->
+&lt;script type="text/javascript">
+  MXChat.createGraph({
+    'title':'Title',
+    'image_url':'thumbnail',
+    'url':'url',
+    'app_url':'appUrl',
+    'description':'desc',
+    'uids':'['loginname','loginname']'
+  });
+&lt;/script>
+</pre>
+<script src="scripts/prettify.min.js"></script>
+<script>
+    prettyPrint();
+</script>

@@ -1,0 +1,29 @@
+<pre class="prettyprint lang-java">
+  &lt;link rel="stylesheet" href="styles/view/tabs.css" />
+  &lt;div data-am-widget="tabs" class="am-tabs am-tabs-default">
+      &lt;ul class="am-tabs-nav am-cf">
+          &lt;li class="am-active">&lt;a href="[data-tab-panel-0]">青春&lt;/a>&lt;/li>
+          &lt;li class="">&lt;a href="[data-tab-panel-1]">彩虹&lt;/a>&lt;/li>
+          &lt;li class="">&lt;a href="[data-tab-panel-2]">歌唱&lt;/a>&lt;/li>
+      &lt;/ul>
+      &lt;div class="am-tabs-bd">
+          &lt;div data-tab-panel-0 class="am-tab-panel am-active">
+            【青春】那时候有多好，任雨打湿裙角。忍不住哼起，心爱的旋律。绿油油的树叶，自由地在说笑。燕子忙归巢，风铃在舞蹈。经过青春的草地，彩虹忽然升起。即使视线渐渐模糊，它也在我心里。就像爱过的旋律，没人能抹去。因为生命存在失望，歌唱，所以才要歌唱。
+          &lt;/div>
+          &lt;div data-tab-panel-1 class="am-tab-panel ">
+            【彩虹】那时候有多好，任雨打湿裙角。忍不住哼起，心爱的旋律。绿油油的树叶，自由地在说笑。燕子忙归巢，风铃在舞蹈。经过青春的草地，彩虹忽然升起。即使视线渐渐模糊，它也在我心里。就像爱过的旋律，没人能抹去。因为生命存在失望，歌唱，所以才要歌唱。
+          &lt;/div>
+          &lt;div data-tab-panel-2 class="am-tab-panel ">
+            【歌唱】那时候有多好，任雨打湿裙角。忍不住哼起，心爱的旋律。绿油油的树叶，自由地在说笑。燕子忙归巢，风铃在舞蹈。经过青春的草地，彩虹忽然升起。即使视线渐渐模糊，它也在我心里。就像爱过的旋律，没人能抹去。因为生命存在失望，歌唱，所以才要歌唱。
+          &lt;/div>
+      &lt;/div>
+  &lt;/div>
+&lt;/div>
+&lt;script type="text/javascript">
+  $('.am-tabs').tabs();
+&lt;/script>
+</pre>
+<script src="scripts/prettify.min.js"></script>
+<script>
+    prettyPrint();
+</script>

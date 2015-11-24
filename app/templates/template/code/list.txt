@@ -1,0 +1,54 @@
+<pre class="prettyprint lang-java">
+&lt;link rel="stylesheet" href="styles/view/layout.css" />
+
+&lt;div class="am-list-news-bd doc-content widget-list list">
+  &lt;ul class="am-list m-widget-list">
+    &lt;li class="am-g am-list-item-desce">
+        &lt;a href="##" class="am-list-item-hd p_1_rem"> 
+          &lt;i class="am-icon-building">&lt;/i>
+          短信平台开发总结报告
+          &lt;div class="am-list-item-text p_1_rem">
+          &lt;ul>
+            &lt;li>发件人：李刚11&lt;/li>
+            &lt;li>当前环节：主办部门内部审核&lt;/li>
+            &lt;li>来文日期：09-12 15:46&lt;/li>
+          &lt;/ul>
+          &lt;/div>
+          &lt;i class="am-icon-chevron-right nav_list_check">&lt;/i>
+        &lt;/a>
+    &lt;/li>
+    &lt;li class="am-g am-list-item-desce">
+        &lt;a href="##" class="am-list-item-hd p_1_rem"> 
+          &lt;i class="am-icon-building">&lt;/i>
+          短信平台开发总结报告
+          &lt;div class="am-list-item-text p_1_rem">
+          &lt;ul>
+            &lt;li>发件人：李刚11&lt;/li>
+            &lt;li>当前环节：主办部门内部审核&lt;/li>
+            &lt;li>来文日期：09-12 15:46&lt;/li>
+          &lt;/ul>
+          &lt;/div>
+          &lt;i class="am-icon-chevron-right nav_list_check">&lt;/i>
+        &lt;/a>
+    &lt;/li>
+    &lt;li class="am-g am-list-item-desce">
+        &lt;a href="##" class="am-list-item-hd p_1_rem"> 
+          &lt;i class="am-icon-building">&lt;/i>
+          短信平台开发总结报告
+          &lt;div class="am-list-item-text p_1_rem">
+          &lt;ul>
+            &lt;li>发件人：李刚11&lt;/li>
+            &lt;li>当前环节：主办部门内部审核&lt;/li>
+            &lt;li>来文日期：09-12 15:46&lt;/li>
+          &lt;/ul>
+          &lt;/div>
+          &lt;i class="am-icon-chevron-right nav_list_check">&lt;/i>
+        &lt;/a>
+    &lt;/li>
+  &lt;/ul>
+&lt;/div>
+</pre>
+<script src="scripts/prettify.min.js"></script>
+<script>
+    prettyPrint();
+</script>

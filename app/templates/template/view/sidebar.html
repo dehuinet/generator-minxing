@@ -1,0 +1,30 @@
+<!-- 侧边栏内容 -->
+<div id="my-offcanvas" class="am-offcanvas">
+  <div class="am-offcanvas-bar">
+    <div class="am-offcanvas-content">
+      <p>
+        你那张略带着 <br/>
+        一点点颓废的脸孔 <br/>
+        轻薄的嘴唇 <br/>
+        含着一千个谎言
+      </p>
+    </div>
+  </div>
+</div>
+
+<button class="am-btn am-btn-primary doc-oc-js" data-rel="open">打开侧边栏</button>
+<script>
+  $(function() {
+    var id = '#my-offcanvas';
+    var $myOc = $(id);
+    $('.doc-oc-js').on('click', function() {
+      $myOc.offCanvas($(this).data('rel'));
+    });
+
+    $myOc.on('open.offcanvas.amui', function() {
+      console.log(id + ' 打开了。');
+    }).on('close.offcanvas.amui', function() {
+      console.log(id + ' 关闭了。');
+    });
+  });
+</script>

@@ -1,0 +1,36 @@
+<pre class="prettyprint lang-java">
+&lt;!-- 侧边栏内容 -->
+&lt;div id="my-offcanvas" class="am-offcanvas">
+  &lt;div class="am-offcanvas-bar">
+    &lt;div class="am-offcanvas-content">
+      &lt;p>
+        你那张略带着 &lt;br/>
+        一点点颓废的脸孔 &lt;br/>
+        轻薄的嘴唇 &lt;br/>
+        含着一千个谎言
+      &lt;/p>
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+
+&lt;button class="am-btn am-btn-primary doc-oc-js" data-rel="open">打开侧边栏&lt;/button>
+&lt;script>
+  $(function() {
+    var id = '#my-offcanvas';
+    var $myOc = $(id);
+    $('.doc-oc-js').on('click', function() {
+      $myOc.offCanvas($(this).data('rel'));
+    });
+
+    $myOc.on('open.offcanvas.amui', function() {
+      console.log(id + ' 打开了。');
+    }).on('close.offcanvas.amui', function() {
+      console.log(id + ' 关闭了。');
+    });
+  });
+&lt;/script>
+</pre>
+<script src="scripts/prettify.min.js"></script>
+<script>
+    prettyPrint();
+</script>

@@ -1,0 +1,102 @@
+<pre class="prettyprint lang-java">
+&lt;!--根据AppID获取当前用户的sso_token-->
+&lt;script type="text/javascript">
+  MXCommon.getSSOToken(
+    ocuID,
+    function(sso_token){
+    }
+  );
+&lt;/script>
+&lt;!--获取服务器地址-->
+&lt;script type="text/javascript">
+  MXCommon.getServerUrl(
+    function(url){
+    }
+  );
+&lt;/script>
+&lt;!--获取通讯录人员及部门数据(单选)->
+&lt;script type="text/javascript">
+  MXContacts.selectUser(
+    function(result){
+    },
+    true
+  );
+&lt;/script>
+&lt;!--获取通讯录人员及部门数据(多选)-->
+&lt;script type="text/javascript">
+  MXContacts.selectUsers(
+    function(result){
+    },
+    true
+  );
+&lt;/script>
+&lt;!--获取当前用户数据-->
+&lt;script type="text/javascript">
+  MXCommon.getCurrentUser(
+    function(result){
+    }
+  );
+&lt;/script>
+&lt;!--点击下载附件-->
+&lt;script type="text/javascript">
+  MXCommon.download(
+    url
+  );
+&lt;/script>
+&lt;!--向用户发起聊天-->
+&lt;script type="text/javascript">
+  MXChat.chat(
+    "['login_name1','login_name2']",
+    function(){
+  });
+&lt;/script>
+&lt;!--根据消息id删除消息-->
+&lt;script type="text/javascript">
+  MXChat.deleteMsg(
+    "messageid",
+    function(){
+  });
+&lt;/script>
+&lt;!--根据method,url地址,params,https的headers发起API请求-->
+&lt;script type="text/javascript">
+  MXCommon.api(
+    {'method':'get',
+      'url':'/api/***',
+      'params':'a=a&b=b',
+      'headers':'h=ha'},
+      function(d){
+  });
+&lt;/script>
+&lt;!--根据实际的登录用户获取人员信息数据-->
+&lt;script type="text/javascript">
+  MXCommon.getPersonInfo(
+    loginName,
+    function(d){
+    }
+  );
+&lt;/script>
+&lt;!--根据实际的登录用户查看人员信息数据-->
+&lt;script type="text/javascript">
+  MXCommon.viewPersonInfo(
+    loginName
+  );
+&lt;/script>
+&lt;!--发送消息到指定工作圈-->
+&lt;script type="text/javascript">
+  var group_id,content;
+  MXCircle.sendTextMessage(group_id, content, function(result){})
+&lt;/script>
+&lt;!--从webview页面跳转到指定工作圈-->
+&lt;script type="text/javascript">
+  var group_id;
+  MXCircle.switchToGroup(group_id)
+&lt;/script>
+&lt;!--查看公众号详情-->
+&lt;script type="text/javascript">
+  MXContacts.showOCU(ocuId);
+&lt;/script>
+</pre>
+<script src="scripts/prettify.min.js"></script>
+<script>
+    prettyPrint();
+</script>

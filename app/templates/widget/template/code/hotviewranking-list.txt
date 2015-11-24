@@ -1,0 +1,88 @@
+<pre class="prettyprint lang-java">
+&lt;link rel="stylesheet" href="styles/view/hotviewranking.css" />
+&lt;div class="container">
+  &lt;header class="head">
+    &lt;img class="head-img" src="images/logo.png" height="150" width="160">
+  &lt;/header>
+  &lt;!--没有数据显示暂无排名-->
+  &lt;section class="wrapper">
+    &lt;div class="emptyImg" style="display:none">当前暂无排名&lt;/div>
+    &lt;ol>
+      &lt;li>
+        &lt;div class="rank">
+          &lt;img src="images/oa.png" alt="头像">
+          &lt;span title="oa">&lt;/span>
+        &lt;/div>
+        &lt;a href="#">这是oa演示数据1&lt;/a>
+      &lt;/li>
+      &lt;li>
+        &lt;div class="rank">
+          &lt;img src="images/oa.png" alt="头像">
+          &lt;span title="oa">&lt;/span>
+        &lt;/div>
+        &lt;a href="#">这是oa演示数据2&lt;/a>
+      &lt;/li>
+      &lt;li>
+        &lt;div class="rank">
+          &lt;img src="images/oa.png" alt="头像">
+          &lt;span title="oa">&lt;/span>
+        &lt;/div>
+        &lt;a href="#">这是oa演示数据3&lt;/a>
+      &lt;/li>
+      &lt;li>
+        &lt;div class="rank">
+          &lt;img src="images/oa.png" alt="头像">
+          &lt;span title="oa">&lt;/span>
+        &lt;/div>
+        &lt;a href="#">这是oa演示数据4&lt;/a>
+      &lt;/li>
+      &lt;li>
+        &lt;div class="rank">
+          &lt;img src="images/oa.png" alt="头像">
+          &lt;span title="oa">&lt;/span>
+        &lt;/div>
+        &lt;a href="#">这是oa演示数据5&lt;/a>
+      &lt;/li>
+      &lt;li>
+        &lt;div class="rank">
+          &lt;img src="images/oa.png" alt="头像">
+          &lt;span title="oa">&lt;/span>
+        &lt;/div>
+        &lt;a href="#">这是oa演示数据6&lt;/a>
+      &lt;/li>
+      &lt;li>
+        &lt;div class="rank">
+          &lt;img src="images/oa.png" alt="头像">
+          &lt;span title="oa">&lt;/span>
+        &lt;/div>
+        &lt;a href="#">这是oa演示数据7&lt;/a>
+      &lt;/li>
+      &lt;li>
+        &lt;div class="rank">
+          &lt;img src="images/oa.png" alt="头像">
+          &lt;span title="oa">&lt;/span>
+        &lt;/div>
+        &lt;a href="#">这是oa演示数据8&lt;/a>
+      &lt;/li>
+      &lt;li>
+        &lt;div class="rank">
+          &lt;img src="images/oa.png" alt="头像">
+          &lt;span title="oa">&lt;/span>
+        &lt;/div>
+        &lt;a href="#">这是oa演示数据9&lt;/a>
+      &lt;/li>
+      &lt;li>
+        &lt;div class="rank">
+          &lt;img src="images/oa.png" alt="头像">
+          &lt;span title="oa">&lt;/span>
+        &lt;/div>
+        &lt;a href="#">这是oa演示数据10&lt;/a>
+      &lt;/li>
+    &lt;/ol>
+  &lt;/section>
+&lt;/div>
+</pre>
+<script src="scripts/prettify.min.js"></script>
+<script>
+    prettyPrint();
+</script>

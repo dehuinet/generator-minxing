@@ -1,0 +1,66 @@
+<pre class="prettyprint lang-java">
+&lt;link rel="stylesheet" href="styles/view/search.css" />
+&lt;link rel="stylesheet" href="styles/view/common.css" />
+&lt;div class="search">
+  &lt;form>
+    &lt;label for="title">文件标题&lt;/label>
+    &lt;input type="text" id="title" placeholder="请输入文件标题">
+    &lt;label for="time">文件时间&lt;/label>
+    &lt;div class="time">
+      &lt;span>文件开始时间&lt;/span>
+      &lt;time id="beginTime" class="am-icon-chevron-right">&lt;/time>
+    &lt;/div>
+    &lt;div class="time time2">
+      &lt;span>文件结束时间&lt;/span>
+      &lt;time id="endTime" class="am-icon-chevron-right">&lt;/time>
+    &lt;/div>
+    &lt;div id="datePlugin">&lt;/div>
+    &lt;label for="type">文件类型&lt;/label>
+    &lt;ul>
+      &lt;li>
+        &lt;label for ="send">发文&lt;/label>
+        &lt;i class="am-icon-check-circle-o" id="send" class="styled">&lt;/i>
+      &lt;/li>
+      &lt;li>
+        &lt;label for ="receive">收文&lt;/label>
+        &lt;i class="am-icon-check-circle-o" id="receive" class="styled">&lt;/i>
+      &lt;/li>
+      &lt;li>
+        &lt;label for ="sign">签报&lt;/label>
+        &lt;i class="am-icon-check-circle-o" id="sign" class="styled">&lt;/i>
+      &lt;/li>
+      &lt;li>
+        &lt;label for ="meeting">会议&lt;/label>
+        &lt;i class="am-icon-check-circle-o" id="meeting" class="styled">&lt;/i>
+      &lt;/li>
+      &lt;li>
+        &lt;label for ="exam">事务审批&lt;/label>
+        &lt;i class="am-icon-check-circle-o" id="exam" class="styled">&lt;/i>
+      &lt;/li>
+    &lt;/ul>
+    &lt;a class="btn-search"href="#">&lt;i class="am-icon-search">&lt;/i>  查 询&lt;/a>
+  &lt;/form>
+&lt;/div>
+&lt;script src="scripts/view/date.js">&lt;/script>
+&lt;script src="scripts/view/iscroll.js">&lt;/script>
+&lt;script src="scripts/view/checkbox.js">&lt;/script>
+&lt;script type="text/javascript">
+    $(function(){
+        $('#beginTime').date();
+        $('#endTime').date();
+        $('.search ul li').click(function(e) {
+            if (!$(this).find('i').hasClass('am-icon-check-circle')) {
+                $(this).find('i').removeClass('am-icon-check-circle-o');
+                $(this).find('i').addClass('am-icon-check-circle');
+            } else {
+                $(this).find('i').removeClass('am-icon-check-circle');
+                $(this).find('i').addClass('am-icon-check-circle-o');
+            }
+        });
+    });
+&lt;/script>
+</pre>
+<script src="scripts/prettify.min.js"></script>
+<script>
+    prettyPrint();
+</script>

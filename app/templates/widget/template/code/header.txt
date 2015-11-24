@@ -1,0 +1,24 @@
+<pre class="prettyprint lang-java">
+&lt;header data-am-widget="header" class="am-header am-header-default">
+    &lt;div class="am-header-left am-header-nav">
+        &lt;a href="#left-link" class="am-btn">
+          &lt;i class="am-header-icon am-icon-bars">&lt;/i>
+        &lt;/a>
+    &lt;/div>
+    &lt;h1 class="am-header-title">
+        header
+    &lt;/h1>
+    &lt;div class="am-header-right am-header-nav">
+        &lt;a href="#user-link" class="">
+          &lt;i class="am-icon-search">&lt;/i>
+        &lt;/a>
+        &lt;a href="#cart-link" class="am-btn">
+          &lt;i class="am-icon-close">&lt;/i>
+        &lt;/a>
+    &lt;/div>
+&lt;/header>
+</pre>
+<script src="scripts/prettify.min.js"></script>
+<script>
+    prettyPrint();
+</script>
