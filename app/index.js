@@ -198,8 +198,8 @@ module.exports = generators.Base.extend({
 
     debugGap: function () {
       this.fs.copy(
-        this.templatePath('debugGap'),
-        this.destinationPath('app/www/debugGap')
+        this.templatePath('tools'),
+        this.destinationPath('tools')
       );
     },
 

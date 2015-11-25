@@ -13,8 +13,8 @@ var zip = require('gulp-zip');
 //将www下面的文件自动打包成.zip压缩包
 gulp.task('zip', () => {
     return gulp.src(['app/**', 'app/plugin.properties'])
-        .pipe(zip('www.zip'))
-        .pipe(gulp.dest('dist'));
+      .pipe(zip('www.zip'))
+      .pipe(gulp.dest('dist'));
 });
 
 gulp.task('styles', () => {
@@ -23,7 +23,7 @@ gulp.task('styles', () => {
     .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/styles'))
-    .pipe(reload({stream: true}));
+    .pipe(reload({stream: true})); 
 });
 
 function lint(files, options) {
@@ -49,7 +49,7 @@ gulp.task('lint', lint('app/www/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('html', ['styles'], () => {
-  return gulp.src('app/www/*.html')
+  return gulp.src('app/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
