@@ -2,7 +2,7 @@
 * @Author: lizhen
 * @Date:   2015-11-10 14:11:42
 * @Last Modified by:   lizhen
-* @Last Modified time: 2015-11-17 18:20:05
+* @Last Modified time: 2015-11-20 16:32:19
 */
 
 .warp{
@@ -117,3 +117,8 @@
     height: 80px;
     line-height: 85px;
 }
+.ios .mt_50{margin-top: 70px;}
+.ios .mt_70{margin-top: 90px;}
+
+.mt_50{margin-top: 50px;}
+.mt_70{margin-top: 70px;}

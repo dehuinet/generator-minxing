@@ -37,7 +37,7 @@
                   </a>
               </div>
             </header>
-              <div class="am-list-news-bd doc-content widget-list list">
+              <div class="am-list-news-bd doc-content widget-list list mt_50">
                   <ul class="am-list m-widget-list">
                       <li class="am-g am-list-item-desce" pageUrl="content.html">
                           <a href="#content" class="am-list-item-hd p_1_rem"> 
@@ -196,6 +196,12 @@
     <script src="scripts/view/oa.js"></script>
     <script src="scripts/jump.js"></script>
     <script src="scripts/view/jquery.magnific-popup.js"></script>
+	  <script>
+		var onDeviceReady = function onDeviceReady(){
+			MXWebui.showWebViewTitle('OA'); 
+		}
+		document.addEventListener("deviceready", onDeviceReady, false);
+	</script>
     <script>
         $(function() {
             var id = '#my-offcanvas';

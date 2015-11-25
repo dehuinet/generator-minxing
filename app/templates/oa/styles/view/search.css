@@ -126,3 +126,9 @@
   top: 4px;
   right: 4px;
 }
+
+.ios .search-dialog{
+  width: 320px;
+  margin-left: -160px;
+  margin-top: -180px !important;
+}

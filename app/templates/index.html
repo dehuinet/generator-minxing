@@ -17,25 +17,19 @@
   <script src="./welcome/amazeui.min.js"></script>
   <style type="text/css">
   a.widget{
-    <% if(widget === false)  { %>
-        display:none;
-    <% } else { %>
+    
         display:inline-block;
-    <% } %>
+    
   }
   a.oa{
-    <% if(oa === false)  { %>
-        display:none;
-    <% } else { %>
+    
         display:inline-block;
-    <% } %>
+    
   }
   a.hotview{
-    <% if(hotview === false)  { %>
-        display:none;
-    <% } else { %>
+    
         display:inline-block;
-    <% } %>
+    
   }
   </style>
  </head>
@@ -51,9 +45,9 @@
        <h2 data-am-scrollspy="{animation:'slide-right', delay: 500}" class="am-scrollspy-init am-scrollspy-inview am-animation-slide-right">敏行 HTML5 组件库</h2>
       </div>
       <div class="amz-btn-started am-scrollspy-init am-scrollspy-inview am-animation-scale-up" data-am-scrollspy="{animation:'scale-up', delay: 1500, repeat: false}">
-       <a href="widget/index.html" class="am-btn am-btn-success am-btn-lg widget">组件库<div style="display:none"><%= widget %></div></a>
-       <a href="oa/index.html" class="am-btn am-btn-default am-btn-lg oa">OA<div style="display:none"><%= oa %></div></a>
-       <a href="hotview/index.html" class="am-btn am-btn-default am-btn-lg hotview">热度榜<div style="display:none"><%= hotview %></div></a>
+       <a href="widget/index.html" class="am-btn am-btn-success am-btn-lg widget">组件库<div style="display:none">true</div></a>
+       <a href="oa/index.html" class="am-btn am-btn-default am-btn-lg oa">OA<div style="display:none">true</div></a>
+       <a href="hotview/index.html" class="am-btn am-btn-default am-btn-lg hotview">热度榜<div style="display:none">true</div></a>
       </div>
      </div>
     </div>

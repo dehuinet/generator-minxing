@@ -22,8 +22,16 @@ footer{
   <h1 class="am-header-title">
       我的工作
   </h1>
+  <div class="am-header-right am-header-nav">
+    <a class="am-btn search-btn am-btn-primary js-modal-open">
+      <i class="am-icon-search"></i>
+    </a>
+    <a href="#" class="am-btn">
+      <i class="am-icon-close" onclick="MXWebui.closeWindow();"></i>
+    </a>
+  </div>
 </header>
-<div class="index">
+<div class="index mt_70">
   <form>
     <ul>
       <li class="singular">
@@ -64,30 +72,30 @@ footer{
         <label for="subtitle">附件标题</label>
         <input type="text" name="title" id="title" >
       </li>
-      <li>
+      <li  class="keys">
         <label for="sign">签发意见</label>
         <span class="wrap">
           <textarea name="sign" id ="sign">同意</textarea>
            </br></br></br></br>
-           <a data-id="yuby@dehuinet.com" href="#" class="am-icon-comment">&nbsp;余彪尧</a>
+           <a data-id="" href="#" class="am-icon-comment">&nbsp;</a>
           <time>12-27 11:07</time>
         </span>
       </li>
-      <li>
+      <li class="keys">
         <label for="exam">审核意见</label>
         <span class="wrap">
           <textarea name="exam" id ="exam">同意：请李总审阅</textarea>
           </br></br></br></br>
-          <a data-id="shiqm@dehuinet.com" href="#" class="am-icon-comment">&nbsp;史清美</a>
+          <a data-id="" href="#" class="am-icon-comment">&nbsp;</a>
           <time>12-29 08:52</time>
         </span>
       </li>
-      <li class="singular">
+      <li class="singular keys">
         <label for="leader">办公室领导审核</label>
         <span class="wrap">
           <textarea name="leader" id ="leader">同意</textarea>
           </br></br></br></br>
-          <a data-id="mudy@dehuinet.com" href="#" class="am-icon-comment">&nbsp;穆道元</a>
+          <a data-id="" href="#" class="am-icon-comment">&nbsp;</a>
           <time>12-29 11:11</time>
         </span>
       </li>
@@ -122,52 +130,86 @@ footer{
   </form>
 </div>
 <script>
-  var onDeviceReady = function(){
-    MXWebui.showToolbar();
+  var onDeviceReady = function onDeviceReady(){
+    var network_id="";
+    var keys = [];
+    var values = [];
+    $.getJSON("flavor.json", function(json_data) {
+      var url = json_data.URL;
+      //var url1 = json_data.URL1;
+      var ocuId = json_data.ocuId;
+      var ocuSecret = json_data.ocuSecret;
+	    var appName = json_data.appName;
+      MXCommon.api({'method':'get','url': url + '/api/v1/users/current'},function(r){
+        network_id = eval('('+r+')').network_id;
+        $.get(url +"/oa/getrandomuser?network_id=" + network_id
+          ,function(data){
+            function getObjectKeys(data)
+            {
+              for (var property in data)
+              keys.push(property);
+              return keys;
+            }
+
+            function getObjectValues(data)
+            {
+              for (var property in data)
+              values.push(data[property]);
+              return values;
+            }
+            getObjectKeys(data);
+            getObjectValues(data);
+            for(var i = 0; i < $(".keys").length; i++){
+              $(".keys:eq("+ i +")").find("a").attr("data-id",keys[i]).html(values[i]);
+            }
+          });
+      });
+      $("#commit").on("click",function(){
+        var current_user_login_name="";
+        var network_id="";
+        MXCommon.getCurrentUser(function(d){
+          current_user_login_name=d.login_name;
+          MXCommon.api({'method':'get','url': url + '/api/v1/users/current'},function(r){
+            network_id=eval('('+r+')').network_id;
+            MXContacts.selectUsers(function(a){
+              var  _login_names=new Array();
+              for(var i=0;i<a.data.length;i++){
+                  _login_names.push(a.data[i].login_name);
+              }
+              _login_names.push(current_user_login_name);
+            $.post(url + "/oa/push"
+              ,{title:$("#title").val(),
+                desc:"当前环节：办公室核稿<br>提交人：马青冈<br>提交时间：2015-1-25",
+                picurl:"",
+                url:"launchApp://" + appName,
+                app_url:"launchApp://" + appName,//"/oa/mobile/app/index.jsp",
+                login_names:_login_names,
+                network_id:network_id,
+                ocuId: ocuId,
+                ocuSecret: ocuSecret
+                }
+                ,function(data){
+                  var r = eval("("+data+")");
+                  if(r.success){
+                    alert("提交成功");
+                    window.location.href="#index"
+                  }else{
+                    //alert("提交失败");
+                  }
+                });
+          },false);
+        });
+       });
+      });
+      $(".keys a").click(function(e){
+        e.preventDefault();
+        var login_name = $(this).attr("data-id");
+        var arr = new Array(login_name);
+        MXChat.chat(arr);
+      });
+    });
   };
   document.addEventListener("deviceready", onDeviceReady, false);
-  $(document).ready(function(){
-    $("#commit").on("click",function(){
-      var current_user_login_name="";
-      var network_id="";
-      MXCommon.getCurrentUser(function(d){
-        current_user_login_name=d.login_name;
-        MXCommon.api({'method':'get','url':'/api/v1/users/current'},function(r){
-          network_id=eval('('+r+')').network_id;
-          MXContacts.selectUsers(function(a){
-            var  _login_names=new Array();
-            for(var i=0;i<a.data.length;i++){
-                _login_names.push(a.data[i].login_name);
-            }
-            _login_names.push(current_user_login_name);
-          $.post("/oa/push"
-            ,{title:$("#title").val(),
-              desc:"当前环节：办公室核稿<br>提交人：马青冈<br>提交时间：2015-1-25",
-              picurl:"",
-              url:"launchApp://oa",//"/oa/mobile/app/index.jsp",
-              login_names:_login_names,
-              network_id:network_id
-              }
-              ,function(data){
-                var r = eval("("+data+")");
-                if(r.success){
-                  alert("提交成功");
-                  window.history.back();
-                }else{
-                  //alert("提交失败");
-                }
-              });
-        },false);
-      });
-     });
-    });
-    $("a[data-id]").click(function(e){
-      e.preventDefault();
-      var login_name = $(e.currentTarget).attr("data-id");
-      var arr = new Array(login_name);
-      MXChat.chat(arr);
-    });
-  });
   $(function() {
       //初始化弹窗
       $('.btn-popup').magnificPopup({
@@ -199,49 +241,4 @@ footer{
       }
       document.getElementById("time").innerHTML = month + "-" + day + " " + hour + ":" + minute;
   });
-</script>
-<script>
-$(function() {
-  var id = '#my-offcanvas';
-  var $myOc = $(id);
-  $('.doc-oc-js').on('click', function() {
-    $myOc.offCanvas($(this).data('rel'));
-  });
-
-  $myOc.on('open.offcanvas.amui', function() {
-    console.log(id + ' 打开了。');
-  }).on('close.offcanvas.amui', function() {
-    console.log(id + ' 关闭了。');
-  });
-
-  $(".left_nav li").click(function(){
-      $(".left_nav li").removeClass('current');
-      $(this).addClass('current')
-  });
-
-  var $modal = $('#your-modal');
-  $('.search-btn').on('click', function(e) {
-    var $target = $(e.target);
-    if (($target).hasClass('js-modal-open')) {
-      $modal.modal();
-    } else if (($target).hasClass('js-modal-close')) {
-      $modal.modal('close');
-    } else {
-      $modal.modal('toggle');
-    }
-  });
-
-  $('#beginTime').date();
-  $('#endTime').date();
-
-  $('.search ul li').click(function(e) {
-      if (!$(this).find('i').hasClass('am-icon-check-circle')) {
-        $(this).find('i').removeClass('am-icon-check-circle-o');
-        $(this).find('i').addClass('am-icon-check-circle');
-      } else {
-        $(this).find('i').removeClass('am-icon-check-circle');
-        $(this).find('i').addClass('am-icon-check-circle-o');
-      }
-  });
-});
 </script>

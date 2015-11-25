@@ -1,0 +1,22 @@
+.am-tabs-default .am-tabs-nav{
+  border-radius: 5px;
+  background-color: #0e90d2;
+  border: 1px solid #9ac9ff;
+  overflow: hidden;
+}
+.am-tabs-default .am-tabs-nav a{
+  color: #fff;
+}
+.am-tabs-default .am-tabs-nav > .am-active a{
+  width: 100%;
+  background-color: #5aa7ff;
+  display: block;
+  overflow: hidden;
+  color: #fff;
+}
+.am-tabs-nav li{
+  border-right: 1px solid #9ac9ff;
+}
+.am-tabs-bd{
+  border: none;
+}
