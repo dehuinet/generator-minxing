@@ -13,7 +13,7 @@ npm install -g generator-minxing
 Then generate your new project:
 
 ```bash
-yo generator-minxing
+yo minxing
 ```
 
 ## Getting To Know Yeoman

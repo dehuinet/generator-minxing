@@ -136,7 +136,6 @@ footer{
     var values = [];
     $.getJSON("flavor.json", function(json_data) {
       var url = json_data.URL;
-      //var url1 = json_data.URL1;
       var ocuId = json_data.ocuId;
       var ocuSecret = json_data.ocuSecret;
 	    var appName = json_data.appName;
@@ -240,5 +239,5 @@ footer{
         minute = "0"+ minute;
       }
       document.getElementById("time").innerHTML = month + "-" + day + " " + hour + ":" + minute;
-  });
+  });  
 </script>

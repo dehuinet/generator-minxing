@@ -70,6 +70,12 @@
     margin: 0;
     padding: 0;
 }
+.am-btn-primary,.am-header-default{
+    background: #1a85ff !important;
+}
+.am-btn-primary{
+    border-color: #1a85ff !important;
+}
 .mx_header .am-header{
     z-index: 20;
 }
