@@ -2,7 +2,7 @@
 * @Author: lizhen
 * @Date:   2015-11-10 14:11:42
 * @Last Modified by:   lizhen
-* @Last Modified time: 2015-11-18 12:12:19
+* @Last Modified time: 2015-11-27 16:25:39
 */
 
 
@@ -20,18 +20,27 @@ $.extend({
         var className = 'load-right';
         var _arr = ['index'];   //创建返回数组
         var _jumpGo = false;
+        var _isReturn = true;
         //监听hash
         $(window).hashchange(function() {
             var hash = location.hash; //获取跳转页面
-            hash = hash.substring(1,hash.Length);
+            if(hash.length < 15){
+                hash = hash.substring(1,hash.Length);
+                _isReturn = true;
+            }else{
+                hash = hash.substring(1,16);
+                _isReturn = false;
+            }
+
             if(hash=='index'){
                 hash='index';
                 _arr=['index'];
             }else if(hash==''){
                 return false;
+            }else if(hash == "conversation_id"){ //判断公众号返回 conversation_id
+                hash =  "content";
             }else if(_jumpGo == false){
                 _arr.push(hash);
-                console.info("_jumpGo==",_jumpGo);
             }else{
                 _arr.length > 0 ? _arr.pop() : '';
             }
@@ -42,12 +51,20 @@ $.extend({
                 location.href='#'+hash;
             });
 
+
+
             var hashUrl = tempUrl + hash + '.html';
 
             if(_jumpGo == true){
                 className = 'load-left';
                 $.initMXPage.intoHtml(className);
-                $(".mx_page:eq(1)").load(hashUrl);
+                $(".mx_page:eq(1)").load(hashUrl,function(){
+                    if(_isReturn == false){
+                        $(".jumpgo").remove(); 
+                    }
+                    var _title_ = $("#my-offcanvas li.current a span").text();
+                    $(".am-header-title").text(_title_);
+                });
                 $(".mx_page:eq(1)").animate({"left":"0%"},300);
                 $(".mx_page:eq(0)").animate({"left":"100%"},300,function(){
                     $(".mx_page:eq(0)").remove();
@@ -56,7 +73,13 @@ $.extend({
             } else{
                 className = 'load-right';
                 $.initMXPage.intoHtml(className);
-                $(".mx_page:eq(1)").load(hashUrl);
+                $(".mx_page:eq(1)").load(hashUrl,function(){
+                    if(_isReturn == false){
+                        $(".jumpgo").remove(); 
+                    }
+                    var _title_ = $("#my-offcanvas li.current a span").text();
+                    $(".am-header-title").text(_title_);
+                });
                 $(".mx_page:eq(1)").animate({"left":"0%"},300);
                 $(".mx_page:eq(0)").animate({"left":"-100%"},300,function(){
                     $(".mx_page:eq(0)").remove();

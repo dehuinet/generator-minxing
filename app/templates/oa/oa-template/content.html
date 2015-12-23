@@ -171,10 +171,11 @@ var onDeviceReady = function onDeviceReady() {
 
                     $.sendOcuMessage(accessToken, ocuId, ocuSecret, _login_names, [{
                         title: $("#title").val(),
-                        desc: "当前环节：办公室核稿<br>提交人：马青冈<br>提交时间：2015-1-25",
-                        picurl: "",
+                        description: "当前环节：办公室核稿<br>提交人：马青冈<br>提交时间：2015-1-25",
+                        pic_url: "",
                         url: "launchApp://" + appName,
-                        app_url: "launchApp://" + appName
+                        app_url: "launchApp://" + appName,
+                        action_label: "办理"
                     }], function() {
                         alert("提交成功");
                         window.location.href = "#index"

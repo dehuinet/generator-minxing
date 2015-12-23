@@ -9,7 +9,7 @@
 (function($) {
     window.MXMock = window.MXMock || {
         MXCommon: {
-            serverUrl: "http://127.0.0.1:3000",
+            serverUrl: "http://test1.dehuinet.com:8031",
             SSOToken: "3ac99170d29a2c36c5ed5c63130c863a",
             currentUser: {
                 id: 3,
