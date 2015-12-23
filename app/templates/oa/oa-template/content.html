@@ -140,7 +140,7 @@ var onDeviceReady = function onDeviceReady() {
         var ocuId = json_data.ocuId;
         var ocuSecret = json_data.ocuSecret;
         var appName = json_data.appName;
-        var accessToken = json_data.accessToken;
+        var accessToken = json_data.appAccessToken;
         MXCommon.getServerUrl(function(serverUrl) {
             $.ajax({
                 url: serverUrl + "/api/v1/users?limit=5",

@@ -26,7 +26,8 @@
                             article_count: articles.length,
                             articles: articles
                         })
-                    }
+                    },
+                    success:success
                 })
             })
         }
