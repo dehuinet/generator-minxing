@@ -8,6 +8,7 @@ var istanbul = require('gulp-istanbul');
 var nsp = require('gulp-nsp');
 var plumber = require('gulp-plumber');
 var coveralls = require('gulp-coveralls');
+var   connect = require('gulp-connect');
 
 gulp.task('static', function () {
   return gulp.src('**/*.js')
@@ -52,6 +53,25 @@ gulp.task('coveralls', ['test'], function () {
   return gulp.src(path.join(__dirname, 'coverage/lcov.info'))
     .pipe(coveralls());
 });
+
+
+gulp.task('serve',['watch'], function() {
+  connect.server({
+    livereload: true,
+    root: ['./app/templates']
+  });
+});
+
+gulp.task('html', function () {
+  gulp.src('./app/templates/**/*.html')
+    .pipe(connect.reload());
+});
+
+gulp.task('watch', function () {
+  gulp.watch(['./app/templates/**/*.html'], ['html']);
+});
+
+
 
 gulp.task('prepublish', ['nsp']);
 gulp.task('default', ['static', 'test', 'coveralls']);
