@@ -162,6 +162,13 @@ module.exports = generators.Base.extend({
       );
     },
 
+    publish: function () {
+      this.fs.copy(
+        this.templatePath('publish.json'),
+        this.destinationPath('publish.json')
+      );
+    },
+
     libs: function () {
       this.fs.copy(
         this.templatePath('libs'),

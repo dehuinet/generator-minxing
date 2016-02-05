@@ -8,7 +8,11 @@ import {stream as wiredep} from 'wiredep';
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
+var Q = require('q');
+var request = require('request');
 var zip = require('gulp-zip');
+var fs = require('fs')
+var publishConfig = require('./publish.json');
 
 //将www下面的文件自动打包成.zip压缩包
 gulp.task('zip', () => {
@@ -17,6 +21,39 @@ gulp.task('zip', () => {
       .pipe(gulp.dest('dist'));
 });
 
+//发布(将dist文件夹下面的www.zip进行上传到服务器)
+gulp.task('publish',function() {
+  var delay = Q.defer();
+  //获取配置文件的一些参数
+  var app_id = publishConfig.app_id;
+  var server_url = publishConfig.url;
+  var access_token = publishConfig.access_token;
+  var description = publishConfig.description;
+  var mandatory_upgrade = publishConfig.mandatory_upgrade;
+  var formData = {
+    app_version_file: fs.createReadStream('dist/www.zip'),
+    app_id: app_id,
+    description: description,
+    mandatory_upgrade: mandatory_upgrade
+  };
+  var options = {
+    url: server_url + '/client_upload_app',
+    headers: {
+      'AUTHORIZATION': 'bearer ' + access_token
+    },
+    formData: formData
+  };
+  request.post(options , function(err, r, body) {
+    if (!err && r && r.statusCode === 200) {
+      console.log(JSON.parse(body).message)
+      delay.resolve(body);
+    } else {
+      console.log(JSON.parse(body).error)
+      delay.reject();
+    }
+  });
+  return delay.promise;
+});
 gulp.task('styles', () => {
   return gulp.src('app/www/styles/*.css')
     .pipe($.sourcemaps.init())
