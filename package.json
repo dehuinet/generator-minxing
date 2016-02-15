@@ -1,6 +1,6 @@
 {
   "name": "generator-minxing",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "generator for creating minxing web app.",
   "repository": "yeoman/generator-minxing",
   "homepage": "",
