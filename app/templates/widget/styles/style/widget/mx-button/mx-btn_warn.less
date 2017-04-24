@@ -1,0 +1,12 @@
+@import "../../base/fn";
+
+.mx-btn_warn {
+    background-color: @mxBtnWarnBg;
+    &:not(.mx-btn_disabled):visited {
+        color: @mxBtnFontColor;
+    }
+    &:not(.mx-btn_disabled):active {
+        color: @mxBtnActiveFontColor;
+        background-color: @mxBtnWarnActiveBg;
+    }
+}

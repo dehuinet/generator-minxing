@@ -1,0 +1,30 @@
+@import "../../../base/fn";
+
+.mx-cells_checkbox {
+    .mx-cell__hd {
+        padding-right: @mxCellInnerGapH;
+    }
+    .mx-icon-checked {
+        &:before {
+            content: '\EA01';
+            color: #C9C9C9;
+            font-size: 23px;
+            display: block;
+        }
+    }
+}
+
+// method2 accessbility
+.mx-check {
+    // checkbox
+    .mx-cells_checkbox & {
+        &:checked {
+            & + .mx-icon-checked {
+                &:before {
+                    content: '\EA06';
+                    color: #09BB07;
+                }
+            }
+        }
+    }
+}

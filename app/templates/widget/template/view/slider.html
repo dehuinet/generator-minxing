@@ -1,0 +1,79 @@
+<div class="page">
+    <div class="page__hd">
+        <h1 class="page__title">Slider</h1>
+        <p class="page__desc">滑块</p>
+    </div>
+    <div class="page__bd page__bd_spacing">
+        <div class="mx-slider">
+            <div class="mx-slider__inner">
+                <div style="width: 0;" class="mx-slider__track"></div>
+                <div style="left: 0;" class="mx-slider__handler"></div>
+            </div>
+        </div>
+        <br>
+        <div class="mx-slider-box">
+            <div class="mx-slider">
+                <div id="sliderInner" class="mx-slider__inner">
+                    <div id="sliderTrack" style="width: 50%;" class="mx-slider__track"></div>
+                    <div id="sliderHandler" style="left: 50%;" class="mx-slider__handler"></div>
+                </div>
+            </div>
+            <div id="sliderValue" class="mx-slider-box__value">50</div>
+        </div>
+    </div>
+    <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+    <pre class="pre">
+        &lt;div class="page__bd page__bd_spacing"&gt;
+            &lt;div class="mx-slider"&gt;
+                &lt;div class="mx-slider__inner"&gt;
+                    &lt;div style="width: 0;" class="mx-slider__track"&gt;&lt;/div&gt;
+                    &lt;div style="left: 0;" class="mx-slider__handler"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;br&gt;
+            &lt;div class="mx-slider-box"&gt;
+                &lt;div class="mx-slider"&gt;
+                    &lt;div id="sliderInner" class="mx-slider__inner"&gt;
+                        &lt;div id="sliderTrack" style="width: 50%;" class="mx-slider__track"&gt;&lt;/div&gt;
+                        &lt;div id="sliderHandler" style="left: 50%;" class="mx-slider__handler"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div id="sliderValue" class="mx-slider-box__value"&gt;50&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </pre>
+    <div class="page__ft">
+        <a href="javascript:home()"><img src="./images/icon_footer_link.png" /></a>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        var $sliderTrack = $('#sliderTrack'),
+            $sliderHandler = $('#sliderHandler'),
+            $sliderValue = $('#sliderValue');
+
+        var totalLen = $('#sliderInner').width(),
+            startLeft = 0,
+            startX = 0;
+
+        $sliderHandler
+            .on('touchstart', function (e) {
+                startLeft = parseInt($sliderHandler.css('left')) * totalLen / 100;
+                startX = e.changedTouches[0].clientX;
+            })
+            .on('touchmove', function(e){
+                var dist = startLeft + e.changedTouches[0].clientX - startX,
+                    percent;
+                dist = dist < 0 ? 0 : dist > totalLen ? totalLen : dist;
+                percent =  parseInt(dist / totalLen * 100);
+                $sliderTrack.css('width', percent + '%');
+                $sliderHandler.css('left', percent + '%');
+                $sliderValue.text(percent);
+
+                e.preventDefault();
+            })
+        ;
+    });
+</script>

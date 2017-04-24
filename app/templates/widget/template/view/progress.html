@@ -1,0 +1,123 @@
+<div class="page">
+    <div class="page__hd">
+        <h1 class="page__title">Progress</h1>
+        <p class="page__desc">进度条</p>
+    </div>
+    <div class="page__bd page__bd_spacing">
+        <div class="mx-progress">
+            <div class="mx-progress__bar">
+                <div class="mx-progress__inner-bar js_progress" style="width: 0%;"></div>
+            </div>
+            <a href="javascript:;" class="mx-progress__opr">
+                <i class="mx-icon-cancel"></i>
+            </a>
+        </div>
+        <br>
+        <div class="mx-progress">
+            <div class="mx-progress__bar">
+                <div class="mx-progress__inner-bar js_progress" style="width: 50%;"></div>
+            </div>
+            <a href="javascript:;" class="mx-progress__opr">
+                <i class="mx-icon-cancel"></i>
+            </a>
+        </div>
+        <br>
+        <div class="mx-progress">
+            <div class="mx-progress__bar">
+                <div class="mx-progress__inner-bar js_progress" style="width: 80%;"></div>
+            </div>
+            <a href="javascript:;" class="mx-progress__opr">
+                <i class="mx-icon-cancel"></i>
+            </a>
+        </div>
+        <div class="mx-btn-area">
+            <a href="javascript:;" class="mx-btn mx-btn_primary" id="btnUpload">上传</a>
+        </div>
+    </div>
+    <div class="mx-parent">
+            <button class="mx-copy mx-copy-t6">copy</button>
+        </div>
+    <pre class="pre">
+        &lt;div class="page__bd page__bd_spacing"&gt;
+            &lt;div class="mx-progress"&gt;
+                &lt;div class="mx-progress__bar"&gt;
+                    &lt;div class="mx-progress__inner-bar js_progress" style="width: 0%;"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;a href="javascript:;" class="mx-progress__opr"&gt;
+                    &lt;i class="mx-icon-cancel"&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;br&gt;
+            &lt;div class="mx-progress"&gt;
+                &lt;div class="mx-progress__bar"&gt;
+                    &lt;div class="mx-progress__inner-bar js_progress" style="width: 50%;"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;a href="javascript:;" class="mx-progress__opr"&gt;
+                    &lt;i class="mx-icon-cancel"&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;br&gt;
+            &lt;div class="mx-progress"&gt;
+                &lt;div class="mx-progress__bar"&gt;
+                    &lt;div class="mx-progress__inner-bar js_progress" style="width: 80%;"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;a href="javascript:;" class="mx-progress__opr"&gt;
+                    &lt;i class="mx-icon-cancel"&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="mx-btn-area"&gt;
+                &lt;a href="javascript:;" class="mx-btn mx-btn_primary" id="btnUpload"&gt;上传&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;script&gt;
+            $(function(){
+                var $progress = $('.js_progress'),
+                    $btnUpload = $('#btnUpload');
+                var progress = 0;
+                function next() {
+                    if(progress > 100){
+                        progress = 0;
+                        $btnUpload.removeClass('mx-btn_disabled');
+                        return;
+                    }
+                    $progress.css({width: progress + '%'});
+                    progress = ++progress;
+                    setTimeout(next, 20);
+                }
+                $btnUpload.on('click', function(){
+                    if ($btnUpload.hasClass('mx-btn_disabled')) return;
+                    $btnUpload.addClass('mx-btn_disabled');
+                    next();
+                });
+            });
+        &lt;/script&gt;
+    </pre>
+    <div class="page__ft">
+        <a href="javascript:home()"><img src="./images/icon_footer_link.png" /></a>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        var $progress = $('.js_progress'),
+            $btnUpload = $('#btnUpload');
+        var progress = 0;
+
+        function next() {
+            if(progress > 100){
+                progress = 0;
+                $btnUpload.removeClass('mx-btn_disabled');
+                return;
+            }
+            $progress.css({width: progress + '%'});
+            progress = ++progress;
+            setTimeout(next, 20);
+        }
+
+        $btnUpload.on('click', function(){
+            if ($btnUpload.hasClass('mx-btn_disabled')) return;
+
+            $btnUpload.addClass('mx-btn_disabled');
+            next();
+        });
+    });
+</script>

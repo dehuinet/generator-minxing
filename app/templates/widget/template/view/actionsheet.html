@@ -1,0 +1,144 @@
+<div class="page">
+    <div class="page__hd">
+        <h1 class="page__title">ActionSheet</h1>
+        <p class="page__desc">弹出式菜单</p>
+    </div>
+    <div class="page__bd page__bd_spacing">
+        <a href="javascript:;" class="mx-btn mx-btn_default" id="showIOSActionSheet">iOS ActionSheet</a>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre>      &lt;a href="javascript:;" class="mx-btn mx-btn_default" id="showIOSActionSheet"&gt;iOS ActionSheet&lt;/a&gt;
+            &lt;!--BEGIN actionSheet--&gt;
+            &lt;div&gt;
+                &lt;div class="mx-mask" id="iosMask" style="display: none"&gt;&lt;/div&gt;
+                &lt;div class="mx-actionsheet" id="iosActionsheet"&gt;
+                    &lt;div class="mx-actionsheet__title"&gt;
+                        &lt;p class="mx-actionsheet__title-text"&gt;这是一个标题，可以为一行或者两行。&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-actionsheet__menu"&gt;
+                        &lt;div class="mx-actionsheet__cell"&gt;示例菜单&lt;/div&gt;
+                        &lt;div class="mx-actionsheet__cell"&gt;示例菜单&lt;/div&gt;
+                        &lt;div class="mx-actionsheet__cell"&gt;示例菜单&lt;/div&gt;
+                        &lt;div class="mx-actionsheet__cell"&gt;示例菜单&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-actionsheet__action"&gt;
+                        &lt;div class="mx-actionsheet__cell" id="iosActionsheetCancel"&gt;取消&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;script&gt;
+                $(function(){
+                    var $iosActionsheet = $('#iosActionsheet');
+                    var $iosMask = $('#iosMask');
+
+                    function hideActionSheet() {
+                        $iosActionsheet.removeClass('mx-actionsheet_toggle');
+                        $iosMask.fadeOut(200);
+                    }
+
+                    $iosMask.on('click', hideActionSheet);
+                    $('#iosActionsheetCancel').on('click', hideActionSheet);
+                    $("#showIOSActionSheet").on("click", function(){
+                        $iosActionsheet.addClass('mx-actionsheet_toggle');
+                        $iosMask.fadeIn(200);
+                    });
+                });
+            &lt;/script&gt;
+        </pre>
+        <a href="javascript:;" class="mx-btn mx-btn_default" id="showAndroidActionSheet">Android ActionSheet</a>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre>      &lt;a href="javascript:;" class="mx-btn mx-btn_default" id="showAndroidActionSheet"&gt;Android ActionSheet&lt;/a&gt;
+            &lt;div class="mx-skin_android" id="androidActionsheet" style="display: none"&gt;
+                &lt;div class="mx-mask"&gt;&lt;/div&gt;
+                &lt;div class="mx-actionsheet"&gt;
+                    &lt;div class="mx-actionsheet__menu"&gt;
+                        &lt;div class="mx-actionsheet__cell"&gt;示例菜单&lt;/div&gt;
+                        &lt;div class="mx-actionsheet__cell"&gt;示例菜单&lt;/div&gt;
+                        &lt;div class="mx-actionsheet__cell"&gt;示例菜单&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;script&gt;
+                 // android
+                $(function(){
+                    var $androidActionSheet = $('#androidActionsheet');
+                    var $androidMask = $androidActionSheet.find('.mx-mask');
+                    $("#showAndroidActionSheet").on('click', function(){
+                        $androidActionSheet.fadeIn(200);
+                        $androidMask.on('click',function () {
+                            $androidActionSheet.fadeOut(200);
+                        });
+                    });
+                });
+            &lt;/script&gt;
+        </pre>
+    </div> 
+    <!--BEGIN actionSheet-->
+    <div>
+        <div class="mx-mask" id="iosMask" style="display: none"></div>
+        <div class="mx-actionsheet" id="iosActionsheet">
+            <div class="mx-actionsheet__title">
+                <p class="mx-actionsheet__title-text">这是一个标题，可以为一行或者两行。</p>
+            </div>
+            <div class="mx-actionsheet__menu">
+                <div class="mx-actionsheet__cell">示例菜单</div>
+                <div class="mx-actionsheet__cell">示例菜单</div>
+                <div class="mx-actionsheet__cell">示例菜单</div>
+                <div class="mx-actionsheet__cell">示例菜单</div>
+            </div>
+            <div class="mx-actionsheet__action">
+                <div class="mx-actionsheet__cell" id="iosActionsheetCancel">取消</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mx-skin_android" id="androidActionsheet" style="display: none">
+        <div class="mx-mask"></div>
+        <div class="mx-actionsheet">
+            <div class="mx-actionsheet__menu">
+                <div class="mx-actionsheet__cell">示例菜单</div>
+                <div class="mx-actionsheet__cell">示例菜单</div>
+                <div class="mx-actionsheet__cell">示例菜单</div>
+            </div>
+        </div>
+    </div>
+    <!--END actionSheet-->
+    <div class="page__ft">
+        <a href="javascript:home()"><img src="./images/icon_footer_link.png" /></a>
+    </div>
+</div>
+<script type="text/javascript">
+    // ios
+    $(function(){
+        var $iosActionsheet = $('#iosActionsheet');
+        var $iosMask = $('#iosMask');
+
+        function hideActionSheet() {
+            $iosActionsheet.removeClass('mx-actionsheet_toggle');
+            $iosMask.fadeOut(200);
+        }
+
+        $iosMask.on('click', hideActionSheet);
+        $('#iosActionsheetCancel').on('click', hideActionSheet);
+        $("#showIOSActionSheet").on("click", function(){
+            $iosActionsheet.addClass('mx-actionsheet_toggle');
+            $iosMask.fadeIn(200);
+        });
+    });
+
+    // android
+    $(function(){
+        var $androidActionSheet = $('#androidActionsheet');
+        var $androidMask = $androidActionSheet.find('.mx-mask');
+
+        $("#showAndroidActionSheet").on('click', function(){
+            $androidActionSheet.fadeIn(200);
+            $androidMask.on('click',function () {
+                $androidActionSheet.fadeOut(200);
+            });
+        });
+    });
+</script>

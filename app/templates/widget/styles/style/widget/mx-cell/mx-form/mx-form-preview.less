@@ -1,0 +1,90 @@
+@import "../../../base/fn";
+
+.mx-form-preview{
+    position: relative;
+    background-color: #FFFFFF;
+    &:before{
+        .setTopLine(@mxCellBorderColor);
+    }
+    &:after{
+        .setBottomLine(@mxCellBorderColor);
+    }
+}
+.mx-form-preview__hd{
+    position: relative;
+    padding: @mxCellGapV @mxCellGapH;
+    text-align: right;
+    line-height: 2.5em;
+    &:after{
+        .setBottomLine(@mxCellBorderColor);
+        left: @mxCellGapH;
+    }
+    .mx-form-preview__value{
+        font-style: normal;
+        font-size: 1.6em;
+    }
+}
+.mx-form-preview__bd{
+    padding: @mxCellGapV @mxCellGapH;
+    font-size: .9em;
+    text-align: right;
+    color: @mxTextColorGray;
+    line-height: 2;
+}
+.mx-form-preview__ft{
+    position: relative;
+    line-height: 50px;
+    display: flex;
+    &:before {
+        .setTopLine(@mxDialogLineColor);
+    }
+}
+.mx-form-preview__item{
+    overflow: hidden;
+}
+.mx-form-preview__label{
+    float: left;
+    margin-right: 1em;
+    min-width: 4em;
+    color: @mxTextColorGray;
+    text-align: justify;
+    text-align-last: justify;
+}
+.mx-form-preview__value{
+    display: block;
+    overflow: hidden;
+    word-break:normal;
+    word-wrap: break-word;
+}
+.mx-form-preview__btn {
+    position: relative;
+    display: block;
+    flex: 1;
+    color: @mxDialogLinkColor;
+    text-align: center;
+    .setTapColor();
+    button&{
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        line-height: inherit;
+        font-size: inherit;
+    }
+    &:active {
+        background-color: @mxDialogLinkActiveBc;
+    }
+    &:after {
+        .setLeftLine(@mxDialogLineColor);
+    }
+    &:first-child {
+        &:after {
+            display: none;
+        }
+    }
+}
+.mx-form-preview__btn_default {
+    color: @mxTextColorGray;
+}
+.mx-form-preview__btn_primary {
+    color: #0BB20C;
+}

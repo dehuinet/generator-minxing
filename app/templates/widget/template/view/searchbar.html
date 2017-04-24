@@ -1,0 +1,178 @@
+<div class="page">
+    <div class="page__hd">
+        <h1 class="page__title">SearchBar</h1>
+        <p class="page__desc">搜索栏</p>
+    </div>
+    <div class="page__bd">
+        <!--<a href="javascript:;" class="mx-btn mx-btn_primary">点击展现searchBar</a>-->
+        <div class="mx-search-bar" id="searchBar">
+            <form class="mx-search-bar__form">
+                <div class="mx-search-bar__box">
+                    <i class="mx-icon-search"></i>
+                    <input type="search" class="mx-search-bar__input" id="searchInput" placeholder="搜索" required/>
+                    <a href="javascript:" class="mx-icon-clear" id="searchClear"></a>
+                </div>
+                <label class="mx-search-bar__label" id="searchText">
+                    <i class="mx-icon-search"></i>
+                    <span>搜索</span>
+                </label>
+            </form>
+            <a href="javascript:" class="mx-search-bar__cancel-btn" id="searchCancel">取消</a>
+        </div>
+        <div class="mx-cells searchbar-result" id="searchResult">
+            <div class="mx-cell mx-cell_access">
+                <div class="mx-cell__bd mx-cell_primary">
+                    <p>实时搜索文本</p>
+                </div>
+            </div>
+            <div class="mx-cell mx-cell_access">
+                <div class="mx-cell__bd mx-cell_primary">
+                    <p>实时搜索文本</p>
+                </div>
+            </div>
+            <div class="mx-cell mx-cell_access">
+                <div class="mx-cell__bd mx-cell_primary">
+                    <p>实时搜索文本</p>
+                </div>
+            </div>
+            <div class="mx-cell mx-cell_access">
+                <div class="mx-cell__bd mx-cell_primary">
+                    <p>实时搜索文本</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+    <pre class="pre">
+        &lt;div class="page__bd"&gt;
+            &lt;div class="mx-search-bar" id="searchBar"&gt;
+                &lt;form class="mx-search-bar__form"&gt;
+                    &lt;div class="mx-search-bar__box"&gt;
+                        &lt;i class="mx-icon-search"&gt;&lt;/i&gt;
+                        &lt;input type="search" class="mx-search-bar__input" id="searchInput" placeholder="搜索" required/&gt;
+                        &lt;a href="javascript:" class="mx-icon-clear" id="searchClear"&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;label class="mx-search-bar__label" id="searchText"&gt;
+                        &lt;i class="mx-icon-search"&gt;&lt;/i&gt;
+                        &lt;span&gt;搜索&lt;/span&gt;
+                    &lt;/label&gt;
+                &lt;/form&gt;
+                &lt;a href="javascript:" class="mx-search-bar__cancel-btn" id="searchCancel"&gt;取消&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="mx-cells searchbar-result" id="searchResult"&gt;
+                &lt;div class="mx-cell mx-cell_access"&gt;
+                    &lt;div class="mx-cell__bd mx-cell_primary"&gt;
+                        &lt;p&gt;实时搜索文本&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-cell mx-cell_access"&gt;
+                    &lt;div class="mx-cell__bd mx-cell_primary"&gt;
+                        &lt;p&gt;实时搜索文本&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-cell mx-cell_access"&gt;
+                    &lt;div class="mx-cell__bd mx-cell_primary"&gt;
+                        &lt;p&gt;实时搜索文本&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-cell mx-cell_access"&gt;
+                    &lt;div class="mx-cell__bd mx-cell_primary"&gt;
+                        &lt;p&gt;实时搜索文本&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;script&gt;
+            $(function(){
+                var $searchBar = $('#searchBar'),
+                    $searchResult = $('#searchResult'),
+                    $searchText = $('#searchText'),
+                    $searchInput = $('#searchInput'),
+                    $searchClear = $('#searchClear'),
+                    $searchCancel = $('#searchCancel');
+                function hideSearchResult(){
+                    $searchResult.hide();
+                    $searchInput.val('');
+                }
+                function cancelSearch(){
+                    hideSearchResult();
+                    $searchBar.removeClass('mx-search-bar_focusing');
+                    $searchText.show();
+                }
+                $searchText.on('click', function(){
+                    $searchBar.addClass('mx-search-bar_focusing');
+                    $searchInput.focus();
+                });
+                $searchInput
+                    .on('blur', function () {
+                        if(!this.value.length) cancelSearch();
+                    })
+                    .on('input', function(){
+                        if(this.value.length) {
+                            $searchResult.show();
+                        } else {
+                            $searchResult.hide();
+                        }
+                    });
+                $searchClear.on('click', function(){
+                    hideSearchResult();
+                    $searchInput.focus();
+                });
+                $searchCancel.on('click', function(){
+                    cancelSearch();
+                    $searchInput.blur();
+                });
+            });
+        &lt;/script&gt;
+    </pre>
+    <div class="page__ft">
+        <a href="javascript:home()"><img src="./images/icon_footer_link.png" /></a>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        var $searchBar = $('#searchBar'),
+            $searchResult = $('#searchResult'),
+            $searchText = $('#searchText'),
+            $searchInput = $('#searchInput'),
+            $searchClear = $('#searchClear'),
+            $searchCancel = $('#searchCancel');
+
+        function hideSearchResult(){
+            $searchResult.hide();
+            $searchInput.val('');
+        }
+        function cancelSearch(){
+            hideSearchResult();
+            $searchBar.removeClass('mx-search-bar_focusing');
+            $searchText.show();
+        }
+
+        $searchText.on('click', function(){
+            $searchBar.addClass('mx-search-bar_focusing');
+            $searchInput.focus();
+        });
+        $searchInput
+            .on('blur', function () {
+                if(!this.value.length) cancelSearch();
+            })
+            .on('input', function(){
+                if(this.value.length) {
+                    $searchResult.show();
+                } else {
+                    $searchResult.hide();
+                }
+            })
+        ;
+        $searchClear.on('click', function(){
+            hideSearchResult();
+            $searchInput.focus();
+        });
+        $searchCancel.on('click', function(){
+            cancelSearch();
+            $searchInput.blur();
+        });
+    });
+</script>

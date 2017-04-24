@@ -1,48 +1,208 @@
-<link rel="stylesheet" href="styles/view/layout.css" />
+<div class="page">
+    <div class="page__hd">
+        <h1 class="page__title">List</h1>
+        <p class="page__desc">列表</p>
+    </div>
+    <div class="page__bd">
+        <div class="mx-cells__title">带说明的列表项</div>
+        <div class="mx-cells">
+            <div class="mx-cell">
+                <div class="mx-cell__bd">
+                    <p>标题文字</p>
+                </div>
+                <div class="mx-cell__ft">说明文字</div>
+            </div>
+            <div class="mx-cell mx-cell_swiped">
+                <div class="mx-cell__bd" >
+                    <div class="mx-cell">
+                        <div class="mx-cell__bd">
+                            <p>标题文字</p>
+                        </div>
+                        <div class="mx-cell__ft">说明文字</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre class="pre">
+            &lt;div class="mx-cells__title"&gt;带说明的列表项&lt;/div&gt;
+            &lt;div class="mx-cells"&gt;
+                &lt;div class="mx-cell"&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;p&gt;标题文字&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__ft"&gt;说明文字&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-cell mx-cell_swiped"&gt;
+                    &lt;div class="mx-cell__bd" &gt;
+                        &lt;div class="mx-cell"&gt;
+                            &lt;div class="mx-cell__bd"&gt;
+                                &lt;p&gt;标题文字&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="mx-cell__ft"&gt;说明文字&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </pre>
+        <div class="mx-cells__title">带图标、说明的列表项</div>
+        <div class="mx-cells">
+            <div class="mx-cell">
+                <div class="mx-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block"></div>
+                <div class="mx-cell__bd">
+                    <p>标题文字</p>
+                </div>
+                <div class="mx-cell__ft">说明文字</div>
+            </div>
+            <div class="mx-cell">
+                <div class="mx-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block"></div>
+                <div class="mx-cell__bd">
+                    <p>标题文字</p>
+                </div>
+                <div class="mx-cell__ft">说明文字</div>
+            </div>
+        </div>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre class="pre">
+            &lt;div class="mx-cells__title"&gt;带图标、说明的列表项&lt;/div&gt;
+            &lt;div class="mx-cells"&gt;
+                &lt;div class="mx-cell"&gt;
+                    &lt;div class="mx-cell__hd"&gt;&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block"&gt;&lt;/div&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;p&gt;标题文字&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__ft"&gt;说明文字&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-cell"&gt;
+                    &lt;div class="mx-cell__hd"&gt;&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block"&gt;&lt;/div&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;p&gt;标题文字&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__ft"&gt;说明文字&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </pre>
+        <div class="mx-cells__title">带跳转的列表项</div>
+        <div class="mx-cells">
+            <a class="mx-cell mx-cell_access" href="javascript:;">
+                <div class="mx-cell__bd">
+                    <p>cell standard</p>
+                </div>
+                <div class="mx-cell__ft">
+                </div>
+            </a>
+            <a class="mx-cell mx-cell_access" href="javascript:;">
+                <div class="mx-cell__bd">
+                    <p>cell standard</p>
+                </div>
+                <div class="mx-cell__ft">
+                </div>
+            </a>
+        </div>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre class="pre">
+            &lt;div class="mx-cells__title"&gt;带跳转的列表项&lt;/div&gt;
+            &lt;div class="mx-cells"&gt;
+                &lt;a class="mx-cell mx-cell_access" href="javascript:;"&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;p&gt;cell standard&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__ft"&gt;
+                    &lt;/div&gt;
+                &lt;/a&gt;
+                &lt;a class="mx-cell mx-cell_access" href="javascript:;"&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;p&gt;cell standard&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__ft"&gt;
+                    &lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        </pre>
+        <div class="mx-cells__title">带说明、跳转的列表项</div>
+        <div class="mx-cells">
+            <a class="mx-cell mx-cell_access" href="javascript:;">
+                <div class="mx-cell__bd">
+                    <p>cell standard</p>
+                </div>
+                <div class="mx-cell__ft">说明文字</div>
+            </a>
+            <a class="mx-cell mx-cell_access" href="javascript:;">
+                <div class="mx-cell__bd">
+                    <p>cell standard</p>
+                </div>
+                <div class="mx-cell__ft">说明文字</div>
+            </a>
+        </div>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre class="pre">
+            &lt;div class="mx-cells__title"&gt;带说明、跳转的列表项&lt;/div&gt;
+            &lt;div class="mx-cells"&gt;
+                &lt;a class="mx-cell mx-cell_access" href="javascript:;"&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;p&gt;cell standard&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__ft"&gt;说明文字&lt;/div&gt;
+                &lt;/a&gt;
+                &lt;a class="mx-cell mx-cell_access" href="javascript:;"&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;p&gt;cell standard&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__ft"&gt;说明文字&lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        </pre>
+        <div class="mx-cells__title">带图标、说明、跳转的列表项</div>
+        <div class="mx-cells">
 
-<div class="am-list-news-bd doc-content widget-list list">
-  <ul class="am-list m-widget-list">
-    <li class="am-g am-list-item-desce">
-        <a href="##" class="am-list-item-hd p_1_rem"> 
-          <i class="am-icon-building"></i>
-          短信平台开发总结报告
-          <div class="am-list-item-text p_1_rem">
-          <ul>
-            <li>发件人：李刚11</li>
-            <li>当前环节：主办部门内部审核</li>
-            <li>来文日期：09-12 15:46</li>
-          </ul>
-          </div>
-          <i class="am-icon-chevron-right nav_list_check"></i>
-        </a>
-    </li>
-    <li class="am-g am-list-item-desce">
-        <a href="##" class="am-list-item-hd p_1_rem"> 
-          <i class="am-icon-building"></i>
-          短信平台开发总结报告
-          <div class="am-list-item-text p_1_rem">
-          <ul>
-            <li>发件人：李刚11</li>
-            <li>当前环节：主办部门内部审核</li>
-            <li>来文日期：09-12 15:46</li>
-          </ul>
-          </div>
-          <i class="am-icon-chevron-right nav_list_check"></i>
-        </a>
-    </li>
-    <li class="am-g am-list-item-desce">
-        <a href="##" class="am-list-item-hd p_1_rem"> 
-          <i class="am-icon-building"></i>
-          短信平台开发总结报告
-          <div class="am-list-item-text p_1_rem">
-          <ul>
-            <li>发件人：李刚11</li>
-            <li>当前环节：主办部门内部审核</li>
-            <li>来文日期：09-12 15:46</li>
-          </ul>
-          </div>
-          <i class="am-icon-chevron-right nav_list_check"></i>
-        </a>
-    </li>
-  </ul>
+            <a class="mx-cell mx-cell_access" href="javascript:;">
+                <div class="mx-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block"></div>
+                <div class="mx-cell__bd">
+                    <p>cell standard</p>
+                </div>
+                <div class="mx-cell__ft">说明文字</div>
+            </a>
+            <a class="mx-cell mx-cell_access" href="javascript:;">
+                <div class="mx-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block"></div>
+                <div class="mx-cell__bd">
+                    <p>cell standard</p>
+                </div>
+                <div class="mx-cell__ft">说明文字</div>
+            </a>
+        </div>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre class="pre">
+            &lt;div class="mx-cells__title"&gt;带图标、说明、跳转的列表项&lt;/div&gt;
+            &lt;div class="mx-cells"&gt;
+
+                &lt;a class="mx-cell mx-cell_access" href="javascript:;"&gt;
+                    &lt;div class="mx-cell__hd"&gt;&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block"&gt;&lt;/div&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;p&gt;cell standard&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__ft"&gt;说明文字&lt;/div&gt;
+                &lt;/a&gt;
+                &lt;a class="mx-cell mx-cell_access" href="javascript:;"&gt;
+                    &lt;div class="mx-cell__hd"&gt;&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block"&gt;&lt;/div&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;p&gt;cell standard&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__ft"&gt;说明文字&lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        </pre>
+    </div>
+    <div class="page__ft">
+        <a href="javascript:home()"><img src="./images/icon_footer_link.png" /></a>
+    </div>
 </div>

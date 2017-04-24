@@ -1,8 +1,8 @@
 /*
 * @Author: lizhen
 * @Date:   2015-11-10 14:11:42
-* @Last Modified by:   lizhen
-* @Last Modified time: 2015-11-18 12:12:19
+* @Last Modified by:   anchen
+* @Last Modified time: 2016-10-12 11:46:46
 */
 
 
@@ -24,15 +24,13 @@ $.extend({
         //监听hash
         $(window).hashchange(function() {
             var hash = location.hash; //获取跳转页面
-            console.log(hash.length);
             if(hash.length < 15){
                 hash = hash.substring(1,hash.Length);
                 _isReturn = true;
             }else{
-                hash = hash.substring(1,16);
+                hash = hash.substring(2,17);
                 _isReturn = false;
             }
-
             if(hash=='index'){
                 hash='index';
                 _arr=['index'];

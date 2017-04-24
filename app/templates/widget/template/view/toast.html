@@ -1,0 +1,112 @@
+<div class="page">
+    <div class="page__hd">
+        <h1 class="page__title">Toast</h1>
+        <p class="page__desc">弹出式提示</p>
+    </div>
+    <div class="page__bd page__bd_spacing">
+        <a href="javascript:;" class="mx-btn mx-btn_default" id="showToast">成功提示</a>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre>
+            &lt;a href="javascript:;" class="mx-btn mx-btn_default" id="showToast"&gt;成功提示&lt;/a&gt;
+             &lt;div id="toast" style="display: none;"&gt;
+                &lt;div class="mx-mask_transparent"&gt;&lt;/div&gt;
+                &lt;div class="mx-toast"&gt;
+                    &lt;i class="mx-icon-success-no-circle mx-icon_toast"&gt;&lt;/i&gt;
+                    &lt;p class="mx-toast__content"&gt;已完成&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;script&gt;
+                // toast
+                $(function(){
+                    var $toast = $('#toast');
+                    $('#showToast').on('click', function(){
+                        if ($toast.css('display') != 'none') return;
+                        $toast.fadeIn(100);
+                        setTimeout(function () {
+                            $toast.fadeOut(100);
+                        }, 2000);
+                    });
+                });
+            &lt;/script&gt;
+        </pre>
+        <a href="javascript:;" class="mx-btn mx-btn_default" id="showLoadingToast">加载中提示</a>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre>
+            &lt;a href="javascript:;" class="mx-btn mx-btn_default" id="showLoadingToast"&gt;加载中提示&lt;/a&gt;
+            &lt;div id="loadingToast" style="display:none;"&gt;
+                &lt;div class="mx-mask_transparent"&gt;&lt;/div&gt;
+                &lt;div class="mx-toast"&gt;
+                    &lt;i class="mx-loading mx-icon_toast"&gt;&lt;/i&gt;
+                    &lt;p class="mx-toast__content"&gt;数据加载中&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;script&gt;
+                // loading
+                $(function(){
+                    var $loadingToast = $('#loadingToast');
+                    $('#showLoadingToast').on('click', function(){
+                        if ($loadingToast.css('display') != 'none') return;
+                        $loadingToast.fadeIn(100);
+                        setTimeout(function () {
+                            $loadingToast.fadeOut(100);
+                        }, 2000);
+                    });
+                });
+            &lt;/script&gt;
+        </pre>
+    </div>
+    
+    <div class="page__ft">
+        <a href="javascript:home()"><img src="./images/icon_footer_link.png" /></a>
+    </div>
+
+    <!--BEGIN toast-->
+    <div id="toast" style="display: none;">
+        <div class="mx-mask_transparent"></div>
+        <div class="mx-toast">
+            <i class="mx-icon-success-no-circle mx-icon_toast"></i>
+            <p class="mx-toast__content">已完成</p>
+        </div>
+    </div>
+    <!--end toast-->
+
+    <!-- loading toast -->
+    <div id="loadingToast" style="display:none;">
+        <div class="mx-mask_transparent"></div>
+        <div class="mx-toast">
+            <i class="mx-loading mx-icon_toast"></i>
+            <p class="mx-toast__content">数据加载中</p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    // toast
+    $(function(){
+        var $toast = $('#toast');
+        $('#showToast').on('click', function(){
+            if ($toast.css('display') != 'none') return;
+
+            $toast.fadeIn(100);
+            setTimeout(function () {
+                $toast.fadeOut(100);
+            }, 2000);
+        });
+    });
+
+    // loading
+    $(function(){
+        var $loadingToast = $('#loadingToast');
+        $('#showLoadingToast').on('click', function(){
+            if ($loadingToast.css('display') != 'none') return;
+
+            $loadingToast.fadeIn(100);
+            setTimeout(function () {
+                $loadingToast.fadeOut(100);
+            }, 2000);
+        });
+    });
+</script>

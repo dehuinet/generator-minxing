@@ -1,0 +1,459 @@
+<div class="page">
+    <div class="page__hd">
+        <h1 class="page__title">Input</h1>
+        <p class="page__desc">表单输入</p>
+    </div>
+    <div class="page__bd">
+        <div class="mx-cells__title">单选列表项</div>
+        <div class="mx-cells mx-cells_radio">
+            <label class="mx-cell mx-check__label" for="x11">
+                <div class="mx-cell__bd">
+                    <p>cell standard</p>
+                </div>
+                <div class="mx-cell__ft">
+                    <input type="radio" class="mx-check" name="radio1" id="x11"/>
+                    <span class="mx-icon-checked"></span>
+                </div>
+            </label>
+            <label class="mx-cell mx-check__label" for="x12">
+
+                <div class="mx-cell__bd">
+                    <p>cell standard</p>
+                </div>
+                <div class="mx-cell__ft">
+                    <input type="radio" name="radio1" class="mx-check" id="x12" checked="checked"/>
+                    <span class="mx-icon-checked"></span>
+                </div>
+            </label>
+            <a href="javascript:void(0);" class="mx-cell mx-cell_link">
+                <div class="mx-cell__bd">添加更多</div>
+            </a>
+        </div>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre class="pre">
+            &lt;div class="mx-cells__title"&gt;单选列表项&lt;/div&gt;
+            &lt;div class="mx-cells mx-cells_radio"&gt;
+                &lt;label class="mx-cell mx-check__label" for="x11"&gt;
+                &lt;div class="mx-cell__bd"&gt;
+                    &lt;p&gt;cell standard&lt;/p&gt;
+                &lt;/div&gt;
+                 &lt;div class="mx-cell__ft"&gt;
+                     &lt;input type="radio" class="mx-check" name="radio1" id="x11"/&gt;
+                     &lt;span class="mx-icon-checked"&gt;&lt;/span&gt;
+                 &lt;/div&gt;
+             &lt;/label&gt;
+                    &lt;label class="mx-cell mx-check__label" for="x12"&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;p>cell standard&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__ft"&gt;
+                        &lt;input type="radio" name="radio1" class="mx-check" id="x12" checked="checked"/&gt;
+                        &lt;span class="mx-icon-checked"&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/label&gt;
+                &lt;a href="javascript:void(0);" class="mx-cell mx-cell_link"&gt;
+                    &lt;div class="mx-cell__bd"&gt;添加更多&lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        </pre>
+        <div class="mx-cells__title">复选列表项</div>
+        <div class="mx-cells mx-cells_checkbox">
+            <label class="mx-cell mx-check__label" for="s11">
+                <div class="mx-cell__hd">
+                    <input type="checkbox" class="mx-check" name="checkbox1" id="s11" checked="checked"/>
+                    <i class="mx-icon-checked"></i>
+                </div>
+                <div class="mx-cell__bd">
+                    <p>standard is dealt for u.</p>
+                </div>
+            </label>
+            <label class="mx-cell mx-check__label" for="s12">
+                <div class="mx-cell__hd">
+                    <input type="checkbox" name="checkbox1" class="mx-check" id="s12"/>
+                    <i class="mx-icon-checked"></i>
+                </div>
+                <div class="mx-cell__bd">
+                    <p>standard is dealicient for u.</p>
+                </div>
+            </label>
+            <a href="javascript:void(0);" class="mx-cell mx-cell_link">
+                <div class="mx-cell__bd">添加更多</div>
+            </a>
+        </div>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre class="pre">
+            &lt;div class="mx-cells__title"&gt;复选列表项&lt;/div&gt;
+            &lt;div class="mx-cells mx-cells_checkbox"&gt;
+                &lt;label class="mx-cell mx-check__label" for="s11"&gt;
+                    &lt;div class="mx-cell__hd"&gt;
+                        &lt;input type="checkbox" class="mx-check" name="checkbox1" id="s11" checked="checked"/&gt;
+                        &lt;i class="mx-icon-checked"&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;p&gt;standard is dealt for u.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/label&gt;
+                &lt;label class="mx-cell mx-check__label" for="s12"&gt;
+                    &lt;div class="mx-cell__hd"&gt;
+                        &lt;input type="checkbox" name="checkbox1" class="mx-check" id="s12"/&gt;
+                        &lt;i class="mx-icon-checked"&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;p&gt;standard is dealicient for u.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/label&gt;
+                &lt;a href="javascript:void(0);" class="mx-cell mx-cell_link"&gt;
+                    &lt;div class="mx-cell__bd"&gt;添加更多&lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        </pre>
+
+        <div class="mx-cells__title">表单</div>
+        <div class="mx-cells mx-cells_form">
+            <div class="mx-cell">
+                <div class="mx-cell__hd"><label class="mx-label">qq</label></div>
+                <div class="mx-cell__bd">
+                    <input class="mx-input" type="number" pattern="[0-9]*" placeholder="请输入qq号"/>
+                </div>
+            </div>
+            <div class="mx-cell mx-cell_vcode">
+                <div class="mx-cell__hd">
+                    <label class="mx-label">手机号</label>
+                </div>
+                <div class="mx-cell__bd">
+                    <input class="mx-input" type="tel" placeholder="请输入手机号"/>
+                </div>
+                <div class="mx-cell__ft">
+                    <button class="mx-vcode-btn">获取验证码</button>
+                </div>
+            </div>
+            <div class="mx-cell">
+                <div class="mx-cell__hd"><label for="" class="mx-label">日期</label></div>
+                <div class="mx-cell__bd">
+                    <input class="mx-input" type="date" value=""/>
+                </div>
+            </div>
+            <div class="mx-cell">
+                <div class="mx-cell__hd"><label for="" class="mx-label">时间</label></div>
+                <div class="mx-cell__bd">
+                    <input class="mx-input" type="datetime-local" value="" placeholder=""/>
+                </div>
+            </div>
+            <div class="mx-cell mx-cell_vcode">
+                <div class="mx-cell__hd"><label class="mx-label">验证码</label></div>
+                <div class="mx-cell__bd">
+                    <input class="mx-input" type="number" placeholder="请输入验证码"/>
+                </div>
+                <div class="mx-cell__ft">
+                    <img class="mx-vcode-img" src="./images/vcode.jpg" />
+                </div>
+            </div>
+        </div>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre class="pre">
+            &lt;div class="mx-cells__title">表单&lt;/div&gt;
+            &lt;div class="mx-cells mx-cells_form"&gt;
+                &lt;div class="mx-cell"&gt;
+                    &lt;div class="mx-cell__hd"&gt;&lt;label class="mx-label"&gt;qq&lt;/label&gt;&lt;/div&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;input class="mx-input" type="number" pattern="[0-9]*" placeholder="请输入qq号"/&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-cell mx-cell_vcode"&gt;
+                    &lt;div class="mx-cell__hd"&gt;
+                        &lt;label class="mx-label"&gt;手机号&lt;/label&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;input class="mx-input" type="tel" placeholder="请输入手机号"/&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__ft"&gt;
+                        &lt;button class="mx-vcode-btn"&gt;获取验证码&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-cell"&gt;
+                    &lt;div class="mx-cell__hd"&gt;&lt;label for="" class="mx-label"&gt;日期&lt;/label&gt;&lt;/div&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;input class="mx-input" type="date" value=""/&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-cell"&gt;
+                    &lt;div class="mx-cell__hd"&gt;&lt;label for="" class="mx-label"&gt;时间&lt;/label>&lt;/div&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;input class="mx-input" type="datetime-local" value="" placeholder=""/&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-cell mx-cell_vcode"&gt;
+                    &lt;div class="mx-cell__hd"&gt;&lt;label class="mx-label"&gt;验证码&lt;/label&gt;&lt;/div&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;input class="mx-input" type="number" placeholder="请输入验证码"/&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__ft"&gt;
+                        &lt;img class="mx-vcode-img" src="./images/vcode.jpg" /&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </pre>
+        <div class="mx-cells__tips">底部说明文字底部说明文字</div>
+
+        <div class="mx-cells__title">表单报错</div>
+        <div class="mx-cells mx-cells_form">
+            <div class="mx-cell mx-cell_warn">
+                <div class="mx-cell__hd"><label for="" class="mx-label">卡号</label></div>
+                <div class="mx-cell__bd">
+                    <input class="mx-input" type="number" pattern="[0-9]*" value="mx input error" placeholder="请输入卡号"/>
+                </div>
+                <div class="mx-cell__ft">
+                    <i class="mx-icon-warn"></i>
+                </div>
+            </div>
+        </div>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre class="pre">
+            &lt;div class="mx-cells__tips"&gt;底部说明文字底部说明文字&lt;/div&gt;
+
+            &lt;div class="mx-cells__title"&gt;表单报错&lt;/div&gt;
+                &lt;div class="mx-cells mx-cells_form"&gt;
+                    &lt;div class="mx-cell mx-cell_warn"&gt;
+                        &lt;div class="mx-cell__hd"&gt;&lt;label for="" class="mx-label"&gt;卡号&lt;/label&gt;&lt;/div&gt;
+                        &lt;div class="mx-cell__bd"&gt;
+                            &lt;input class="mx-input" type="number" pattern="[0-9]*" value="mx input error" placeholder="请输入卡号"/&gt;
+                        &lt;/div&gt;
+                        &lt;div class="mx-cell__ft"&gt;
+                            &lt;i class="mx-icon-warn"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+        </pre>
+
+        <div class="mx-cells__title">开关</div>
+        <div class="mx-cells mx-cells_form">
+            <div class="mx-cell mx-cell_switch">
+                <div class="mx-cell__bd">标题文字</div>
+                <div class="mx-cell__ft">
+                    <input class="mx-switch" type="checkbox"/>
+                </div>
+            </div>
+            <div class="mx-cell mx-cell_switch">
+                <div class="mx-cell__bd">兼容IE Edge的版本</div>
+                <div class="mx-cell__ft">
+                    <label for="switchCP" class="mx-switch-cp">
+                        <input id="switchCP" class="mx-switch-cp__input" type="checkbox" checked="checked"/>
+                        <div class="mx-switch-cp__box"></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre class="pre">
+            &lt;div class="mx-cells__title"&gt;开关&lt;/div&gt;
+            &lt;div class="mx-cells mx-cells_form"&gt;
+                &lt;div class="mx-cell mx-cell_switch"&gt;
+                    &lt;div class="mx-cell__bd"&gt;标题文字&lt;/div&gt;
+                    &lt;div class="mx-cell__ft"&gt;
+                        &lt;input class="mx-switch" type="checkbox"/&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-cell mx-cell_switch"&gt;
+                    &lt;div class="mx-cell__bd"&gt;兼容IE Edge的版本&lt;/div&gt;
+                    &lt;div class="mx-cell__ft"&gt;
+                        &lt;label for="switchCP" class="mx-switch-cp"&gt;
+                            &lt;input id="switchCP" class="mx-switch-cp__input" type="checkbox" checked="checked"/&gt;
+                            &lt;div class="mx-switch-cp__box"&gt;&lt;/div&gt;
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </pre>
+        <div class="mx-cells__title">文本框</div>
+        <div class="mx-cells">
+            <div class="mx-cell">
+                <div class="mx-cell__bd">
+                    <input class="mx-input" type="text" placeholder="请输入文本"/>
+                </div>
+            </div>
+        </div>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre class="pre">
+            &lt;div class="mx-cells__title"&gt;文本框&lt;/div&gt;
+            &lt;div class="mx-cells"&gt;
+                &lt;div class="mx-cell"&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;input class="mx-input" type="text" placeholder="请输入文本"/&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </pre>
+        <div class="mx-cells__title">文本域</div>
+        <div class="mx-cells mx-cells_form">
+            <div class="mx-cell">
+                <div class="mx-cell__bd">
+                    <textarea class="mx-textarea" placeholder="请输入文本" rows="3"></textarea>
+                    <div class="mx-textarea-counter"><span>0</span>/200</div>
+                </div>
+            </div>
+        </div>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre class="pre">
+            &lt;div class="mx-cells__title"&gt;文本域&lt;/div&gt;
+            &lt;div class="mx-cells mx-cells_form"&gt;
+                &lt;div class="mx-cell"&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;textarea class="mx-textarea" placeholder="请输入文本" rows="3"&gt;&lt;/textarea&gt;
+                        &lt;div class="mx-textarea-counter"&gt;&lt;span&gt;0&lt;/span&gt;/200&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </pre>
+        <div class="mx-cells__title">选择</div>
+        <div class="mx-cells">
+
+            <div class="mx-cell mx-cell_select mx-cell_select-before">
+                <div class="mx-cell__hd">
+                    <select class="mx-select" name="select2">
+                        <option value="1">+86</option>
+                        <option value="2">+80</option>
+                        <option value="3">+84</option>
+                        <option value="4">+87</option>
+                    </select>
+                </div>
+                <div class="mx-cell__bd">
+                    <input class="mx-input" type="number" pattern="[0-9]*" placeholder="请输入号码"/>
+                </div>
+            </div>
+        </div>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre class="pre">
+            &lt;div class="mx-cells__title"&gt;选择&lt;/div&gt;
+            &lt;div class="mx-cells"&gt;
+
+                &lt;div class="mx-cell mx-cell_select mx-cell_select-before"&gt;
+                    &lt;div class="mx-cell__hd"&gt;
+                        &lt;select class="mx-select" name="select2"&gt;
+                            &lt;option value="1"&gt;+86&lt;/option&gt;
+                            &lt;option value="2"&gt;+80&lt;/option&gt;
+                            &lt;option value="3"&gt;+84&lt;/option&gt;
+                            &lt;option value="4"&gt;+87&lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;input class="mx-input" type="number" pattern="[0-9]*" placeholder="请输入号码"/&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </pre>
+        <div class="mx-cells__title">选择</div>
+        <div class="mx-cells">
+            <div class="mx-cell mx-cell_select">
+                <div class="mx-cell__bd">
+                    <select class="mx-select" name="select1">
+                        <option selected="" value="1">微信号</option>
+                        <option value="2">QQ号</option>
+                        <option value="3">Email</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mx-cell mx-cell_select mx-cell_select-after">
+                <div class="mx-cell__hd">
+                    <label for="" class="mx-label">国家/地区</label>
+                </div>
+                <div class="mx-cell__bd">
+                    <select class="mx-select" name="select2">
+                        <option value="1">中国</option>
+                        <option value="2">美国</option>
+                        <option value="3">英国</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre class="pre">
+            &lt;div class="mx-cells__title"&gt;选择&lt;/div&gt;
+            &lt;div class="mx-cells"&gt;
+                &lt;div class="mx-cell mx-cell_select"&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;select class="mx-select" name="select1"&gt;
+                            &lt;option selected="" value="1"&gt;微信号&lt;/option&gt;
+                            &lt;option value="2"&gt;QQ号&lt;/option&gt;
+                            &lt;option value="3"&gt;Email&lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-cell mx-cell_select mx-cell_select-after"&gt;
+                    &lt;div class="mx-cell__hd"&gt;
+                        &lt;label for="" class="mx-label"&gt;国家/地区&lt;/label&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;select class="mx-select" name="select2"&gt;
+                            &lt;option value="1"&gt;中国&lt;/option&gt;
+                            &lt;option value="2"&gt;美国&lt;/option&gt;
+                            &lt;option value="3"&gt;英国&lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </pre>
+        <label for="mxAgree" class="mx-agree">
+            <input id="mxAgree" type="checkbox" class="mx-agree__checkbox"/>
+            <span class="mx-agree__text">
+                阅读并同意<a href="javascript:void(0);">《相关条款》</a>
+            </span>
+        </label>
+
+        <div class="mx-btn-area">
+            <a class="mx-btn mx-btn_primary" href="javascript:" id="showTooltips">确定</a>
+        </div>
+        <div class="mx-parent">
+            <button class="mx-copy mx-copy-t6">copy</button>
+        </div>
+        <pre class="pre">
+            &lt;label for="mxAgree" class="mx-agree"&gt;
+                &lt;input id="mxAgree" type="checkbox" class="mx-agree__checkbox"/&gt;
+                &lt;span class="mx-agree__text"&gt;
+                    阅读并同意&lt;a href="javascript:void(0);"&gt;《相关条款》&lt;/a&gt;
+                &lt;/span&gt;
+            &lt;/label&gt;
+
+            &lt;div class="mx-btn-area"&gt;
+                &lt;a class="mx-btn mx-btn_primary" href="javascript:" id="showTooltips"&gt;确定&lt;/a&gt;
+            &lt;/div&gt;
+        </pre>
+    </div>
+    <div class="page__ft">
+        <a href="javascript:home()"><img src="./images/icon_footer_link.png" /></a>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        var $tooltips = $('.js_tooltips');
+
+        $('#showTooltips').on('click', function(){
+            if ($tooltips.css('display') != 'none') return;
+
+            // toptips的fixed, 如果有`animation`, `position: fixed`不生效
+            $('.page.cell').removeClass('slideIn');
+
+            $tooltips.css('display', 'block');
+            setTimeout(function () {
+                $tooltips.css('display', 'none');
+            }, 2000);
+        });
+    });
+</script>

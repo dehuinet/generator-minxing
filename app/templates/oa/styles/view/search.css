@@ -20,6 +20,7 @@
   height: 34px;
   border: 1px solid #dbdbdb;
   padding-left: 4px;
+  text-align: center;
 }
 .search .time{
   width: 100%;
