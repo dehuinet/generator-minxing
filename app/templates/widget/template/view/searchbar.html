@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>MxUI</title>
+    <link rel="stylesheet" href="../../styles/mx.css"/>
+    <link rel="stylesheet" href="../../styles/example.css"/>
+    <style>  
+        .page{
+            opacity: 1;
+        }
+        .page.home .font{
+            font-size: 27px;
+        }
+        .reset{
+            width: 100%;
+            text-align: left;
+            resize: none;
+            margin-top: 8px;
+            background: #fff;
+            outline: none;
+            font-size: 14px;
+            padding: 12px 0 0;
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+            
+        }
+        pre{
+            padding: 10px 20px;
+            background: #fff;
+            border-radius: 4px;
+            border:1px solid #eee;
+            margin:10px 0;
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+            white-space: pre-wrap;
+            max-width: 100%;
+            word-wrap : break-word;
+        }
+        code{
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+        }
+       /* .pre{
+            overflow-y: scroll;
+            max-height: 10rem;
+        }*/
+       .mx-parent{
+            position: relative;
+            display: block;
+       }
+       .mx-copy{
+            position: absolute;
+            right: 0;
+            display: block;
+            font-size: 12px;
+            text-align: right;
+            padding: 5px 8px;
+            background-color: #fff;
+            color: #767676;
+            border-radius: 4px;
+            border: 1px solid #elele8;
+            top: 11px;
+            left: 0px;
+       }
+       .mx-copy-t{
+            top: 0;
+       }
+       .mx-copy-t6{
+            top: 6px;
+       }
+       .mx-copy:hover{
+            background-color: #563d7c;
+       }
+        .searchbar-result {
+            display: none;
+            margin-top: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+    <div class="page__hd">
+        <h1 class="page__title">SearchBar</h1>
+        <p class="page__desc">搜索栏</p>
+    </div>
+    <div class="page__bd">
+        <!--<a href="javascript:;" class="mx-btn mx-btn_primary">点击展现searchBar</a>-->
+        <div class="mx-search-bar" id="searchBar">
+            <form class="mx-search-bar__form">
+                <div class="mx-search-bar__box">
+                    <i class="mx-icon-search"></i>
+                    <input type="search" class="mx-search-bar__input" id="searchInput" placeholder="搜索" required/>
+                    <a href="javascript:" class="mx-icon-clear" id="searchClear"></a>
+                </div>
+                <label class="mx-search-bar__label" id="searchText">
+                    <i class="mx-icon-search"></i>
+                    <span>搜索</span>
+                </label>
+            </form>
+            <a href="javascript:" class="mx-search-bar__cancel-btn" id="searchCancel">取消</a>
+        </div>
+        <div class="mx-cells searchbar-result" id="searchResult">
+            <div class="mx-cell mx-cell_access">
+                <div class="mx-cell__bd mx-cell_primary">
+                    <p>实时搜索文本</p>
+                </div>
+            </div>
+            <div class="mx-cell mx-cell_access">
+                <div class="mx-cell__bd mx-cell_primary">
+                    <p>实时搜索文本</p>
+                </div>
+            </div>
+            <div class="mx-cell mx-cell_access">
+                <div class="mx-cell__bd mx-cell_primary">
+                    <p>实时搜索文本</p>
+                </div>
+            </div>
+            <div class="mx-cell mx-cell_access">
+                <div class="mx-cell__bd mx-cell_primary">
+                    <p>实时搜索文本</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+    <pre class="pre">
+        &lt;div class="page__bd"&gt;
+            &lt;div class="mx-search-bar" id="searchBar"&gt;
+                &lt;form class="mx-search-bar__form"&gt;
+                    &lt;div class="mx-search-bar__box"&gt;
+                        &lt;i class="mx-icon-search"&gt;&lt;/i&gt;
+                        &lt;input type="search" class="mx-search-bar__input" id="searchInput" placeholder="搜索" required/&gt;
+                        &lt;a href="javascript:" class="mx-icon-clear" id="searchClear"&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;label class="mx-search-bar__label" id="searchText"&gt;
+                        &lt;i class="mx-icon-search"&gt;&lt;/i&gt;
+                        &lt;span&gt;搜索&lt;/span&gt;
+                    &lt;/label&gt;
+                &lt;/form&gt;
+                &lt;a href="javascript:" class="mx-search-bar__cancel-btn" id="searchCancel"&gt;取消&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="mx-cells searchbar-result" id="searchResult"&gt;
+                &lt;div class="mx-cell mx-cell_access"&gt;
+                    &lt;div class="mx-cell__bd mx-cell_primary"&gt;
+                        &lt;p&gt;实时搜索文本&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-cell mx-cell_access"&gt;
+                    &lt;div class="mx-cell__bd mx-cell_primary"&gt;
+                        &lt;p&gt;实时搜索文本&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-cell mx-cell_access"&gt;
+                    &lt;div class="mx-cell__bd mx-cell_primary"&gt;
+                        &lt;p&gt;实时搜索文本&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-cell mx-cell_access"&gt;
+                    &lt;div class="mx-cell__bd mx-cell_primary"&gt;
+                        &lt;p&gt;实时搜索文本&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;script&gt;
+            $(function(){
+                var $searchBar = $('#searchBar'),
+                    $searchResult = $('#searchResult'),
+                    $searchText = $('#searchText'),
+                    $searchInput = $('#searchInput'),
+                    $searchClear = $('#searchClear'),
+                    $searchCancel = $('#searchCancel');
+                function hideSearchResult(){
+                    $searchResult.hide();
+                    $searchInput.val('');
+                }
+                function cancelSearch(){
+                    hideSearchResult();
+                    $searchBar.removeClass('mx-search-bar_focusing');
+                    $searchText.show();
+                }
+                $searchText.on('click', function(){
+                    $searchBar.addClass('mx-search-bar_focusing');
+                    $searchInput.focus();
+                });
+                $searchInput
+                    .on('blur', function () {
+                        if(!this.value.length) cancelSearch();
+                    })
+                    .on('input', function(){
+                        if(this.value.length) {
+                            $searchResult.show();
+                        } else {
+                            $searchResult.hide();
+                        }
+                    });
+                $searchClear.on('click', function(){
+                    hideSearchResult();
+                    $searchInput.focus();
+                });
+                $searchCancel.on('click', function(){
+                    cancelSearch();
+                    $searchInput.blur();
+                });
+            });
+        &lt;/script&gt;
+    </pre>
+    <div class="page__ft">
+        <a href="../../index.html"><img src="../../images/icon_footer_link.png" /></a>
+    </div>
+</div>
+<script src="../../scripts/zepto.min.js"></script>
+<script src="../../scripts/clipboard.min.js"></script>
+<script>
+    var clipboard = new Clipboard('.mx-parent',{
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+            }
+        });
+        clipboard.on('success', function(e) {
+            console.log(e);
+        });
+
+        clipboard.on('error', function(e) {
+            console.log(e);
+        });
+</script>
+<script type="text/javascript">
+    $(function(){
+        var $searchBar = $('#searchBar'),
+            $searchResult = $('#searchResult'),
+            $searchText = $('#searchText'),
+            $searchInput = $('#searchInput'),
+            $searchClear = $('#searchClear'),
+            $searchCancel = $('#searchCancel');
+
+        function hideSearchResult(){
+            $searchResult.hide();
+            $searchInput.val('');
+        }
+        function cancelSearch(){
+            hideSearchResult();
+            $searchBar.removeClass('mx-search-bar_focusing');
+            $searchText.show();
+        }
+
+        $searchText.on('click', function(){
+            $searchBar.addClass('mx-search-bar_focusing');
+            $searchInput.focus();
+        });
+        $searchInput
+            .on('blur', function () {
+                if(!this.value.length) cancelSearch();
+            })
+            .on('input', function(){
+                if(this.value.length) {
+                    $searchResult.show();
+                } else {
+                    $searchResult.hide();
+                }
+            })
+        ;
+        $searchClear.on('click', function(){
+            hideSearchResult();
+            $searchInput.focus();
+        });
+        $searchCancel.on('click', function(){
+            cancelSearch();
+            $searchInput.blur();
+        });
+    });
+</script>
+</body>
+</html>

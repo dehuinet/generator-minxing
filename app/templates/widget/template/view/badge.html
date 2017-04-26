@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>MxUI</title>
+    <link rel="stylesheet" href="../../styles/mx.css"/>
+    <link rel="stylesheet" href="../../styles/example.css"/>
+    <style>  
+        .page{
+            opacity: 1;
+        }
+        .page.home .font{
+            font-size: 27px;
+        }
+        .reset{
+            width: 100%;
+            text-align: left;
+            resize: none;
+            margin-top: 8px;
+            background: #fff;
+            outline: none;
+            font-size: 14px;
+            padding: 12px 0 0;
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+            
+        }
+        pre{
+            padding: 10px 20px;
+            background: #fff;
+            border-radius: 4px;
+            border:1px solid #eee;
+            margin:10px 0;
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+            white-space: pre-wrap;
+            max-width: 100%;
+            word-wrap : break-word;
+        }
+        code{
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+        }
+       /* .pre{
+            overflow-y: scroll;
+            max-height: 10rem;
+        }*/
+       .mx-parent{
+            position: relative;
+            display: block;
+       }
+       .mx-copy{
+            position: absolute;
+            right: 0;
+            display: block;
+            font-size: 12px;
+            text-align: right;
+            padding: 5px 8px;
+            background-color: #fff;
+            color: #767676;
+            border-radius: 4px;
+            border: 1px solid #elele8;
+            top: 11px;
+            left: 0px;
+       }
+       .mx-copy-t{
+            top: 0;
+       }
+       .mx-copy-t6{
+            top: 6px;
+       }
+       .mx-copy:hover{
+            background-color: #563d7c;
+       }
+    </style>
+</head>
+<body>
+    <div class="page">
+    <div class="page__hd">
+        <h1 class="page__title">Badge</h1>
+        <p class="page__desc">徽章</p>
+    </div>
+    <div class="page__bd">
+        <div class="mx-cells__title">新消息提示跟摘要信息后，统一在列表右侧</div>
+        <div class="mx-cells">
+            <div class="mx-cell mx-cell_access">
+                <div class="mx-cell__bd">单行列表</div>
+                <div class="mx-cell__ft" style="font-size: 0">
+                    <span style="vertical-align:middle; font-size: 17px;">详细信息</span>
+                    <span class="mx-badge mx-badge_dot" style="margin-left: 5px;margin-right: 5px;"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mx-cells__title">未读数红点跟在主题信息后，统一在列表左侧</div>
+        <div class="mx-cells">
+            <div class="mx-cell">
+                <div class="mx-cell__hd" style="position: relative;margin-right: 10px;">
+                    <img src="../../images/pic_160.png" style="width: 50px;display: block"/>
+                    <span class="mx-badge" style="position: absolute;top: -.4em;right: -.4em;">8</span>
+                </div>
+                <div class="mx-cell__bd">
+                    <p>联系人名称</p>
+                    <p style="font-size: 13px;color: #888888;">摘要信息</p>
+                </div>
+            </div>
+            <div class="mx-cell mx-cell_access">
+                <div class="mx-cell__bd">
+                    <span style="vertical-align: middle">单行列表</span>
+                    <span class="mx-badge" style="margin-left: 5px;">8</span>
+                </div>
+                <div class="mx-cell__ft"></div>
+            </div>
+            <div class="mx-cell mx-cell_access">
+                <div class="mx-cell__bd">
+                    <span style="vertical-align: middle">单行列表</span>
+                    <span class="mx-badge" style="margin-left: 5px;">8</span>
+                </div>
+                <div class="mx-cell__ft">详细信息</div>
+            </div>
+            <div class="mx-cell mx-cell_access">
+                <div class="mx-cell__bd">
+                    <span style="vertical-align: middle">单行列表</span>
+                    <span class="mx-badge" style="margin-left: 5px;">New</span>
+                </div>
+                <div class="mx-cell__ft"></div>
+            </div>
+        </div>
+    </div>
+    <div class="mx-parent">
+        <button class="mx-copy">copy</button>
+    </div>
+    <pre class="pre">
+         &lt;div class="page__bd"&gt;
+            &lt;div class="mx-cells__title"&gt;新消息提示跟摘要信息后，统一在列表右侧&lt;/div&gt;
+            &lt;div class="mx-cells"&gt;
+                &lt;div class="mx-cell mx-cell_access"&gt;
+                    &lt;div class="mx-cell__bd"&gt;单行列表&lt;/div&gt;
+                    &lt;div class="mx-cell__ft" style="font-size: 0"&gt;
+                        &lt;span style="vertical-align:middle; font-size: 17px;"&gt;详细信息&lt;/span&gt;
+                        &lt;span class="mx-badge mx-badge_dot" style="margin-left: 5px;margin-right: 5px;"&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class="mx-cells__title"&gt;未读数红点跟在主题信息后，统一在列表左侧&lt;/div&gt;
+            &lt;div class="mx-cells"&gt;
+                &lt;div class="mx-cell"&gt;
+                    &lt;div class="mx-cell__hd" style="position: relative;margin-right: 10px;"&gt;
+                        &lt;img src="../../images/pic_160.png" style="width: 50px;display: block"/&gt;
+                        &lt;span class="mx-badge" style="position: absolute;top: -.4em;right: -.4em;"&gt;8&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;p&gt;联系人名称&lt;/p&gt;
+                        &lt;p style="font-size: 13px;color: #888888;"&gt;摘要信息&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-cell mx-cell_access"&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;span style="vertical-align: middle"&gt;单行列表&lt;/span&gt;
+                        &lt;span class="mx-badge" style="margin-left: 5px;"&gt;8&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__ft"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-cell mx-cell_access"&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;span style="vertical-align: middle"&gt;单行列表&lt;/span&gt;
+                        &lt;span class="mx-badge" style="margin-left: 5px;"&gt;8&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__ft"&gt;详细信息&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-cell mx-cell_access"&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;span style="vertical-align: middle"&gt;单行列表&lt;/span&gt;
+                        &lt;span class="mx-badge" style="margin-left: 5px;"&gt;New&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-cell__ft"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </pre>
+    <div class="page__ft">
+        <a href="../../index.html"><img src="../../images/icon_footer_link.png" /></a>
+    </div>
+</div>
+</body>
+<script src="../../scripts/clipboard.min.js"></script>
+<script>
+    var clipboard = new Clipboard('.mx-parent',{
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+            }
+        });
+        clipboard.on('success', function(e) {
+            console.log(e);
+        });
+
+        clipboard.on('error', function(e) {
+            console.log(e);
+        });
+</script>
+</html>

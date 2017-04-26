@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>MxUI</title>
+    <link rel="stylesheet" href="../../styles/mx.css"/>
+    <link rel="stylesheet" href="../../styles/example.css"/>
+    <style>  
+        .page{
+            opacity: 1;
+        }
+        .page.home .font{
+            font-size: 27px;
+        }
+        .reset{
+            width: 100%;
+            text-align: left;
+            resize: none;
+            margin-top: 8px;
+            background: #fff;
+            outline: none;
+            font-size: 14px;
+            padding: 12px 0 0;
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+            
+        }
+        pre{
+            padding: 10px 20px;
+            background: #fff;
+            border-radius: 4px;
+            border:1px solid #eee;
+            margin:10px 0;
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+            white-space: pre-wrap;
+            max-width: 100%;
+            word-wrap : break-word;
+        }
+        code{
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+        }
+       /* .pre{
+            overflow-y: scroll;
+            max-height: 10rem;
+        }*/
+       .mx-parent{
+            position: relative;
+            display: block;
+       }
+       .mx-copy{
+            position: absolute;
+            right: 0;
+            display: block;
+            font-size: 12px;
+            text-align: right;
+            padding: 5px 8px;
+            background-color: #fff;
+            color: #767676;
+            border-radius: 4px;
+            border: 1px solid #elele8;
+            top: 11px;
+            left: 0px;
+       }
+       .mx-copy-t{
+            top: 0;
+       }
+       .mx-copy-t6{
+            top: 6px;
+       }
+       .mx-copy:hover{
+            background-color: #563d7c;
+       }
+    </style>
+</head>
+<body>
+    <div class="page">
+    <div class="page__hd">
+        <h1 class="page__title">Uploader</h1>
+        <p class="page__desc">上传组件，一般配合<a class="link" href="#gallery">组件Gallery</a>来使用。</p>
+    </div>
+    <div class="page__bd">
+        <div class="mx-gallery" id="gallery">
+            <span class="mx-gallery__img" id="galleryImg"></span>
+            <div class="mx-gallery__opr">
+                <a href="javascript:" class="mx-gallery__del">
+                    <i class="mx-icon-delete mx-icon_gallery-delete"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="mx-cells mx-cells_form">
+            <div class="mx-cell">
+                <div class="mx-cell__bd">
+                    <div class="mx-uploader">
+                        <div class="mx-uploader__hd">
+                            <p class="mx-uploader__title">图片上传</p>
+                            <div class="mx-uploader__info">0/2</div>
+                        </div>
+                        <div class="mx-uploader__bd">
+                            <ul class="mx-uploader__files" id="uploaderFiles">
+                                <li class="mx-uploader__file" style="background-image:url(../../images/pic_160.png)"></li>
+                                <li class="mx-uploader__file" style="background-image:url(../../images/pic_160.png)"></li>
+                                <li class="mx-uploader__file" style="background-image:url(../../images/pic_160.png)"></li>
+                                <li class="mx-uploader__file mx-uploader__file_status" style="background-image:url(../../images/pic_160.png)">
+                                    <div class="mx-uploader__file-content">
+                                        <i class="mx-icon-warn"></i>
+                                    </div>
+                                </li>
+                                <li class="mx-uploader__file mx-uploader__file_status" style="background-image:url(../../images/pic_160.png)">
+                                    <div class="mx-uploader__file-content">50%</div>
+                                </li>
+                            </ul>
+                            <div class="mx-uploader__input-box">
+                                <input id="uploaderInput" class="mx-uploader__input" type="file" accept="image/*" multiple/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+    <pre class="pre">  
+            &lt;div class="mx-cells mx-cells_form"&gt;
+                &lt;div class="mx-cell"&gt;
+                    &lt;div class="mx-cell__bd"&gt;
+                        &lt;div class="mx-uploader"&gt;
+                            &lt;div class="mx-uploader__hd"&gt;
+                                &lt;p class="mx-uploader__title"&gt;图片上传&lt;/p&gt;
+                                &lt;div class="mx-uploader__info"&gt;0/2&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="mx-uploader__bd"&gt;
+                                &lt;ul class="mx-uploader__files" id="uploaderFiles"&gt;
+                                    &lt;li class="mx-uploader__file" style="background-image:url(../../images/pic_160.png)"&gt;&lt;/li&gt;
+                                    &lt;li class="mx-uploader__file" style="background-image:url(../../images/pic_160.png)"&gt;&lt;/li&gt;
+                                    &lt;li class="mx-uploader__file" style="background-image:url(../../images/pic_160.png)"&gt;&lt;/li&gt;
+                                    &lt;li class="mx-uploader__file mx-uploader__file_status" style="background-image:url(../../images/pic_160.png)"&gt;
+                                        &lt;div class="mx-uploader__file-content"&gt;
+                                            &lt;i class="mx-icon-warn"&gt;&lt;/i&gt;
+                                        &lt;/div&gt;
+                                    &lt;/li&gt;
+                                    &lt;li class="mx-uploader__file mx-uploader__file_status" style="background-image:url(../../images/pic_160.png)"&gt;
+                                        &lt;div class="mx-uploader__file-content"&gt;50%&lt;/div&gt;
+                                    &lt;/li&gt;
+                                &lt;/ul&gt;
+                                &lt;div class="mx-uploader__input-box"&gt;
+                                    &lt;input id="uploaderInput" class="mx-uploader__input" type="file" accept="image/*" multiple/&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;script&gt;
+             $(function(){
+                    var tmpl = '&lt;li class="mx-uploader__file" style="background-image:url(#url#)"&gt;&lt;/li&gt;',
+                        $gallery = $("#gallery"), $galleryImg = $("#galleryImg"),
+                        $uploaderInput = $("#uploaderInput"),
+                        $uploaderFiles = $("#uploaderFiles");
+                    $uploaderInput.on("change", function(e){
+                        var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
+                        for (var i = 0, len = files.length; i < len; ++i) {
+                            var file = files[i];
+                            if (url) {
+                                src = url.createObjectURL(file);
+                            } else {
+                                src = e.target.result;
+                            }
+                            $uploaderFiles.append($(tmpl.replace('#url#', src)));
+                        }
+                    });
+                    $uploaderFiles.on("click", "li", function(){
+                        $galleryImg.attr("style", this.getAttribute("style"));
+                        $gallery.fadeIn(100);
+                    });
+                    $gallery.on("click", function(){
+                        $gallery.fadeOut(100);
+                    });
+                });
+        &lt;/script&gt;
+    </pre>
+    <div class="page__ft">
+       <a href="../../index.html"><img src="../../images/icon_footer_link.png" /></a>
+    </div>
+</div>
+  <script src="../../scripts/zepto.min.js"></script>
+  <script src="../../scripts/clipboard.min.js"></script>
+<script>
+    var clipboard = new Clipboard('.mx-parent',{
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+            }
+        });
+        clipboard.on('success', function(e) {
+            console.log(e);
+        });
+
+        clipboard.on('error', function(e) {
+            console.log(e);
+        });
+</script>
+    <script type="text/javascript">
+    $(function(){
+        var tmpl = '<li class="mx-uploader__file" style="background-image:url(#url#)"></li>',
+            $gallery = $("#gallery"), $galleryImg = $("#galleryImg"),
+            $uploaderInput = $("#uploaderInput"),
+            $uploaderFiles = $("#uploaderFiles");
+
+        $uploaderInput.on("change", function(e){
+            var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
+            for (var i = 0, len = files.length; i < len; ++i) {
+                var file = files[i];
+
+                if (url) {
+                    src = url.createObjectURL(file);
+                } else {
+                    src = e.target.result;
+                }
+
+                $uploaderFiles.append($(tmpl.replace('#url#', src)));
+            }
+        });
+        $uploaderFiles.on("click", "li", function(){
+            $galleryImg.attr("style", this.getAttribute("style"));
+            $gallery.fadeIn(100);
+        });
+        $gallery.on("click", function(){
+            $gallery.fadeOut(100);
+        });
+    });
+</script>
+</body>
+</html>

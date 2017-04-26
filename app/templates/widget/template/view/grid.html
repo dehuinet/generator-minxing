@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>MxUI</title>
+    <link rel="stylesheet" href="../../styles/mx.css"/>
+    <link rel="stylesheet" href="../../styles/example.css"/>
+    <style>  
+        .page{
+            opacity: 1;
+        }
+        .page.home .font{
+            font-size: 27px;
+        }
+        .reset{
+            width: 100%;
+            text-align: left;
+            resize: none;
+            margin-top: 8px;
+            background: #fff;
+            outline: none;
+            font-size: 14px;
+            padding: 12px 0 0;
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+            
+        }
+        pre{
+            padding: 10px 20px;
+            background: #fff;
+            border-radius: 4px;
+            border:1px solid #eee;
+            margin:10px 0;
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+            white-space: pre-wrap;
+            max-width: 100%;
+            word-wrap : break-word;
+        }
+        code{
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+        }
+       /* .pre{
+            overflow-y: scroll;
+            max-height: 10rem;
+        }*/
+       .mx-parent{
+            position: relative;
+            display: block;
+       }
+       .mx-copy{
+            position: absolute;
+            right: 0;
+            display: block;
+            font-size: 12px;
+            text-align: right;
+            padding: 5px 8px;
+            background-color: #fff;
+            color: #767676;
+            border-radius: 4px;
+            border: 1px solid #elele8;
+            top: 11px;
+            left: 0px;
+       }
+       .mx-copy-t{
+            top: 0;
+       }
+       .mx-copy-t6{
+            top: 6px;
+       }
+       .mx-copy:hover{
+            background-color: #563d7c;
+       }
+    </style>
+</head>
+<body>
+    <div class="page">
+    <div class="page__hd">
+        <h1 class="page__title">Grid</h1>
+        <p class="page__desc">九宫格</p>
+    </div>
+    <div class="mx-grids">
+        <a href="javascript:;" class="mx-grid">
+            <div class="mx-grid__icon">
+                <img src="../../images/icon_tabbar.png" alt="">
+            </div>
+            <p class="mx-grid__label">Grid</p>
+        </a>
+        <a href="javascript:;" class="mx-grid">
+            <div class="mx-grid__icon">
+                <img src="../../images/icon_tabbar.png" alt="">
+            </div>
+            <p class="mx-grid__label">Grid</p>
+        </a>
+        <a href="javascript:;" class="mx-grid">
+            <div class="mx-grid__icon">
+                <img src="../../images/icon_tabbar.png" alt="">
+            </div>
+            <p class="mx-grid__label">Grid</p>
+        </a>
+        <a href="javascript:;" class="mx-grid">
+            <div class="mx-grid__icon">
+                <img src="../../images/icon_tabbar.png" alt="">
+            </div>
+            <p class="mx-grid__label">Grid</p>
+        </a>
+        <a href="javascript:;" class="mx-grid">
+            <div class="mx-grid__icon">
+                <img src="../../images/icon_tabbar.png" alt="">
+            </div>
+            <p class="mx-grid__label">Grid</p>
+        </a>
+        <a href="javascript:;" class="mx-grid">
+            <div class="mx-grid__icon">
+                <img src="../../images/icon_tabbar.png" alt="">
+            </div>
+            <p class="mx-grid__label">Grid</p>
+        </a>
+        <a href="javascript:;" class="mx-grid">
+            <div class="mx-grid__icon">
+                <img src="../../images/icon_tabbar.png" alt="">
+            </div>
+            <p class="mx-grid__label">Grid</p>
+        </a>
+        <a href="javascript:;" class="mx-grid">
+            <div class="mx-grid__icon">
+                <img src="../../images/icon_tabbar.png" alt="">
+            </div>
+            <p class="mx-grid__label">Grid</p>
+        </a>
+        <a href="javascript:;" class="mx-grid">
+            <div class="mx-grid__icon">
+                <img src="../../images/icon_tabbar.png" alt="">
+            </div>
+            <p class="mx-grid__label">Grid</p>
+        </a>
+    </div>
+    <div class="mx-parent">
+                <button class="mx-copy">copy</button>
+    </div>
+    <pre class="pre">
+         &lt;div class="mx-grids"&gt;
+            &lt;a href="javascript:;" class="mx-grid"&gt;
+                &lt;div class="mx-grid__icon"&gt;
+                    &lt;img src="../../images/icon_tabbar.png" alt=""&gt;
+                &lt;/div&gt;
+                &lt;p class="mx-grid__label"&gt;Grid&lt;/p&gt;
+            &lt;/a&gt;
+            &lt;a href="javascript:;" class="mx-grid"&gt;
+                &lt;div class="mx-grid__icon"&gt;
+                    &lt;img src="../../images/icon_tabbar.png" alt=""&gt;
+                &lt;/div&gt;
+                &lt;p class="mx-grid__label"&gt;Grid&lt;/p&gt;
+            &lt;/a&gt;
+            &lt;a href="javascript:;" class="mx-grid"&gt;
+                &lt;div class="mx-grid__icon"&gt;
+                    &lt;img src="../../images/icon_tabbar.png" alt=""&gt;
+                &lt;/div&gt;
+                &lt;p class="mx-grid__label"&gt;Grid&lt;/p&gt;
+            &lt;/a&gt;
+            &lt;a href="javascript:;" class="mx-grid"&gt;
+                &lt;div class="mx-grid__icon"&gt;
+                    &lt;img src="../../images/icon_tabbar.png" alt=""&gt;
+                &lt;/div&gt;
+                &lt;p class="mx-grid__label"&gt;Grid&lt;/p&gt;
+            &lt;/a&gt;
+            &lt;a href="javascript:;" class="mx-grid"&gt;
+                &lt;div class="mx-grid__icon"&gt;
+                    &lt;img src="../../images/icon_tabbar.png" alt=""&gt;
+                &lt;/div&gt;
+                &lt;p class="mx-grid__label"&gt;Grid&lt;/p&gt;
+            &lt;/a&gt;
+            &lt;a href="javascript:;" class="mx-grid"&gt;
+                &lt;div class="mx-grid__icon"&gt;
+                    &lt;img src="../../images/icon_tabbar.png" alt=""&gt;
+                &lt;/div&gt;
+                &lt;p class="mx-grid__label"&gt;Grid&lt;/p&gt;
+            &lt;/a&gt;
+            &lt;a href="javascript:;" class="mx-grid"&gt;
+                &lt;div class="mx-grid__icon"&gt;
+                    &lt;img src="../../images/icon_tabbar.png" alt=""&gt;
+                &lt;/div&gt;
+                &lt;p class="mx-grid__label"&gt;Grid&lt;/p&gt;
+            &lt;/a&gt;
+            &lt;a href="javascript:;" class="mx-grid"&gt;
+                &lt;div class="mx-grid__icon"&gt;
+                    &lt;img src="../../images/icon_tabbar.png" alt=""&gt;
+                &lt;/div&gt;
+                &lt;p class="mx-grid__label"&gt;Grid&lt;/p&gt;
+            &lt;/a&gt;
+            &lt;a href="javascript:;" class="mx-grid"&gt;
+                &lt;div class="mx-grid__icon"&gt;
+                    &lt;img src="../../images/icon_tabbar.png" alt=""&gt;
+                &lt;/div&gt;
+                &lt;p class="mx-grid__label"&gt;Grid&lt;/p&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    </pre>
+</div>
+</body>
+<script src="../../scripts/clipboard.min.js"></script>
+<script>
+    var clipboard = new Clipboard('.mx-parent',{
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+            }
+        });
+        clipboard.on('success', function(e) {
+            console.log(e);
+        });
+
+        clipboard.on('error', function(e) {
+            console.log(e);
+        });
+</script>
+</html>

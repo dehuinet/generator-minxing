@@ -1,13 +1,169 @@
-<link rel="stylesheet" href="styles/view/article.css" />
-<div class="container">
-  <div class="secret-mask"></div>
-  <!-- 正文页面 -->
-  <h4>关于机房监控系统研发立项的批复</h4>
-  <p>本次机房监控系统的建设，我们最终实现以下两大管理目标：</p>
-  <h5>（一）建设全面的监控管理平台，消除监控死角。</h5>
-  <p>信息技术中心的各个系统采用了多个厂家的网络设备，服务器，因此本项目首先要解决的问题是通过建设全面的监控管理平台将目前各个业务系统中的各种设备纳入到监控平台中来。消除管理对象之间的差别，消除数据采集手段的差别，消除管理软件的差别，对各种不同数据来源数据统一处理、统一展现、统一用户登录、统一权限控制。</p>
-  <h5>（二）建设开放、具有良好扩展性的IT管理平台。</h5>
-  <p>监控管理平台应具有很好的开放性，保证跟相关系统的集成。监控管理平台应具有良好的扩展性，不仅可以满足现阶段本行系统管理的需要，未来，随着本行业务的不断发展，监控功能添加，或管理节点数量增加时，监控管理平台也可以很好满足本行的需求。</p>
-  <h5>（三）升级速度快，开发周期短</h5>
-  <p>由于网首IT运维服务平台是纯B/S架构的，所以当需要增加一个新功能或是新模块时，无需改动系统底层的架构，所以开发的速度会非常快。这就会使产品新功能、新模块的开发周期变短，升级速度变快。</p>
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>MxUI</title>
+    <link rel="stylesheet" href="../../styles/mx.css"/>
+    <link rel="stylesheet" href="../../styles/example.css"/>
+    <style>  
+        .page{
+            opacity: 1;
+        }
+        .page.home .font{
+            font-size: 27px;
+        }
+        .reset{
+            width: 100%;
+            text-align: left;
+            resize: none;
+            margin-top: 8px;
+            background: #fff;
+            outline: none;
+            font-size: 14px;
+            padding: 12px 0 0;
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+            
+        }
+        pre{
+            padding: 10px 20px;
+            background: #fff;
+            border-radius: 4px;
+            border:1px solid #eee;
+            margin:10px 0;
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+            white-space: pre-wrap;
+            max-width: 100%;
+            word-wrap : break-word;
+        }
+        code{
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+        }
+       /* .pre{
+            overflow-y: scroll;
+            max-height: 10rem;
+        }*/
+       .mx-parent{
+            position: relative;
+            display: block;
+       }
+       .mx-copy{
+            position: absolute;
+            right: 0;
+            display: block;
+            font-size: 12px;
+            text-align: right;
+            padding: 5px 8px;
+            background-color: #fff;
+            color: #767676;
+            border-radius: 4px;
+            border: 1px solid #elele8;
+            top: 11px;
+            left: 0px;
+       }
+       .mx-copy-t{
+            top: 0;
+       }
+       .mx-copy-t6{
+            top: 6px;
+       }
+       .mx-copy:hover{
+            background-color: #563d7c;
+       }
+    </style>
+</head>
+<body>
+    <div class="page">
+    <div class="page__hd">
+        <h1 class="page__title">Article</h1>
+        <p class="page__desc">文章</p>
+    </div>
+    <div class="page__bd">
+        <article class="mx-article">
+            <h1>大标题</h1>
+            <section>
+                <h2 class="title">章标题</h2>
+                <section>
+                    <h3>1.1 节标题</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                    </p>
+                    <p>
+                        <img src="../../images/pic_article.png" alt="">
+                        <img src="../../images/pic_article.png" alt="">
+                    </p>
+                </section>
+                <section>
+                    <h3>1.2 节标题</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </section>
+            </section>
+        </article>
+    </div>
+    <div class="mx-parent">
+        <button class="mx-copy">copy</button>
+    </div>
+        <pre class="pre">
+             &lt;div class="page__bd"&gt;
+                &lt;article class="mx-article"&gt;
+                    &lt;h1&gt;大标题&lt;/h1&gt;
+                    &lt;section&gt;
+                        &lt;h2 class="title"&gt;章标题&lt;/h2&gt;
+                        &lt;section&gt;
+                            &lt;h3&gt;1.1 节标题&lt;/h3&gt;
+                            &lt;p&gt;
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.
+                            &lt;/p&gt;
+                            &lt;p&gt;
+                                &lt;img src="../../images/pic_article.png" alt=""&gt;
+                                &lt;img src="../../images/pic_article.png" alt=""&gt;
+                            &lt;/p&gt;
+                        &lt;/section&gt;
+                        &lt;section&gt;
+                            &lt;h3&gt;1.2 节标题&lt;/h3&gt;
+                            &lt;p&gt;
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            &lt;/p&gt;
+                        &lt;/section&gt;
+                    &lt;/section&gt;
+                &lt;/article&gt;
+            &lt;/div&gt;
+        </pre>
+    
+    
+    <div class="page__ft">
+        <a href="../../index.html"><img src="../../images/icon_footer_link.png" /></a>
+    </div>
 </div>
+</body>
+<script src="../../scripts/clipboard.min.js"></script>
+<script>
+    var clipboard = new Clipboard('.mx-parent',{
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+            }
+        });
+        clipboard.on('success', function(e) {
+            console.log(e);
+        });
+
+        clipboard.on('error', function(e) {
+            console.log(e);
+        });
+</script>
+</html>

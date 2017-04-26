@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>MxUI</title>
+    <link rel="stylesheet" href="../../styles/mx.css"/>
+    <link rel="stylesheet" href="../../styles/example.css"/>
+    <style>  
+        .page{
+            opacity: 1;
+        }
+        .page.home .font{
+            font-size: 27px;
+        }
+        .reset{
+            width: 100%;
+            text-align: left;
+            resize: none;
+            margin-top: 8px;
+            background: #fff;
+            outline: none;
+            font-size: 14px;
+            padding: 12px 0 0;
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+            
+        }
+        pre{
+            padding: 10px 20px;
+            background: #fff;
+            border-radius: 4px;
+            border:1px solid #eee;
+            margin:10px 0;
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+            white-space: pre-wrap;
+            max-width: 100%;
+            word-wrap : break-word;
+        }
+        code{
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+        }
+       /* .pre{
+            overflow-y: scroll;
+            max-height: 10rem;
+        }*/
+       .mx-parent{
+            position: relative;
+            display: block;
+       }
+       .mx-copy{
+            position: absolute;
+            right: 0;
+            display: block;
+            font-size: 12px;
+            text-align: right;
+            padding: 5px 8px;
+            background-color: #fff;
+            color: #767676;
+            border-radius: 4px;
+            border: 1px solid #elele8;
+            top: 11px;
+            left: 0px;
+       }
+       .mx-copy-t{
+            top: 0;
+       }
+       .mx-copy-t6{
+            top: 6px;
+       }
+       .mx-copy:hover{
+            background-color: #563d7c;
+       }
+    </style>
+</head>
+<body>
+    <div class="page">
+    <div class="page__hd">
+        <h1 class="page__title">Preview</h1>
+        <p class="page__desc">表单预览</p>
+    </div>
+    <div class="page__bd">
+        <div class="mx-form-preview">
+            <div class="mx-form-preview__hd">
+                <div class="mx-form-preview__item">
+                    <label class="mx-form-preview__label">付款金额</label>
+                    <em class="mx-form-preview__value">¥2400.00</em>
+                </div>
+            </div>
+            <div class="mx-form-preview__bd">
+                <div class="mx-form-preview__item">
+                    <label class="mx-form-preview__label">商品</label>
+                    <span class="mx-form-preview__value">电动打蛋机</span>
+                </div>
+                <div class="mx-form-preview__item">
+                    <label class="mx-form-preview__label">标题标题</label>
+                    <span class="mx-form-preview__value">名字名字名字</span>
+                </div>
+                <div class="mx-form-preview__item">
+                    <label class="mx-form-preview__label">标题标题</label>
+                    <span class="mx-form-preview__value">很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字</span>
+                </div>
+            </div>
+            <div class="mx-form-preview__ft">
+                <a class="mx-form-preview__btn mx-form-preview__btn_primary" href="javascript:">操作</a>
+            </div>
+        </div>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre class="pre">
+            &lt;div class="mx-form-preview"&gt;
+                &lt;div class="mx-form-preview__hd"&gt;
+                    &lt;div class="mx-form-preview__item"&gt;
+                        &lt;label class="mx-form-preview__label"&gt;付款金额&lt;/label&gt;
+                        &lt;em class="mx-form-preview__value"&gt;¥2400.00&lt;/em&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-form-preview__bd"&gt;
+                    &lt;div class="mx-form-preview__item"&gt;
+                        &lt;label class="mx-form-preview__label"&gt;商品&lt;/label&gt;
+                        &lt;span class="mx-form-preview__value"&gt;电动打蛋机&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-form-preview__item"&gt;
+                        &lt;label class="mx-form-preview__label"&gt;标题标题&lt;/label&gt;
+                        &lt;span class="mx-form-preview__value"&gt;名字名字名字&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-form-preview__item"&gt;
+                        &lt;label class="mx-form-preview__label"&gt;标题标题&lt;/label&gt;
+                        &lt;span class="mx-form-preview__value"&gt;很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-form-preview__ft"&gt;
+                    &lt;a class="mx-form-preview__btn mx-form-preview__btn_primary" href="javascript:"&gt;操作&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </pre>
+        <br>
+        <div class="mx-form-preview">
+            <div class="mx-form-preview__hd">
+                <label class="mx-form-preview__label">付款金额</label>
+                <em class="mx-form-preview__value">¥2400.00</em>
+            </div>
+            <div class="mx-form-preview__bd">
+                <div class="mx-form-preview__item">
+                    <label class="mx-form-preview__label">商品</label>
+                    <span class="mx-form-preview__value">电动打蛋机</span>
+                </div>
+                <div class="mx-form-preview__item">
+                    <label class="mx-form-preview__label">标题标题</label>
+                    <span class="mx-form-preview__value">名字名字名字</span>
+                </div>
+                <div class="mx-form-preview__item">
+                    <label class="mx-form-preview__label">标题标题</label>
+                    <span class="mx-form-preview__value">很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字</span>
+                </div>
+            </div>
+            <div class="mx-form-preview__ft">
+                <a class="mx-form-preview__btn mx-form-preview__btn_default" href="javascript:">辅助操作</a>
+                <button type="submit" class="mx-form-preview__btn mx-form-preview__btn_primary" href="javascript:">操作</button>
+            </div>
+        </div>
+        <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+        <pre class="pre">
+            &lt;div class="mx-form-preview"&gt;
+                &lt;div class="mx-form-preview__hd"&gt;
+                    &lt;label class="mx-form-preview__label"&gt;付款金额&lt;/label&gt;
+                    &lt;em class="mx-form-preview__value"&gt;¥2400.00&lt;/em&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-form-preview__bd"&gt;
+                    &lt;div class="mx-form-preview__item"&gt;
+                        &lt;label class="mx-form-preview__label"&gt;商品&lt;/label&gt;
+                        &lt;span class="mx-form-preview__value"&gt;电动打蛋机&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-form-preview__item"&gt;
+                        &lt;label class="mx-form-preview__label"&gt;标题标题&lt;/label&gt;
+                        &lt;span class="mx-form-preview__value"&gt;名字名字名字&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="mx-form-preview__item"&gt;
+                        &lt;label class="mx-form-preview__label"&gt;标题标题&lt;/label&gt;
+                        &lt;span class="mx-form-preview__value"&gt;很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-form-preview__ft"&gt;
+                    &lt;a class="mx-form-preview__btn mx-form-preview__btn_default" href="javascript:"&gt;辅助操作&lt;/a&gt;
+                    &lt;button type="submit" class="mx-form-preview__btn mx-form-preview__btn_primary" href="javascript:"&gt;操作&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </pre>
+    </div>
+    <div class="page__ft">
+        <a href="../../index.html"><img src="../../images/icon_footer_link.png" /></a>
+    </div>
+</div>
+</body>
+<script src="../../scripts/clipboard.min.js"></script>
+<script>
+    var clipboard = new Clipboard('.mx-parent',{
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+            }
+        });
+        clipboard.on('success', function(e) {
+            console.log(e);
+        });
+
+        clipboard.on('error', function(e) {
+            console.log(e);
+        });
+</script>
+</html>

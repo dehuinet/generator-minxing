@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>MxUI</title>
+    <link rel="stylesheet" href="../../styles/mx.css"/>
+    <link rel="stylesheet" href="../../styles/example.css"/>
+    <style>  
+        .page{
+            opacity: 1;
+        }
+        .page.home .font{
+            font-size: 27px;
+        }
+        .reset{
+            width: 100%;
+            text-align: left;
+            resize: none;
+            margin-top: 8px;
+            background: #fff;
+            outline: none;
+            font-size: 14px;
+            padding: 12px 0 0;
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+            
+        }
+        pre{
+            padding: 10px 20px;
+            background: #fff;
+            border-radius: 4px;
+            border:1px solid #eee;
+            margin:10px 0;
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+            white-space: pre-wrap;
+            max-width: 100%;
+            word-wrap : break-word;
+        }
+        code{
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+        }
+       /* .pre{
+            overflow-y: scroll;
+            max-height: 10rem;
+        }*/
+       .mx-parent{
+            position: relative;
+            display: block;
+       }
+       .mx-copy{
+            position: absolute;
+            right: 0;
+            display: block;
+            font-size: 12px;
+            text-align: right;
+            padding: 5px 8px;
+            background-color: #fff;
+            color: #767676;
+            border-radius: 4px;
+            border: 1px solid #elele8;
+            top: 11px;
+            left: 0px;
+       }
+       .mx-copy-t{
+            top: 0;
+       }
+       .mx-copy-t6{
+            top: 6px;
+       }
+       .mx-copy:hover{
+            background-color: #563d7c;
+       }
+       .j_bottom{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+       }
+    </style>
+</head>
+<body>
+    <div class="page layers">
+    <div class="page__hd">
+        <div class="j_info page__info" data-for="normal">
+            <h2 class="page__title">mx页面层级</h2>
+            <p class="page__desc">用于规范mx页面元素所属层级、层级顺序及组合规范。</p>
+        </div>
+        <div class="j_info page__info" data-for="popout" style="display:none">
+            <h2 class="page__title">Popout</h2>
+            <p class="page__desc">弹出层，作为内容层和导航层的补充，用于承载弹窗通知、操作菜单、菜单、成功或加载中等状态的Toast，表单报错提示等弹出内容。</p>
+        </div>
+        <div class="j_info page__info" data-for="mask" style="display:none">
+            <h2 class="page__title">Mask</h2>
+            <p class="page__desc">蒙层，配合Popout层使用，用于锁定内容层和导航层操作，不单独使用。</p>
+        </div>
+        <div class="j_info page__info" data-for="navigation" style="display:none">
+            <h2 class="page__title">Navigation</h2>
+            <p class="page__desc">导航层，位于内容层之上，在用户滑动内容层时可保持位置不动，通常用于承载导航栏等需要固定在页面的元素。</p>
+        </div>
+        <div class="j_info page__info" data-for="content" style="display:none">
+            <h2 class="page__title">Content</h2>
+            <p class="page__desc">内容层，承载页面主要内容。</p>
+        </div>
+    </div>
+    <div class="page__bd">
+        <div class="layers j_layers">
+            <div data-name="popout" class="j_pic j_layer layers__layer layers__layer_popout"><span>Popout</span></div>
+            <div data-name="mask" class="j_pic j_layer layers__layer layers__layer_mask"><span>Mask</span></div>
+            <div data-name="navigation" class="j_pic j_layer layers__layer layers__layer_navigation"><span>Navigation</span></div>
+            <div data-name="content" class="j_pic j_layer layers__layer layers__layer_content"><span>Content</span></div>
+        </div>
+    </div>
+    <div class="page__ft j_bottom">
+        <a href="../../index.html"><img src="../../images/icon_footer_link.png" /></a>
+    </div>
+</div>
+ <script src="../../scripts/zepto.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var $layers = $(".layers__layer"), $infos = $(".j_info"),
+            hideTimeout;
+
+        function showInfo(name){
+            $infos.filter("[data-for='" + name + "']").show().siblings().hide();
+        }
+        function hideIfLayerShowing(){
+            if($layers.filter(".j_transform").length != $layers.length){ // 展示中
+                showInfo("normal");
+                $layers.addClass("j_transform");
+
+                clearTimeout(hideTimeout);
+                hideTimeout = setTimeout(function(){
+                    $layers.removeClass("j_hide");
+                }, 300);
+                return true;
+            }
+            return false;
+        }
+        $layers.on("transitionend webkitTransitionend", function(){
+            var that = this;
+            if(that.classList.contains("j_transform")){
+                setTimeout(function(){
+                    that.classList.remove("j_pic");
+                }, 500);
+            }else{
+                that.classList.add("j_pic");
+            }
+        });
+        setTimeout(function(){
+            $layers.addClass("j_transform");
+
+            $(".j_layer").on("click", function(e){
+                if(hideIfLayerShowing()) return;
+
+                var target = this;
+                if(target.classList.contains("j_layer")){
+                    clearTimeout(hideTimeout);
+
+                    var name;
+                    target = $(target);
+                    name = target.data("name");
+                    showInfo(name);
+
+                    target.removeClass("j_transform").siblings().addClass("j_hide");
+                }
+            });
+        }, 500);
+    });
+</script>
+</body>
+</html>

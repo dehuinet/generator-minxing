@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>MxUI</title>
+    <link rel="stylesheet" href="../../styles/mx.css"/>
+    <link rel="stylesheet" href="../../styles/example.css"/>
+    <style>  
+        .page{
+            opacity: 1;
+        }
+        .page.home .font{
+            font-size: 27px;
+        }
+        .reset{
+            width: 100%;
+            text-align: left;
+            resize: none;
+            margin-top: 8px;
+            background: #fff;
+            outline: none;
+            font-size: 14px;
+            padding: 12px 0 0;
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+            
+        }
+        pre{
+            padding: 10px 20px;
+            background: #fff;
+            border-radius: 4px;
+            border:1px solid #eee;
+            margin:10px 0;
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+            white-space: pre-wrap;
+            max-width: 100%;
+            word-wrap : break-word;
+        }
+        code{
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+        }
+       /* .pre{
+            overflow-y: scroll;
+            max-height: 10rem;
+        }*/
+       .mx-parent{
+            position: relative;
+            display: block;
+       }
+       .mx-copy{
+            position: absolute;
+            right: 0;
+            display: block;
+            font-size: 12px;
+            text-align: right;
+            padding: 5px 8px;
+            background-color: #fff;
+            color: #767676;
+            border-radius: 4px;
+            border: 1px solid #elele8;
+            top: 11px;
+            left: 0px;
+       }
+       .mx-copy-t{
+            top: 0;
+       }
+       .mx-copy-t6{
+            top: 6px;
+       }
+       .mx-copy:hover{
+            background-color: #563d7c;
+       }
+    </style>
+</head>
+<body>
+    <div class="page">
+    <div class="page__bd" style="height: 50%;">
+        <div class="mx-tab">
+            <div class="mx-navbar">
+                <div class="mx-navbar__item mx-bar__item_on">
+                    选项一
+                </div>
+                <div class="mx-navbar__item">
+                    选项二
+                </div>
+                <div class="mx-navbar__item">
+                    选项三
+                </div>
+            </div>
+            <div class="mx-tab__panel">
+
+            </div>
+        </div>
+    </div>
+    <div class="mx-parent">
+            <button class="mx-copy">copy</button>
+        </div>
+    <pre class="pre">
+        &lt;div class="page__bd" style="height: 100%;"&gt;
+            &lt;div class="mx-tab"&gt;
+                &lt;div class="mx-navbar"&gt;
+                    &lt;div class="mx-navbar__item mx-bar__item_on"&gt;
+                        选项一
+                    &lt;/div&gt;
+                    &lt;div class="mx-navbar__item"&gt;
+                        选项二
+                    &lt;/div&gt;
+                    &lt;div class="mx-navbar__item"&gt;
+                        选项三
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="mx-tab__panel"&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;script&gt;
+            $(function(){
+                $('.mx-navbar__item').on('click', function () {
+                    $(this).addClass('mx-bar__item_on').siblings('.mx-bar__item_on').removeClass('mx-bar__item_on');
+                });
+            });
+        &lt;/script&gt;
+    </pre>
+</div>
+<script src="../../scripts/zepto.min.js"></script>
+<script src="../../scripts/clipboard.min.js"></script>
+<script>
+    var clipboard = new Clipboard('.mx-parent',{
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+            }
+        });
+        clipboard.on('success', function(e) {
+            console.log(e);
+        });
+
+        clipboard.on('error', function(e) {
+            console.log(e);
+        });
+</script>
+<script type="text/javascript">
+    $(function(){
+        $('.mx-navbar__item').on('click', function () {
+            $(this).addClass('mx-bar__item_on').siblings('.mx-bar__item_on').removeClass('mx-bar__item_on');
+        });
+    });
+</script>
+</body>
+</html>

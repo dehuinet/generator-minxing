@@ -13,6 +13,61 @@
         <link rel="stylesheet" href="styles/view/layout.css" />
         <link rel="stylesheet" href="styles/view/search.css" />
         <link rel="stylesheet" href="styles/view/common.css" />
+        <link rel="stylesheet" href="styles/mx.min.css" />
+        <style>
+          .mx-cells:before{
+              border-top: none;
+          }
+          .mx-cells_form:before{
+              border: 1px solid #d9d9d9;
+          }
+          
+          .slider-container_box{
+              margin-top: 70px;
+              width: 100%;
+          }
+          .mx-media-box__hd img{
+              width: 100%;
+              height: 100%;
+          }
+          .mx-panel__bd{;
+            border-bottom: 1px solid #d9d9d9;
+          }
+          .mx-container{
+              width: 100%;
+              height: auto;
+              margin: 0 auto;
+              background: #d9d9d9;
+          }
+          .mx-container .mx-cells{
+              margin-top: 0;
+          }
+          .mx-bg-no{
+              background: none;
+          }
+          .mx-text_lf{
+              text-align: left;
+          }
+          .mx-cells_checkbox label{
+              font-weight: normal;
+              margin-bottom: 0;
+          }
+          .mx-btn_mini{
+              margin-top: 10px;
+          }
+          .mx-check__label:before{
+              height: 2px;
+          }
+          .warp{
+            background-color: #d9d9d9;
+          }
+          .mx-mg-t{
+              margin-top: 5px;
+          }
+          .mx-mg-t60{
+              margin-top: 52px;
+          }
+        </style>
     </head>
     <body>
     <div class="warp">
@@ -26,7 +81,7 @@
                   </a>
               </div>
               <h1 class="am-header-title">
-                  我的工作
+                  审批
               </h1>
               <div class="am-header-right am-header-nav">
                   <a class="am-btn search-btn am-btn-primary js-modal-open">
@@ -37,169 +92,248 @@
                   </a>
               </div>
             </header>
-              <div class="am-list-news-bd doc-content widget-list list mt_50">
-                  <ul class="am-list m-widget-list">
-                      <li class="am-g am-list-item-desce" pageUrl="content.html">
-                          <a href="#content" class="am-list-item-hd p_1_rem"> 
-                              <i class="am-icon-building"></i>
-                              短信平台开发总结报告
-                              <div class="am-list-item-text p_1_rem">
-                              <ul>
-                                  <li>发件人：李刚11</li>
-                                  <li>当前环节：主办部门内部审核</li>
-                                  <li>来文日期：09-12 15:46</li>
-                              </ul>
-                              </div>
-                              <i class="am-icon-chevron-right nav_list_check"></i>
-                          </a>
-                      </li>
-                      <li class="am-g am-list-item-desce" pageUrl="content.html">
-                          <a href="#content" class="am-list-item-hd p_1_rem"> 
-                              <i class="am-icon-building"></i>
-                              短信平台开发总结报告
-                              <div class="am-list-item-text p_1_rem">
-                              <ul>
-                                  <li>发件人：李刚11</li>
-                                  <li>当前环节：主办部门内部审核</li>
-                                  <li>来文日期：09-12 15:46</li>
-                              </ul>
-                              </div>
-                              <i class="am-icon-chevron-right nav_list_check"></i>
-                          </a>
-                      </li>
-                      <li class="am-g am-list-item-desce">
-                          <a  href="#content" class="am-list-item-hd p_1_rem"> 
-                              <i class="am-icon-building"></i>
-                              短信平台开发总结报告
-                              <div class="am-list-item-text p_1_rem">
-                              <ul>
-                                  <li>发件人：李刚11</li>
-                                  <li>当前环节：主办部门内部审核</li>
-                                  <li>来文日期：09-12 15:46</li>
-                              </ul>
-                              </div>
-                              <i class="am-icon-chevron-right nav_list_check"></i>
-                          </a>
-                      </li>
-                  </ul>
-              </div>
+              <a href="#test" >
+                <div class="mx-media-box mx-media-box_appmsg mx-mg-t60">
+                    <div class="mx-media-box__hd" >
+                        <img src="images/doc.png">
+                    </div>
+                    <div class="mx-media-box__bd">
+                        <h4 class="mx-media-box__title">名称：关于二代支付系统网络延时环境优化调整</h4>
+                        <p class="mx-media-box__desc mx-mg-t">上传人：于敏</p>
+                         <!-- <time class="mx-media-box__desc">时间：12-09 12:05</time> -->
+                    </div>
+                    <!-- <a href="#" class="mx-btn mx-btn_mini mx-btn_primary">下载</a> -->
+                    <span>9-30</span>
+                </div>
+               </a>
+               <div class="mx-media-box mx-media-box_appmsg">
+                    <div class="mx-media-box__hd" >
+                        <img src="images/doc.png">
+                    </div>
+                    <div class="mx-media-box__bd">
+                        <h4 class="mx-media-box__title">名称：关于召开2015年宣传思想专业会议的通知</h4>
+                        <p class="mx-media-box__desc mx-mg-t">上传人：许文</p>
+                         <!-- <time class="mx-media-box__desc">时间：09-13 08:52</time> -->
+                    </div>
+                    <!-- <a href="#" class="mx-btn mx-btn_mini mx-btn_primary">下载</a> -->
+                    <span>9-30</span>
+                </div>
+                <div class="mx-media-box mx-media-box_appmsg">
+                    <div class="mx-media-box__hd" >
+                        <img src="images/doc.png">
+                    </div>
+                    <div class="mx-media-box__bd">
+                        <h4 class="mx-media-box__title">名称：关于召开2015年宣传思想专业会议的通知</h4>
+                        <p class="mx-media-box__desc mx-mg-t">上传人：许文</p>
+                         <!-- <time class="mx-media-box__desc">时间：09-13 08:52</time> -->
+                    </div>
+                    <!-- <a href="#" class="mx-btn mx-btn_mini mx-btn_primary">下载</a> -->
+                    <span>9-30</span>
+                </div>
+                <div class="mx-media-box mx-media-box_appmsg">
+                      <div class="mx-media-box__hd" >
+                          <img src="images/doc.png">
+                      </div>
+                      <div class="mx-media-box__bd">
+                          <h4 class="mx-media-box__title">名称：关于召</h4>
+                          <p class="mx-media-box__desc mx-mg-t">上传人：许文</p>
+                           <!-- <time class="mx-media-box__desc">时间：09-13 08:52</time> -->
+                      </div>
+                      <!-- <a href="#" class="mx-btn mx-btn_mini mx-btn_primary">下载</a> -->
+                      <span>9-30</span>
+                  </div>
+                  <div class="mx-media-box mx-media-box_appmsg">
+                      <div class="mx-media-box__hd" >
+                          <img src="images/doc.png">
+                      </div>
+                      <div class="mx-media-box__bd">
+                          <h4 class="mx-media-box__title">名称：关于召开2015年宣传思想专业会议的通知</h4>
+                          <p class="mx-media-box__desc mx-mg-t">上传人：许文</p>
+                           <!-- <time class="mx-media-box__desc">时间：09-13 08:52</time> -->
+                      </div>
+                      <!-- <a href="#" class="mx-btn mx-btn_mini mx-btn_primary">下载</a> -->
+                      <span>9-30</span>
+                  </div>
           </div>
         </div>
 
         <!-- 侧边栏内容 -->
         <div id="my-offcanvas" class="am-offcanvas">
           <div class="am-offcanvas-bar">
-            <div class="am-offcanvas-content">
-                <div class="nav_list_top">
-                    <span class="am-list-news-bd doc-content">
-                        <img src="images/oa.png" height="52" width="52">
-                    </span>
-                    <a href="##" class="am-list-item-hd p_1_rem current"> OA综合系统
+        
+          <div class="slider-container_box">
+                <div class="mx-panel__bd">
+                    <a href="javascript:;" class="mx-media-box mx-media-box_appmsg">
+                        <div class="mx-media-box__hd">
+                            <img class="mx-media-box__thumb" src="http://pic.58pic.com/58pic/13/15/14/34E58PICuHd_1024.jpg" alt="">
+                        </div>
+                        <div class="mx-media-box__bd">
+                            <h4 class="mx-media-box__title">OA综合系统</h4>
+                        </div>
                     </a>
                 </div>
-                <div class="am-list-news-bd doc-content widget-list left_nav">
-                    <ul class="am-list m-widget-list">
-                      <li class="am-g am-list-item-desce current" data-rel="close">
-                          <a href="#" class="am-list-item-hd am-icon-building p_1_rem"> <span>我的工作</span> <i class="am-icon-circle font_12rem"></i>
-                          </a>
-                          <i class="am-icon-check nav_list_check"></i>
-                      </li>
-                      <li class="am-g am-list-item-desce" data-rel="close">
-                          <a href="#" class="am-list-item-hd am-icon-building p_1_rem"> <span>待办事宜</span> <i class="am-icon-circle font_12rem hide"></i>
-                          </a>
-                          <i class="am-icon-check nav_list_check"></i>
-                      </li>
-                      <li class="am-g am-list-item-desce" data-rel="close">
-                          <a href="#" class="am-list-item-hd am-icon-building p_1_rem"> <span>待阅事宜</span> <i class="am-icon-circle font_12rem hide"></i>
-                          </a>
-                          <i class="am-icon-check nav_list_check"></i>
-                      </li>
-                      <li class="am-g am-list-item-desce" data-rel="close">
-                          <a href="#" class="am-list-item-hd am-icon-building p_1_rem"> <span>发文管理</span> <i class="am-icon-circle font_12rem hide"></i>
-                          </a>
-                          <i class="am-icon-check nav_list_check"></i>
-                      </li>
-                      <li class="am-g am-list-item-desce" data-rel="close">
-                          <a href="#" class="am-list-item-hd am-icon-building p_1_rem"> <span>收文管理</span> <i class="am-icon-circle font_12rem"></i>
-                          </a>
-                          <i class="am-icon-check nav_list_check"></i>
-                      </li>
-                      <li class="am-g am-list-item-desce" data-rel="close">
-                          <a href="#" class="am-list-item-hd am-icon-building p_1_rem"> <span>通知公告</span> <i class="am-icon-circle font_12rem"></i>
-                          </a>
-                          <i class="am-icon-check nav_list_check"></i>
-                      </li>
-                    </ul>
-                </div>
-            </div>
+                <!-- 单选 -->
+                <div class="mx-cells mx-cells_radio"> 
+                  <label class="mx-cell mx-check__label" data-rel="close"for="x11">
+                      <div class="mx-cell__bd">
+                          <p>我的工作ddd</p>
+                      </div>
+                      <div class="mx-cell__ft">
+                          <input type="radio" class="mx-check" name="radio1" id="x11">
+                          <span class="mx-icon-checked"></span>
+                      </div>
+                  </label>
+                  <label class="mx-cell mx-check__label" data-rel="close" for="x12">
+
+                      <div class="mx-cell__bd">
+                          <p>我的工作d</p>
+                      </div>
+                      <div class="mx-cell__ft">
+                          <input type="radio" name="radio1" class="mx-check" id="x12" checked="checked">
+                          <span class="mx-icon-checked"></span>
+                      </div>
+                  </label>
+                  <label class="mx-cell mx-check__label" data-rel="close" for="x13">
+
+                      <div class="mx-cell__bd">
+                          <p>我的工作</p>
+                      </div>
+                      <div class="mx-cell__ft">
+                          <input type="radio" name="radio1" class="mx-check" id="x13" checked="checked">
+                          <span class="mx-icon-checked"></span>
+                      </div>
+                  </label>
+              </div>
           </div>
         </div>
         
+        </div>
         <!-- 搜索 dialog -->
         <div class="am-modal search-dialog am-modal-no-btn" tabindex="-1" id="your-modal">
-          <div class="am-modal-dialog">
-            <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>×</a>
-            <div class="am-modal-bd">
-                <div class="search">
-                  <form>
-                    <label for="title">文件标题</label>
-                    <input type="text" id="title" placeholder="请输入文件标题">
-                    <label for="time">文件时间</label>
-                    <div class="time">
-                      <span>文件开始时间</span>
-                      <time id="beginTime" class="am-icon-chevron-right"></time>
-                    </div>
-                    <div class="time time2">
-                      <span>文件结束时间</span>
-                      <time id="endTime" class="am-icon-chevron-right"></time>
+          
+              <div class="mx-container">
+                  <div class="mx-cells mx-bg-no">
+                      <div class="mx-cell">
+                          <div class="mx-cell__bd">
+                              <p class="mx-text_lf">文件标题</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="mx-cells">
+                      <div class="mx-cell">
+                          <div class="mx-cell__bd">
+                              <input type="text" class="mx-input" placeholder="请输入文本">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="mx-cells mx-bg-no">
+                      <div class="mx-cell">
+                          <div class="mx-cell__bd">
+                              <p class="mx-text_lf">文件时间</p>
+                          </div>
+                      </div>
+                  </div>
+                   <div class="mx-cells">
+                        <span class="mx-cell mx-cell_access" href="javascript:;">
+                            <div class="mx-cell__bd">
+                                <p class="mx-text_lf" id="showDatePicker">文件开始时间</p>
+                            </div>
+                            <div class="mx-cell__ft">
+                            </div>
+                        </span>
+                        <span class="mx-cell mx-cell_access" href="javascript:;">
+                            <div class="mx-cell__bd">
+                                <p class="mx-text_lf" id="endDatePicker">文件结束时间</p>
+                            </div>
+                            <div class="mx-cell__ft">
+                            </div>
+                        </span>
+
                     </div>
                     <div id="datePlugin"></div>
-                    <label for="type">文件类型</label>
-                    <ul>
-                      <li>
-                        <label for ="send">发文</label>
-                        <i class="am-icon-check-circle-o" id="send" class="styled"></i>
-                      </li>
-                      <li>
-                        <label for ="receive">收文</label>
-                        <i class="am-icon-check-circle-o" id="receive" class="styled"></i>
-                      </li>
-                      <li>
-                        <label for ="sign">签报</label>
-                        <i class="am-icon-check-circle-o" id="sign" class="styled"></i>
-                      </li>
-                      <li>
-                        <label for ="meeting">会议</label>
-                        <i class="am-icon-check-circle-o" id="meeting" class="styled"></i>
-                      </li>
-                      <li>
-                        <label for ="exam">事务审批</label>
-                        <i class="am-icon-check-circle-o" id="exam" class="styled"></i>
-                      </li>
-                    </ul>
-                    <a class="btn-search"href="#"><i class="am-icon-search"></i>  查 询</a>
-                  </form>
-                </div>
-            </div>
-          </div>
-        </div>
-
+                    <div class="mx-cells mx-bg-no">
+                        <div class="mx-cell">
+                            <div class="mx-cell__bd">
+                                <p class="mx-text_lf">文件类型</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mx-cells mx-cells_checkbox">
+                        <label class="mx-cell mx-check__label" for="s11">
+                            <div class="mx-cell__bd">
+                                <p class="mx-text_lf">发文</p>
+                            </div>
+                            <div class="mx-cell__hd">
+                                <input type="checkbox" class="mx-check" name="checkbox1" id="s11" checked="checked">
+                                <i class="mx-icon-checked"></i>
+                            </div>
+                        </label>
+                        <label class="mx-cell mx-check__label" for="s12">
+                            <div class="mx-cell__bd">
+                                <p class="mx-text_lf">收文</p>
+                            </div>
+                             <div class="mx-cell__hd">
+                                <input type="checkbox" name="checkbox1" class="mx-check" id="s12">
+                                <i class="mx-icon-checked"></i>
+                            </div>
+                        </label>
+                         <label class="mx-cell mx-check__label" for="s13">
+                            <div class="mx-cell__bd">
+                                <p class="mx-text_lf">收文</p>
+                            </div>
+                             <div class="mx-cell__hd">
+                                <input type="checkbox" name="checkbox1" class="mx-check" id="s13">
+                                <i class="mx-icon-checked"></i>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="mx-btn mx-btn_mini mx-btn_primary"><i class="mx-icon-search"></i>  查询</div>
+              </div>
+        </div>   
     </div>
+
+
     <script src="../libs/jquery.min.js"></script>
     <script src="../libs/jquery.hashchange.js"></script>
     <script src="../libs/minxing.mock.data.js"></script>
     <script src="../libs/minxing.mock.lib.js"></script>
     <script src="../libs/amazeui.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="../scripts/main.js"></script>
     <script src="scripts/view/date.js"></script>
     <script src="scripts/view/iscroll.js"></script>
     <script src="scripts/view/checkbox.js"></script>
     <script src="scripts/view/oa.js"></script>
     <script src="scripts/jump.js"></script>
     <script src="scripts/view/jquery.magnific-popup.js"></script>
+    <script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
 	  <script>
-	</script>
+        $('#showDatePicker').on('click', function () {
+            weui.datePicker({
+                start: 1990,
+                end: new Date().getFullYear(),
+                onChange: function (result) {
+                    console.log(result);
+                },
+                onConfirm: function (result) {
+                    console.log(result);
+                }
+            });
+        }); 
+         $('#endDatePicker').on('click', function () {
+            weui.datePicker({
+                start: 1990,
+                end: new Date().getFullYear(),
+                onChange: function (result) {
+                    console.log(result);
+                },
+                onConfirm: function (result) {
+                    console.log(result);
+                }
+            });
+        }); 
+    </script>
     <script>
+        
         $(function() {
             var id = '#my-offcanvas';
             var $myOc = $(id);
@@ -213,8 +347,8 @@
               console.log(id + ' 关闭了。');
             });
 
-            $(document).on('click','.left_nav li',function(){
-                $(".left_nav li").removeClass('current');
+            $(document).on('click','.mx-cells_radio label',function(){
+                $(".mx-cells_radio label").removeClass('current');
                 $(this).addClass('current');
                 $myOc.offCanvas($(this).data('rel'));
             });
@@ -231,8 +365,8 @@
               }
             });
 
-            $('#beginTime').date();
-            $('#endTime').date();
+            // $('#beginTime').date();
+            // $('#endTime').date();
 
             $('.search ul li').click(function(e) {
                 if (!$(this).find('i').hasClass('am-icon-check-circle')) {
