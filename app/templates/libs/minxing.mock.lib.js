@@ -1,22 +1,20 @@
-﻿/*
+/*
  * @Author: minxing365.com
  * @Date:   2015-12-22
  * @Desc: 当前文件会自动检测在非敏行浏览器运行的时候，模拟一些事件和API,当前文件请不要修改，以后会进行升级。
- * @Last Modified by:   anchen
+ * @Last Modified by:   dev@dehuinet.com
  * @Last Modified time: 2015-12-22
  */
 ;
 (function($) {
     $.extend({
-        sendOcuMessage: function(accessToken, ocuId, ocuSecret, direct_to_user_ids, user_id, articles, success,error) {
+        sendOcuMessage: function(accessToken, ocuId, ocuSecret, direct_to_user_ids, articles, success) {
             //发送公众号推送消息，这个建议仅在demo环境中使用
             MXCommon.getServerUrl(function(serverUrl) {
                 $.ajax({
                     url: serverUrl + "/api/v1/conversations/ocu_messages",
                     headers: {
-                        "Authorization": "Bearer " + accessToken,
-                        "NETWORK-ID": "110",
-                        "X_AS_USER": user_id
+                        "Authorization": "Bearer " + accessToken
                     },
                     method: "POST",
                     data: {
@@ -27,14 +25,9 @@
                         body: JSON.stringify({
                             article_count: articles.length,
                             articles: articles
-                        }),
-                        sso_key: 'user_id'
+                        })
                     },
-                    success:success,
-                    error:function(err){
-                         alert("异常！");
-                         alert("err:::" + JSON.stringify(err));
-                    }
+                    success:success
                 })
             })
         }

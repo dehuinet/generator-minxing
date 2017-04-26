@@ -1,4 +1,86 @@
-<div class="page">
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>MxUI</title>
+    <link rel="stylesheet" href="../../styles/mx.css"/>
+    <link rel="stylesheet" href="../../styles/example.css"/>
+    <style>  
+        .page{
+            opacity: 1;
+        }
+        .page.home .font{
+            font-size: 27px;
+        }
+        .reset{
+            width: 100%;
+            text-align: left;
+            resize: none;
+            margin-top: 8px;
+            background: #fff;
+            outline: none;
+            font-size: 14px;
+            padding: 12px 0 0;
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+            
+        }
+        pre{
+            padding: 10px 20px;
+            background: #fff;
+            border-radius: 4px;
+            border:1px solid #eee;
+            margin:10px 0;
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+            white-space: pre-wrap;
+            max-width: 100%;
+            word-wrap : break-word;
+        }
+        code{
+            font-family:  Monaco,Menlo,Consolas,"Courier New",FontAwesome,monospace;
+        }
+       /* .pre{
+            overflow-y: scroll;
+            max-height: 10rem;
+        }*/
+       .mx-parent{
+            position: relative;
+            display: block;
+       }
+       .mx-copy{
+            position: absolute;
+            right: 0;
+            display: block;
+            font-size: 12px;
+            text-align: right;
+            padding: 5px 8px;
+            background-color: #fff;
+            color: #767676;
+            border-radius: 4px;
+            border: 1px solid #elele8;
+            top: 11px;
+            left: 0px;
+       }
+       .mx-copy-t{
+            top: 0;
+       }
+       .mx-copy-t6{
+            top: 6px;
+       }
+       .mx-copy:hover{
+            background-color: #563d7c;
+       }
+       .j_bottom{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+       }
+    </style>
+</head>
+<body>
+    <div class="page layers">
     <div class="page__hd">
         <div class="j_info page__info" data-for="normal">
             <h2 class="page__title">mx页面层级</h2>
@@ -29,10 +111,11 @@
             <div data-name="content" class="j_pic j_layer layers__layer layers__layer_content"><span>Content</span></div>
         </div>
     </div>
-    <div class="page__ft">
-        <a href="javascript:home()"><img src="./images/icon_footer_link.png" /></a>
+    <div class="page__ft j_bottom">
+        <a href="../../index.html"><img src="../../images/icon_footer_link.png" /></a>
     </div>
 </div>
+ <script src="../../scripts/zepto.min.js"></script>
 <script type="text/javascript">
     $(function(){
         var $layers = $(".layers__layer"), $infos = $(".j_info"),
@@ -85,3 +168,5 @@
         }, 500);
     });
 </script>
+</body>
+</html>

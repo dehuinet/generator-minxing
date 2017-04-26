@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
     <title>MxUI</title>
-    <link rel="stylesheet" href="styles/style/mx.css"/>
-    <link rel="stylesheet" href="styles/style/example.css"/>
+    <link rel="stylesheet" href="styles/mx.css"/>
+    <link rel="stylesheet" href="styles/example.css"/>
     <style>  
         .page.home .font{
             font-size: 27px;
@@ -67,6 +67,9 @@
        .mx-copy:hover{
             background-color: #563d7c;
        }
+       .mx-a{
+            color: #000;
+       }
     </style>
 </head>
 <body ontouchstart>
@@ -79,48 +82,268 @@
 
     <div class="container" id="container"></div>
 
-    <link rel="import" href="template/view/home.html">
-    <link rel="import" href="template/view/button.html">
-    <link rel="import" href="template/view/list.html">
-    <link rel="import" href="template/view/input.html">
-    <link rel="import" href="template/view/toast.html">
-    <link rel="import" href="template/view/dialog.html">
-    <link rel="import" href="template/view/progress.html">
-    <link rel="import" href="template/view/msg.html">
-    <link rel="import" href="template/view/msg_success.html">
-    <link rel="import" href="template/view/msg_warn.html">
-    <link rel="import" href="template/view/article.html">
-    <link rel="import" href="template/view/navbar.html">
-    <link rel="import" href="template/view/tabbar.html">
-    <link rel="import" href="template/view/panel.html">
-    <link rel="import" href="template/view/actionsheet.html">
-    <link rel="import" href="template/view/icons.html">
-    <link rel="import" href="template/view/searchbar.html">
-    <link rel="import" href="template/view/picker.html">
-    <link rel="import" href="template/view/footer.html">
-    <link rel="import" href="template/view/gallery.html">
-    <link rel="import" href="template/view/flex.html">
-    <link rel="import" href="template/view/loadmore.html">
-    <link rel="import" href="template/view/layers.html">
-    <link rel="import" href="template/view/uploader.html">
-    <link rel="import" href="template/view/preview.html">
-    <link rel="import" href="template/view/grid.html">
-    <link rel="import" href="template/view/badge.html">
-    <link rel="import" href="template/view/slider.html">
-    
-    <script>
-        var clipboard = new Clipboard('.mx-parent',{
-        target: function(trigger) {
-            return trigger.nextElementSibling;
+    <script type="text/html" id="tpl_home">
+<div class="page">
+    <div class="page__hd">
+        <h1 class="page__title font">
+            MxUI
+            <!-- <img src="./images/logo.png" alt="MxUI" height="21px" /> -->
+        </h1>
+        <p class="page__desc">MxUI 是一套同敏行原生视觉体验一致的基础样式库，由敏行官方设计团队为敏行内网页量身设计，令用户的使用感知更加统一。</p>
+    </div>
+    <div class="page__bd page__bd_spacing">
+        <ul>
+            <li>
+                <div class="mx-flex js_category">
+                    <p class="mx-flex__item">表单</p>
+                    <img src="./images/icon_nav_form.png" alt="">
+                </div>
+                <div class="page__category js_categoryInner">
+                    <div class="mx-cells page__category-content">
+                        <a class="mx-cell mx-cell_access js_item" data-id="button" href="template/view/button.html">
+                            <div class="mx-cell__bd">
+                                <p>Button</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                        <a class="mx-cell mx-cell_access js_item" data-id="input" href="template/view/input.html">
+                            <div class="mx-cell__bd">
+                                <p>Input</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                        <a class="mx-cell mx-cell_access js_item" data-id="list" href="template/view/list.html">
+                            <div class="mx-cell__bd">
+                                <p>List</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                        <a class="mx-cell mx-cell_access js_item" data-id="slider" href="template/view/slider.html">
+                            <div class="mx-cell__bd">
+                                <p>Slider</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                        <a class="mx-cell mx-cell_access js_item" data-id="uploader" href="template/view/uploader.html">
+                            <div class="mx-cell__bd">
+                                <p>Uploader</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="mx-flex js_category">
+                    <p class="mx-flex__item">基础组件</p>
+                    <img src="./images/icon_nav_layout.png" alt="">
+                </div>
+                <div class="page__category js_categoryInner">
+                    <div class="mx-cells page__category-content">
+                        <a class="mx-cell mx-cell_access js_item" data-id="article" href="template/view/article.html">
+                            <div class="mx-cell__bd">
+                                <p>Article</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                        <a class="mx-cell mx-cell_access js_item" data-id="badge" href="template/view/badge.html">
+                            <div class="mx-cell__bd">
+                                <p>Badge</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                        <a class="mx-cell mx-cell_access js_item" data-id="flex" href="template/view/flex.html">
+                            <div class="mx-cell__bd">
+                                <p>Flex</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                        <a class="mx-cell mx-cell_access js_item" data-id="footer" href="template/view/footer.html">
+                            <div class="mx-cell__bd">
+                                <p>Footer</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                        <a class="mx-cell mx-cell_access js_item" data-id="gallery" href="template/view/gallery.html">
+                            <div class="mx-cell__bd">
+                                <p>Gallery</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                        <a class="mx-cell mx-cell_access js_item" data-id="grid" href="template/view/grid.html">
+                            <div class="mx-cell__bd">
+                                <p>Grid</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                        <a class="mx-cell mx-cell_access js_item" data-id="icons" href="template/view/icons.html">
+                            <div class="mx-cell__bd">
+                                <p>Icons</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                        <a class="mx-cell mx-cell_access js_item" data-id="loadmore" href="template/view/loadmore.html">
+                            <div class="mx-cell__bd">
+                                <p>Loadmore</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                        <a class="mx-cell mx-cell_access js_item" data-id="panel" href="template/view/panel.html">
+                            <div class="mx-cell__bd">
+                                <p>Panel</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                        <a class="mx-cell mx-cell_access js_item" data-id="preview" href="template/view/preview.html">
+                            <div class="mx-cell__bd">
+                                <p>Preview</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                        <a class="mx-cell mx-cell_access js_item" data-id="progress" href="template/view/progress.html">
+                            <div class="mx-cell__bd">
+                                <p>Progress</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="mx-flex js_category">
+                    <p class="mx-flex__item">操作反馈</p>
+                    <img src="./images/icon_nav_feedback.png" alt="">
+                </div>
+                <div class="page__category js_categoryInner">
+                    <div class="mx-cells page__category-content">
+                        <a class="mx-cell mx-cell_access js_item" data-id="actionsheet" href="template/view/actionsheet.html">
+                            <div class="mx-cell__bd">
+                                <p>Actionsheet</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                        <a class="mx-cell mx-cell_access js_item" data-id="dialog" href="template/view/dialog.html">
+                            <div class="mx-cell__bd">
+                                <p>Dialog</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                        <a class="mx-cell mx-cell_access js_item" data-id="msg" href="template/view/msg.html">
+                            <div class="mx-cell__bd">
+                                <p>Msg</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                        <a class="mx-cell mx-cell_access js_item" data-id="picker" href="template/view/picker.html">
+                            <div class="mx-cell__bd">
+                                <p>Picker</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                        <a class="mx-cell mx-cell_access js_item" data-id="toast" href="template/view/toast.html">
+                            <div class="mx-cell__bd">
+                                <p>Toast</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="mx-flex js_category">
+                    <p class="mx-flex__item">导航相关</p>
+                    <img src="./images/icon_nav_nav.png" alt="">
+                </div>
+                <div class="page__category js_categoryInner">
+                    <div class="mx-cells page__category-content">
+                        <a class="mx-cell mx-cell_access js_item" data-id="navbar" href="template/view/navbar.html">
+                            <div class="mx-cell__bd">
+                                <p>Navbar</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                        <a class="mx-cell mx-cell_access js_item" data-id="tabbar" href="template/view/tabbar.html">
+                            <div class="mx-cell__bd">
+                                <p>Tabbar</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="mx-flex js_category">
+                    <p class="mx-flex__item">搜索相关</p>
+                    <img src="./images/icon_nav_search.png" alt="">
+                </div>
+                <div class="page__category js_categoryInner">
+                    <div class="mx-cells page__category-content">
+                        <a class="mx-cell mx-cell_access js_item" data-id="searchbar" href="template/view/searchbar.html">
+                            <div class="mx-cell__bd">
+                                <p>Search Bar</p>
+                            </div>
+                            <div class="mx-cell__ft"></div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="template/view/layers.html" class="mx-a">
+                    <div class="mx-flex js_item" data-id="layers">
+                        <p class="mx-flex__item">层级规范</p>
+                        <img src="./images/icon_nav_z-index.png" alt="">
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="page__ft">
+        <a href="javascript:home()"><img src="./images/icon_footer.png" /></a>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        var winH = $(window).height();
+        var categorySpace = 10;
+
+        $('.js_item').on('click', function(){
+            var id = $(this).data('id');
+            window.pageManager.go(id);
+        });
+        $('.js_category').on('click', function(){
+            var $this = $(this),
+                $inner = $this.next('.js_categoryInner'),
+                $page = $this.parents('.page'),
+                $parent = $(this).parent('li');
+            var innerH = $inner.data('height');
+            bear = $page;
+
+            if(!innerH){
+                $inner.css('height', 'auto');
+                innerH = $inner.height();
+                $inner.removeAttr('style');
+                $inner.data('height', innerH);
+            }
+
+            if($parent.hasClass('js_show')){
+                $parent.removeClass('js_show');
+            }else{
+                $parent.siblings().removeClass('js_show');
+
+                $parent.addClass('js_show');
+                if(this.offsetTop + this.offsetHeight + innerH > $page.scrollTop() + winH){
+                    var scrollTop = this.offsetTop + this.offsetHeight + innerH - winH + categorySpace;
+
+                    if(scrollTop > this.offsetTop){
+                        scrollTop = this.offsetTop - categorySpace;
+                    }
+
+                    $page.scrollTop(scrollTop);
+                }
             }
         });
-        clipboard.on('success', function(e) {
-            console.log(e);
-        });
-
-        clipboard.on('error', function(e) {
-            console.log(e);
-        });
-    </script>
+    });
+</script>
+</script>   
 </body>
 </html>

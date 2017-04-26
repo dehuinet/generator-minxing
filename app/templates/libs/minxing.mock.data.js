@@ -1,4 +1,4 @@
-﻿/*
+/*
  * @Author: minxing365.com
  * @Date:   2015-12-22
  * @Desc: 当前文件主要是为了做一些模拟数据，可以自行修改
@@ -9,7 +9,7 @@
 (function($) {
     window.MXMock = window.MXMock || {
         MXCommon: {
-            serverUrl: "https://www.minxing365.com",
+            serverUrl: "http://test1.dehuinet.com:8031",
             SSOToken: "3ac99170d29a2c36c5ed5c63130c863a",
             currentUser: {
                 id: 3,

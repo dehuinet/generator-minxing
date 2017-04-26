@@ -1,0 +1,17 @@
+﻿<pre>         &lt;a href="javascript:;" class="mx-btn mx-btn_primary"&gt;页面主操作 Normal<code>&lt;/a&gt;</code></pre>
+<pre>         &lt;a href="javascript:;" class="mx-btn mx-btn_primary"&gt;&lt;i class="mx-loading"&gt;&lt;/i&gt;页面主操作 Loading<code>&lt;/a&gt;</code></pre>
+<pre>         &lt;a href="javascript:;" class="mx-btn mx-btn_disabled mx-btn_primary"&gt;页面主操作 Disabled<code>&lt;/a&gt;</code></pre>
+<pre>         &lt;a href="javascript:;" class="mx-btn mx-btn_default"&gt;页面次要操作 Normal<code>&lt;/a&gt;</code></pre>
+ <pre>         &lt;a href="javascript:;" class="mx-btn mx-btn_default mx-btn_loading"&gt;&lt;i class="mx-loading"&gt;&lt;/i&gt;页面次操作 Loading<code>&lt;/a&gt;</code></pre>
+<pre>         &lt;a href="javascript:;" class="mx-btn mx-btn_disabled mx-btn_default"&gt;页面次要操作 Disabled<code>&lt;/a&gt;</code></pre>
+<pre>         &lt;a href="javascript:;" class="mx-btn mx-btn_warn"&gt;警告类操作 Normal<code>&lt;/a&gt;</code></pre>
+<pre>         &lt;a href="javascript:;" class="mx-btn mx-btn_warn mx-btn_loading"&gt;&lt;i class="mx-loading"&gt;&lt;/i&gt;警告类操作 Loading<code>&lt;/a&gt;</code></pre>
+<pre>         &lt;a href="javascript:;" class="mx-btn mx-btn_disabled mx-btn_warn"&gt;警告类操作 Disabled<code>&lt;/a&gt;</code></pre>
+<pre>     &lt;a href="javascript:;" class="mx-btn mx-btn_plain-default"&gt;按钮<code>&lt;/a&gt;</code></pre>
+<pre>     &lt;a href="javascript:;" class="mx-btn mx-btn_plain-default mx-btn_plain-disabled"&gt;按钮<code>&lt;/a&gt;</code></pre>
+<pre>     &lt;a href="javascript:;" class="mx-btn mx-btn_plain-primary"&gt;按钮<code>&lt;/a&gt;</code></pre>
+<pre>     &lt;a href="javascript:;" class="mx-btn mx-btn_plain-primary mx-btn_plain-disabled"&gt;按钮<code>&lt;/a&gt;</code></pre>
+<pre>     &lt;a href="javascript:;" class="mx-btn mx-btn_mini mx-btn_primary"&gt;按钮<code>&lt;/a&gt;</code></pre>
+<pre>     &lt;a href="javascript:;" class="mx-btn mx-btn_mini mx-btn_default"&gt;按钮<code>&lt;/a&gt;</code></pre>
+<pre>     &lt;a href="javascript:;" class="mx-btn mx-btn_mini mx-btn_warn"&gt;按钮<code>&lt;/a&gt;</code></pre>
+
