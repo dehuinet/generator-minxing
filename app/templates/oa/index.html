@@ -15,6 +15,9 @@
         <link rel="stylesheet" href="styles/view/common.css" />
         <link rel="stylesheet" href="styles/mx.min.css" />
         <style>
+          body{
+              font-size: 62.5%;
+          }
           .mx-cells:before{
               border-top: none;
           }
@@ -34,10 +37,11 @@
             border-bottom: 1px solid #d9d9d9;
           }
           .mx-container{
-              width: 100%;
+              width: 90%;
               height: auto;
               margin: 0 auto;
               background: #d9d9d9;
+
           }
           .mx-container .mx-cells{
               margin-top: 0;
@@ -47,6 +51,7 @@
           }
           .mx-text_lf{
               text-align: left;
+              font-size: 14px;
           }
           .mx-cells_checkbox label{
               font-weight: normal;
@@ -63,13 +68,74 @@
           }
           .mx-mg-t{
               margin-top: 5px;
+              margin-bottom: 10px;
           }
           .mx-mg-t60{
-              margin-top: 52px;
+              margin-top: 65px;
+          }
+          .mx-media-box__title{
+              font-size: 16px;
+          }
+          .mx-media-box__desc{
+              font-size: 13px;
+          }
+          a{
+              color: #333333;
+          }
+          .mx-input{
+              font-size: 14px;
+          }
+          .mx-cell{
+              padding: 7px 15px;
+          }
+          .mx-mt-0{
+              margin-top: 0;
+          }
+          .mx-mb-0{
+              margin-bottom: 0;
+          }
+          a:hover{
+              color: #333333;
+          }
+          .am-offcanvas-bar{
+              width: 70%;
+          }
+          .mx-close{
+              text-align: right;
+              display: block;
+              margin-right: 17px;
+              color: #fff;
+              font-size: 14px;
+          }
+          .mx-mg-t46{
+              margin-top: 4.6rem;
+          }
+          .ios{
+              height: 6.5rem;
+          }
+          .mx-slider-l{
+              display: inline-block;
+             line-height: 16px;
+          }
+          .am-icon-building{
+              color: #1a85ff;
+          }
+          .mx-name{
+              margin-bottom: 7px;
+          }
+          .mx-time-f{
+              font-size: 12px;
+              color: #999;
+              margin-bottom: 34px;
+          }
+          .mx-an-left{
+              display: inline-block;
+              vertical-align: sub;
           }
         </style>
     </head>
     <body>
+
     <div class="warp">
         <!-- 页面内容 -->
         <div class="MX-pages">
@@ -80,79 +146,81 @@
                     <i class="am-header-icon am-icon-bars"></i>
                   </a>
               </div>
-              <h1 class="am-header-title">
-                  审批
+              <h1 class="am-header-title" id="am-header-title">
+                  我的工作
               </h1>
               <div class="am-header-right am-header-nav">
                   <a class="am-btn search-btn am-btn-primary js-modal-open">
                     <i class="am-icon-search"></i>
                   </a>
-                  <a href="#" class="am-btn">
+                  <a href="javascript:;" class="am-btn">
                     <i class="am-icon-close" onclick="MXWebui.closeWindow();"></i>
                   </a>
               </div>
             </header>
-              <a href="#test" >
-                <div class="mx-media-box mx-media-box_appmsg mx-mg-t60">
+              <a href="javascript:;" >
+                <div class="mx-media-box mx-media-box_appmsg mx-mg-t60 mx-an" id="mx-an">
                     <div class="mx-media-box__hd" >
-                        <img src="images/doc.png">
+                        <img class="img" src="">
                     </div>
                     <div class="mx-media-box__bd">
-                        <h4 class="mx-media-box__title">名称：关于二代支付系统网络延时环境优化调整</h4>
-                        <p class="mx-media-box__desc mx-mg-t">上传人：于敏</p>
+                        <h4 class="mx-media-box__title mx-name"></h4>
+                        <p class="mx-media-box__desc mx-mg-t">人生就像一场旅行</p>
                          <!-- <time class="mx-media-box__desc">时间：12-09 12:05</time> -->
                     </div>
                     <!-- <a href="#" class="mx-btn mx-btn_mini mx-btn_primary">下载</a> -->
-                    <span>9-30</span>
+                    <span class="mx-media-box__title mx-time mx-time-f">2-11</span>
                 </div>
                </a>
+             
                <div class="mx-media-box mx-media-box_appmsg">
                     <div class="mx-media-box__hd" >
-                        <img src="images/doc.png">
+                        <img class="img" src="">
                     </div>
                     <div class="mx-media-box__bd">
-                        <h4 class="mx-media-box__title">名称：关于召开2015年宣传思想专业会议的通知</h4>
-                        <p class="mx-media-box__desc mx-mg-t">上传人：许文</p>
+                        <h4 class="mx-media-box__title mx-name"></h4>
+                        <p class="mx-media-box__desc mx-mg-t">永不放弃自己</p>
                          <!-- <time class="mx-media-box__desc">时间：09-13 08:52</time> -->
                     </div>
                     <!-- <a href="#" class="mx-btn mx-btn_mini mx-btn_primary">下载</a> -->
-                    <span>9-30</span>
+                    <span class="mx-media-box__title mx-time mx-time-f">9-30</span>
                 </div>
+                
                 <div class="mx-media-box mx-media-box_appmsg">
                     <div class="mx-media-box__hd" >
-                        <img src="images/doc.png">
+                       <img class="img" src="">
                     </div>
                     <div class="mx-media-box__bd">
-                        <h4 class="mx-media-box__title">名称：关于召开2015年宣传思想专业会议的通知</h4>
-                        <p class="mx-media-box__desc mx-mg-t">上传人：许文</p>
+                        <h4 class="mx-media-box__title mx-name"></h4>
+                        <p class="mx-media-box__desc mx-mg-t">勇敢面对任何挑战</p>
                          <!-- <time class="mx-media-box__desc">时间：09-13 08:52</time> -->
                     </div>
                     <!-- <a href="#" class="mx-btn mx-btn_mini mx-btn_primary">下载</a> -->
-                    <span>9-30</span>
+                    <span class="mx-media-box__title mx-time mx-time-f">9-30</span>
                 </div>
                 <div class="mx-media-box mx-media-box_appmsg">
                       <div class="mx-media-box__hd" >
-                          <img src="images/doc.png">
+                          <img class="img" src="">
                       </div>
                       <div class="mx-media-box__bd">
-                          <h4 class="mx-media-box__title">名称：关于召</h4>
-                          <p class="mx-media-box__desc mx-mg-t">上传人：许文</p>
+                          <h4 class="mx-media-box__title mx-name"></h4>
+                          <p class="mx-media-box__desc mx-mg-t">喜欢跑步，摄影</p>
                            <!-- <time class="mx-media-box__desc">时间：09-13 08:52</time> -->
                       </div>
                       <!-- <a href="#" class="mx-btn mx-btn_mini mx-btn_primary">下载</a> -->
-                      <span>9-30</span>
+                      <span class="mx-media-box__title mx-time mx-time-f">9-30</span>
                   </div>
                   <div class="mx-media-box mx-media-box_appmsg">
                       <div class="mx-media-box__hd" >
-                          <img src="images/doc.png">
+                          <img class="img" src="">
                       </div>
                       <div class="mx-media-box__bd">
-                          <h4 class="mx-media-box__title">名称：关于召开2015年宣传思想专业会议的通知</h4>
-                          <p class="mx-media-box__desc mx-mg-t">上传人：许文</p>
+                          <h4 class="mx-media-box__title mx-name"></h4>
+                          <p class="mx-media-box__desc mx-mg-t">对自己好一点</p>
                            <!-- <time class="mx-media-box__desc">时间：09-13 08:52</time> -->
                       </div>
                       <!-- <a href="#" class="mx-btn mx-btn_mini mx-btn_primary">下载</a> -->
-                      <span>9-30</span>
+                      <span class="mx-media-box__title mx-time mx-time-f">9-30</span>
                   </div>
           </div>
         </div>
@@ -165,7 +233,7 @@
                 <div class="mx-panel__bd">
                     <a href="javascript:;" class="mx-media-box mx-media-box_appmsg">
                         <div class="mx-media-box__hd">
-                            <img class="mx-media-box__thumb" src="http://pic.58pic.com/58pic/13/15/14/34E58PICuHd_1024.jpg" alt="">
+                            <img class="mx-media-box__thumb" src="images/1.jpg" alt="">
                         </div>
                         <div class="mx-media-box__bd">
                             <h4 class="mx-media-box__title">OA综合系统</h4>
@@ -173,33 +241,69 @@
                     </a>
                 </div>
                 <!-- 单选 -->
-                <div class="mx-cells mx-cells_radio"> 
-                  <label class="mx-cell mx-check__label" data-rel="close"for="x11">
+                <div class="mx-cells mx-cells_radio mx-mt-0"> 
+                  <label class="mx-cell mx-check__label mx-mb-0" data-rel="close" for="x11">
                       <div class="mx-cell__bd">
-                          <p>我的工作ddd</p>
+                          <i class="am-icon-building"></i>
+                          <p class="mx-media-box__title mx-slider-l">我的工作</p>
                       </div>
                       <div class="mx-cell__ft">
                           <input type="radio" class="mx-check" name="radio1" id="x11">
                           <span class="mx-icon-checked"></span>
                       </div>
                   </label>
-                  <label class="mx-cell mx-check__label" data-rel="close" for="x12">
+                  <label class="mx-cell mx-check__label mx-mb-0" data-rel="close" for="x12">
 
                       <div class="mx-cell__bd">
-                          <p>我的工作d</p>
+                          <i class="am-icon-building"></i>
+                          <p class="mx-media-box__title mx-slider-l">待办事宜</p>
                       </div>
                       <div class="mx-cell__ft">
                           <input type="radio" name="radio1" class="mx-check" id="x12" checked="checked">
                           <span class="mx-icon-checked"></span>
                       </div>
                   </label>
-                  <label class="mx-cell mx-check__label" data-rel="close" for="x13">
+                  <label class="mx-cell mx-check__label mx-mb-0" data-rel="close" for="x13">
 
                       <div class="mx-cell__bd">
-                          <p>我的工作</p>
+                          <i class="am-icon-building"></i>
+                          <p class="mx-media-box__title mx-slider-l">待阅事宜</p>
                       </div>
                       <div class="mx-cell__ft">
                           <input type="radio" name="radio1" class="mx-check" id="x13" checked="checked">
+                          <span class="mx-icon-checked"></span>
+                      </div>
+                  </label>
+                  <label class="mx-cell mx-check__label mx-mb-0" data-rel="close" for="x14">
+
+                      <div class="mx-cell__bd">
+                          <i class="am-icon-building"></i>
+                          <p class="mx-media-box__title mx-slider-l">发文管理</p>
+                      </div>
+                      <div class="mx-cell__ft">
+                          <input type="radio" name="radio1" class="mx-check" id="x14" checked="checked">
+                          <span class="mx-icon-checked"></span>
+                      </div>
+                  </label>
+                  <label class="mx-cell mx-check__label mx-mb-0" data-rel="close" for="x15">
+
+                      <div class="mx-cell__bd">
+                          <i class="am-icon-building"></i>
+                          <p class="mx-media-box__title mx-slider-l">收文管理</p>
+                      </div>
+                      <div class="mx-cell__ft">
+                          <input type="radio" name="radio1" class="mx-check" id="x15" checked="checked">
+                          <span class="mx-icon-checked"></span>
+                      </div>
+                  </label>
+                  <label class="mx-cell mx-check__label mx-mb-0" data-rel="close" for="x16">
+
+                      <div class="mx-cell__bd">
+                          <i class="am-icon-building"></i>
+                          <p class="mx-media-box__title mx-slider-l">通知公告</p>
+                      </div>
+                      <div class="mx-cell__ft">
+                          <input type="radio" name="radio1" class="mx-check" id="x16" checked="checked">
                           <span class="mx-icon-checked"></span>
                       </div>
                   </label>
@@ -212,10 +316,12 @@
         <div class="am-modal search-dialog am-modal-no-btn" tabindex="-1" id="your-modal">
           
               <div class="mx-container">
+                  <i class="am-icon-close mx-close" id="mx-close"></i>
                   <div class="mx-cells mx-bg-no">
                       <div class="mx-cell">
                           <div class="mx-cell__bd">
                               <p class="mx-text_lf">文件标题</p>
+                              
                           </div>
                       </div>
                   </div>
@@ -287,18 +393,18 @@
                             </div>
                         </label>
                     </div>
-                    <div class="mx-btn mx-btn_mini mx-btn_primary"><i class="mx-icon-search"></i>  查询</div>
+                    <div class="mx-btn mx-btn_mini mx-btn_primary" id="mx-inquire">查询</div>
               </div>
         </div>   
     </div>
 
 
-    <script src="../libs/jquery.min.js"></script>
-    <script src="../libs/jquery.hashchange.js"></script>
-    <script src="../libs/minxing.mock.data.js"></script>
-    <script src="../libs/minxing.mock.lib.js"></script>
-    <script src="../libs/amazeui.js"></script>
-    <script src="../scripts/main.js"></script>
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/jquery.hashchange.js"></script>
+    <script src="libs/minxing.mock.data.js"></script>
+    <script src="libs/minxing.mock.lib.js"></script>
+    <script src="libs/amazeui.js"></script>
+    <script src="scripts/main.js"></script>
     <script src="scripts/view/date.js"></script>
     <script src="scripts/view/iscroll.js"></script>
     <script src="scripts/view/checkbox.js"></script>
@@ -338,6 +444,7 @@
             var id = '#my-offcanvas';
             var $myOc = $(id);
             $(document).on('click','.doc-oc-js', function() {
+               console.log(1)
               $myOc.offCanvas($(this).data('rel'));
             });
 
@@ -348,9 +455,14 @@
             });
 
             $(document).on('click','.mx-cells_radio label',function(){
+
                 $(".mx-cells_radio label").removeClass('current');
                 $(this).addClass('current');
                 $myOc.offCanvas($(this).data('rel'));
+                var i = $(this).index()
+                console.log(i)
+                console.log($('.mx-slider-l').eq(i).html())
+                $('#am-header-title').html($('.mx-slider-l').eq(i).html())
             });
 
             var $modal = $('#your-modal');
@@ -365,9 +477,6 @@
               }
             });
 
-            // $('#beginTime').date();
-            // $('#endTime').date();
-
             $('.search ul li').click(function(e) {
                 if (!$(this).find('i').hasClass('am-icon-check-circle')) {
                   $(this).find('i').removeClass('am-icon-check-circle-o');
@@ -377,14 +486,43 @@
                   $(this).find('i').addClass('am-icon-check-circle-o');
                 }
             });
+            $('.mx-media-box').click(function(){
+                window.location.href = '#test';
+            });
+            $('#mx-close').click(function(){
+                $modal.modal('close');
+            });
+            $('#mx-inquire').click(function(){
+                $modal.modal('close');
+            })
         });
+        var mxName = document.getElementsByClassName('.mx-name')
+        $.getJSON('config_flavor.json',function(data){
+          console.log(data)
+          for (var i = 0; i < data.length; i++) {
+             $('.mx-name').eq(i).html(data[i].username);
+             $('.mx-time').eq(i).html(data[i].startTime);
+             $('.img').eq(i).attr('src',data[i].img_url);
+          }
+        })
     </script>
     <!--解决在ios header中显示bug，增加ios单独的样式-->
     <script type="text/javascript">
-      (function() {
+      // (function() {
+      //   var agent = navigator.userAgent;
+      //   if (/iphone|ipad|ipod/i.test(agent)) {
+      //       $('body').addClass('ios');
+      //   }
+      // }());
+       (function() {
         var agent = navigator.userAgent;
         if (/iphone|ipad|ipod/i.test(agent)) {
-            $('body').addClass('ios');
+            $('body').addClass('ios'); 
+            $('.mx-container').css('paddingBottom','10px');
+        }else{
+            $('#mx-an').removeClass('mx-mg-t60');
+            $('.mx-an').addClass('mx-mg-t46');
+            $('.slider-container_box').css('marginTop','49px');
         }
       }());
     </script>

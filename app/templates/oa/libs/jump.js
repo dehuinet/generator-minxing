@@ -1,8 +1,8 @@
 /*
 * @Author: lizhen
 * @Date:   2015-11-10 14:11:42
-* @Last Modified by:   anchen
-* @Last Modified time: 2016-10-12 11:46:46
+* @Last Modified by:   lizhen
+* @Last Modified time: 2015-11-27 16:25:39
 */
 
 
@@ -24,15 +24,14 @@ $.extend({
         //监听hash
         $(window).hashchange(function() {
             var hash = location.hash; //获取跳转页面
-            hash = hash.split('?')[0];
             if(hash.length < 15){
-                console.info('hash::', hash)
                 hash = hash.substring(1,hash.Length);
                 _isReturn = true;
             }else{
-                hash = hash.substring(2,17);
+                hash = hash.substring(1,16);
                 _isReturn = false;
             }
+
             if(hash=='index'){
                 hash='index';
                 _arr=['index'];
@@ -42,7 +41,6 @@ $.extend({
                 hash =  "content";
             }else if(_jumpGo == false){
                 _arr.push(hash);
-                console.info("_jumpGo==",_jumpGo);
             }else{
                 _arr.length > 0 ? _arr.pop() : '';
             }
@@ -64,6 +62,8 @@ $.extend({
                     if(_isReturn == false){
                         $(".jumpgo").remove(); 
                     }
+                    var _title_ = $("#my-offcanvas li.current a span").text();
+                    $(".am-header-title").text(_title_);
                 });
                 $(".mx_page:eq(1)").animate({"left":"0%"},300);
                 $(".mx_page:eq(0)").animate({"left":"100%"},300,function(){
@@ -77,6 +77,8 @@ $.extend({
                     if(_isReturn == false){
                         $(".jumpgo").remove(); 
                     }
+                    var _title_ = $("#my-offcanvas li.current a span").text();
+                    $(".am-header-title").text(_title_);
                 });
                 $(".mx_page:eq(1)").animate({"left":"0%"},300);
                 $(".mx_page:eq(0)").animate({"left":"-100%"},300,function(){

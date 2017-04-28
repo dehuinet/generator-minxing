@@ -3,7 +3,7 @@
         <a><img class="am-header-icon-custom" src="data:image/svg+xml;charset=utf-8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 12 20&quot;&gt;&lt;path d=&quot;M10,0l2,2l-8,8l8,8l-2,2L0,10L10,0z&quot; fill=&quot;%23fff&quot;/&gt;&lt;/svg&gt;" alt=""/></a>
     </div>
     <h1 class="am-header-title">
-        审批
+        我的工作
     </h1>
 </header>
 <link rel="stylesheet" href="styles/mx.min.css" />
@@ -16,18 +16,53 @@
         bottom: 0;
         width: 100%;
         background: #fff;
+        font-size: 14px;
     }
     .mx-flex-tx{
          border:1px solid #d9d9d9;
          padding: 10px 0;
          text-align: center;
     }
+    .mx-media-box__title{
+         font-size: 14px;
+    }
+    .mx-cells::before{
+        border-top: none;
+    }
+    .mx-cells__title{
+        font-size: 12px;
+    }
+    .mx-cells{
+        margin-top: 0;
+    }
+    .mx-bor-t{
+        border-top: 1px solid #e5e5e5;
+    }
+    .mx_page{
+        top: 49px;
+    }
+    .mx-cells__title{
+        margin-bottom: 0.7em;
+    }
+    .mx-alert1{
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%);
+        background: #fff;
+    }
+    .mx-text{
+        padding: 15px;
+    }
+    .mx-mg-t23{
+        margin-top: 23px;
+    }
 </style>
-<div class="mx-panel__bd" style="margin-top: 70px;">
+<div class="mx-panel__bd mx-mg-t23 mx-an">
 	<div class="mx-cells">
             <div class="mx-cell mx-cell_af">
                 <div class="mx-cell__bd">
-                    <p>关于召  请假申请，待您审批</p>
+                    <p class="mx-media-box__title">王震  请假申请，待您审批</p>
                 </div>
             </div>
             <div class="mx-body">
@@ -36,22 +71,42 @@
                 <p class="mx-cells__title">请假天数: <span class="mx-sp">15天</span></p>
             </div>
              <div class="mx-cells">
-                <a class="mx-cell mx-cell_access" href="javascript:;">
+                <a class="mx-cell mx-cell_access mx-bor-t" href="javascript:;">
                     <div class="mx-cell__bd">
-                        <p>详情</p>
+                        <p class="mx-media-box__title">详情</p>
                     </div>
                     <div class="mx-cell__ft">
                     </div>
                 </a>
             </div>
     </div>
+
+       <!-- <div class="mx-alert1">
+            <p class="mx-text">审批成功</p>
+       </div> -->
 </div>
     <div class="mx-ps-bt">
         <div class="mx-flex">
             <div class="mx-flex__item mx-flex-tx"><div class="placeholder">申请</div></div>
             <div class="mx-flex__item mx-flex-tx"><div class="placeholder">我的申请</div></div>
-            <div class="mx-flex__item mx-flex-tx"><div class="placeholder">审批</div></div>
+            <div class="mx-flex__item mx-flex-tx"><div class="placeholder" id="placeholder">审批</div></div>
             <!-- <div class="mx-flex__item"><div class="placeholder">mx</div></div> -->
         </div>    
     </div>
+    <script>
+        $('#placeholder').click(function(){
+            setTimeout(function(){
+                console.log(1)
+               window.location.href = "#index"
+            },500)
+        });
+        (function() {
+            var agent = navigator.userAgent;
+            if (/iphone|ipad|ipod/i.test(agent)) {
+                $('body').addClass('ios'); 
+            }else{
+                $('.mx-an').removeClass('mx-mg-t23');
+            }
+          }());
+    </script>
 
