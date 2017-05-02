@@ -13,6 +13,7 @@ var request = require('request');
 var zip = require('gulp-zip');
 var fs = require('fs')
 var publishConfig = require('./publish.json');
+var nsp = require('gulp-nsp');
 
 //将www下面的文件自动打包成.zip压缩包
 gulp.task('zip', () => {
@@ -20,6 +21,11 @@ gulp.task('zip', () => {
       .pipe(zip('www.zip'))
       .pipe(gulp.dest('dist'));
 });
+
+gulp.task('nsp', function (cb) {
+  nsp({package: path.resolve('package.json'),stopOnError:false}, cb);
+});
+
 
 //发布(将dist文件夹下面的www.zip进行上传到服务器)
 gulp.task('publish',function() {
@@ -184,6 +190,7 @@ gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
+gulp.task('prepublish', ['nsp']);
 gulp.task('default', ['clean'], () => {
   gulp.start('build');
 });
