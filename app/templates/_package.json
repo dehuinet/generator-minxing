@@ -24,6 +24,7 @@
     "main-bower-files": "^2.5.0",
     "wiredep": "^2.2.2",
     "q": "^1.0.1",
+    "gulp-nsp": "^2.1.0",
     "request": "^2.40.0",
     "gulp-zip": "^3.0.2"
   },
