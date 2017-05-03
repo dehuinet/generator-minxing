@@ -1,13 +1,18 @@
-<header data-am-widget="header" class="am-header am-header-default">
-    <div class="am-header-left am-header-nav jumpgo">
-        <a><img class="am-header-icon-custom" src="data:image/svg+xml;charset=utf-8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 12 20&quot;&gt;&lt;path d=&quot;M10,0l2,2l-8,8l8,8l-2,2L0,10L10,0z&quot; fill=&quot;%23fff&quot;/&gt;&lt;/svg&gt;" alt=""/></a>
+<header data-mxin-widget="header" class="mxin-header mxin-header-default">
+    <div class="mxin-header-left mxin-header-nav jumpgo">
+        <a><img class="mxin-header-icon-custom" src="data:image/svg+xml;charset=utf-8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 12 20&quot;&gt;&lt;path d=&quot;M10,0l2,2l-8,8l8,8l-2,2L0,10L10,0z&quot; fill=&quot;%23fff&quot;/&gt;&lt;/svg&gt;" alt=""/></a>
     </div>
-    <h1 class="am-header-title">
+    <h1 class="mxin-header-title">
         我的工作
     </h1>
 </header>
-<link rel="stylesheet" href="styles/mx.min.css" />
+<link rel="stylesheet" href="styles/mx.css" />
 <style>
+.mxin-header-icon-custom{
+        height: 16px;
+        width: auto;
+        vertical-align: middle;
+    }
     .mx-cell_af{
         border-bottom: 1px solid #d9d9d9;
     }
@@ -54,8 +59,22 @@
     .mx-text{
         padding: 15px;
     }
-    .mx-mg-t23{
+    .ios .mx-mg-t23{
         margin-top: 23px;
+    }
+    @media screen and (min-width: 380px) {
+        .mx-media-box__title{
+            font-size: 16px;
+        }
+        .mx-cells__title{
+            font-size: 14px;
+        }
+        .mx-media-box__title{
+            font-size: 16px;
+        }
+        .mx-mg-t46{
+            margin-top: 0;
+        }
     }
 </style>
 <div class="mx-panel__bd mx-mg-t23 mx-an">
@@ -98,14 +117,12 @@
             setTimeout(function(){
                 console.log(1)
                window.location.href = "#index"
-            },500)
+            },0)
         });
         (function() {
             var agent = navigator.userAgent;
             if (/iphone|ipad|ipod/i.test(agent)) {
                 $('body').addClass('ios'); 
-            }else{
-                $('.mx-an').removeClass('mx-mg-t23');
             }
           }());
     </script>

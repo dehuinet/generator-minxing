@@ -6,228 +6,211 @@
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
         <title>OA</title>
-        <link rel="stylesheet" href="styles/reset.css"/>
         <link rel="stylesheet" href="styles/main.css"/>
-        <link rel="stylesheet" href="styles/amazeui.css" />
-        <link rel="stylesheet" href="styles/view/layout.css" />
-        <link rel="stylesheet" href="styles/view/search.css" />
-        <link rel="stylesheet" href="styles/view/common.css" />
-        <link rel="stylesheet" href="styles/mx.min.css" />
+        <link rel="stylesheet" href="styles/mx.css" />
         <style>
-          body{
-              font-size: 62.5%;
-          }
-          .mx-cells:before{
-              border-top: none;
-          }
-          .mx-cells_form:before{
-              border: 1px solid #d9d9d9;
-          }
-          
-          .slider-container_box{
-              margin-top: 70px;
-              width: 100%;
-          }
-          .mx-media-box__hd img{
-              width: 100%;
-              height: 100%;
-          }
-          .mx-panel__bd{;
-            border-bottom: 1px solid #d9d9d9;
-          }
-          .mx-container{
-              width: 90%;
-              height: auto;
-              margin: 0 auto;
-              background: #d9d9d9;
-
-          }
-          .mx-container .mx-cells{
-              margin-top: 0;
-          }
-          .mx-bg-no{
-              background: none;
-          }
-          .mx-text_lf{
-              text-align: left;
-              font-size: 14px;
-          }
-          .mx-cells_checkbox label{
-              font-weight: normal;
-              margin-bottom: 0;
-          }
-          .mx-btn_mini{
-              margin-top: 10px;
-          }
-          .mx-check__label:before{
-              height: 2px;
-          }
-          .warp{
-            background-color: #d9d9d9;
-          }
-          .mx-mg-t{
-              margin-top: 5px;
-              margin-bottom: 10px;
-          }
-          .mx-mg-t60{
-              margin-top: 65px;
-          }
-          .mx-media-box__title{
-              font-size: 16px;
-          }
-          .mx-media-box__desc{
-              font-size: 13px;
-          }
-          a{
-              color: #333333;
-          }
-          .mx-input{
-              font-size: 14px;
-          }
-          .mx-cell{
-              padding: 7px 15px;
-          }
-          .mx-mt-0{
-              margin-top: 0;
-          }
-          .mx-mb-0{
-              margin-bottom: 0;
-          }
-          a:hover{
-              color: #333333;
-          }
-          .am-offcanvas-bar{
-              width: 70%;
-          }
-          .mx-close{
-              text-align: right;
-              display: block;
-              margin-right: 17px;
-              color: #fff;
-              font-size: 14px;
-          }
-          .mx-mg-t46{
-              margin-top: 4.6rem;
-          }
-          .ios{
-              height: 6.5rem;
-          }
-          .mx-slider-l{
-              display: inline-block;
-             line-height: 16px;
-          }
-          .am-icon-building{
-              color: #1a85ff;
-          }
-          .mx-name{
-              margin-bottom: 7px;
-          }
-          .mx-time-f{
-              font-size: 12px;
-              color: #999;
-              margin-bottom: 34px;
-          }
-          .mx-an-left{
-              display: inline-block;
-              vertical-align: sub;
-          }
+              html,body{
+                min-height: 100%;
+              }
+              html{
+                height: 100%;
+              }
+             .mx-cells:before{
+                  border-top: none;
+              }
+              .mx-startT{
+                  margin-left: 26px;
+              }
+              .mx-mask-1{
+                  background-color: rgba(0,0,0,0.6);
+                  z-index: 9999;
+              }
+              .mx-fadeIn{
+                  margin-top: -189px;
+                  opacity: 1;
+              }
+            .ios .mxin-header  .mxin-header-icon-l{
+                  background: url('images/tu2.png') no-repeat left center;
+                  background-size: 100% 100%;
+                  height: 25px;
+                  width: 25px;
+                  top: 12px;
+              }
+              .mxin-header  .mxin-header-icon-l{
+                  background: url('images/tu2.png') no-repeat left center;
+                  background-size: 100% 100%;
+                  height: 25px;
+                  width: 25px;
+                  top: 12px;
+              }
+            .ios .mxin-header-icon-r{
+                  background: url('images/tu1.png') no-repeat left center;
+                  background-size: 92% 100%;
+                  width: 10px;
+              }
+              .mxin-header-icon-r{
+                  background: url('images/tu1.png') no-repeat left center;
+                  background-size: 92% 100%;
+                  width: 10px;
+                  margin-top: 11px;
+              }
+              .mxin-icon-oa{
+                   width: 17px;
+                   height: 17px;
+                   display: inline-block;
+              }
+              .mxin-icon-work{
+                    background: url('images/NOTEPAD.png') no-repeat left center;
+                    background-size: 100% 100%;
+              }
+              .mxin-icon-ban{
+                    background: url('images/shen.png') no-repeat left center;
+                    background-size: 100% 100%;
+              }
+              .mxin-icon-yue{
+                    background: url('images/gong.png') no-repeat left center;
+                    background-size: 100% 100%;
+              }
+              .mxin-icon-fa{
+                    background: url('images/BoxOutgoing.png') no-repeat left center;
+                    background-size: 100% 100%;
+              }
+              .mxin-icon-shou{
+                    background: url('images/BoxIncoming.png') no-repeat left center;
+                    background-size: 100% 100%;
+              }
+              .mxin-icon-mes{
+                    background: url('images/Megaphone.png') no-repeat left center;
+                    background-size: 100% 100%;
+              }
+              .mx-margin-t{
+                  margin-top: 11px;
+              }
+              .mx-mg-t7{
+                  margin-top: 7px;
+              }
+              @media screen and (min-width: 380px) {
+                  .mx-media-box__title{
+                    font-size: 17px;
+                  }
+                  .mx-media-box__desc{
+                    font-size: 15px;
+                  }
+                  .mx-cells__title{
+                    font-size: 14px;
+                  }
+                  .mx-time-f{
+                    font-size: 15px;
+                  }
+                  .mx-text_lf{
+                      font-size: 16px;
+                  }
+                  .mx-btn_mini{
+                      font-size: 15px;
+                  }
+                  .mx-cell{
+                      padding: 10px 15px;
+                  }
+                  .mx-oa-sey{
+                    font-size: 18px;
+                  }
+              }
+              label > * { pointer-events: none; }
         </style>
     </head>
-    <body>
+    <body style="height: 100%;">
 
-    <div class="warp">
+    <div class="warp" style="background-color: #f0f1f2;">
         <!-- 页面内容 -->
         <div class="MX-pages">
           <div class="load-page mx_page">
-            <header data-am-widget="header" class="am-header am-header-default">
-              <div class="am-header-left am-header-nav">
-                  <a class="am-btn am-btn-primary doc-oc-js" data-rel="open">
-                    <i class="am-header-icon am-icon-bars"></i>
-                  </a>
+            <header data-mxin-widget="header" class="mxin-header mxin-header-default">
+              <div class="mxin-header-left doc-oc-js mxin-header-nav  mxin-header-icon-l mx-oa-js" data-rel="open" id="mx-nav-open" style="z-index: 999999999999;">
+                  
               </div>
-              <h1 class="am-header-title" id="am-header-title">
+              <h1 class="mxin-header-title" id="mxin-header-title">
                   我的工作
               </h1>
-              <div class="am-header-right am-header-nav">
-                  <a class="am-btn search-btn am-btn-primary js-modal-open">
-                    <i class="am-icon-search"></i>
+              <div class="mxin-header-right mxin-header-nav">
+                  <a class="mxin-btn search-btn mxin-btn-primary js-modal-open">
+                    <i class="mx-icon-search" style="color: #eeeeee"></i>
                   </a>
-                  <a href="javascript:;" class="am-btn">
-                    <i class="am-icon-close" onclick="MXWebui.closeWindow();"></i>
+                  <a href="javascript:;" class="mxin-btn mxin-header-icon-r" onclick="MXWebui.closeWindow();">
                   </a>
               </div>
             </header>
               <a href="javascript:;" >
-                <div class="mx-media-box mx-media-box_appmsg mx-mg-t60 mx-an" id="mx-an">
+                <div class="mx-media-box mx-media-box_appmsg mx-mg-t60 mx-mg-t46 mx-an" id="mx-an">
                     <div class="mx-media-box__hd" >
-                        <img class="img" src="">
+                        <img class="img" src="images/1.jpg">
                     </div>
-                    <div class="mx-media-box__bd">
-                        <h4 class="mx-media-box__title mx-name"></h4>
+                    <div class="mx-media-box__bd" style="margin-left: 4px;">
+                        <h4 class="mx-media-box__title mx-name">王震</h4>
                         <p class="mx-media-box__desc mx-mg-t">人生就像一场旅行</p>
                          <!-- <time class="mx-media-box__desc">时间：12-09 12:05</time> -->
                     </div>
                     <!-- <a href="#" class="mx-btn mx-btn_mini mx-btn_primary">下载</a> -->
-                    <span class="mx-media-box__title mx-time mx-time-f">2-11</span>
+                    <span class="mx-media-box__title mx-time mx-time-f">2017-02-11</span>
                 </div>
                </a>
              
                <div class="mx-media-box mx-media-box_appmsg">
                     <div class="mx-media-box__hd" >
-                        <img class="img" src="">
+                        <img class="img" src="images/2.jpg">
                     </div>
-                    <div class="mx-media-box__bd">
-                        <h4 class="mx-media-box__title mx-name"></h4>
+                    <div class="mx-media-box__bd" style="margin-left: 4px;">
+                        <h4 class="mx-media-box__title mx-name">冯宇鹏</h4>
                         <p class="mx-media-box__desc mx-mg-t">永不放弃自己</p>
                          <!-- <time class="mx-media-box__desc">时间：09-13 08:52</time> -->
                     </div>
                     <!-- <a href="#" class="mx-btn mx-btn_mini mx-btn_primary">下载</a> -->
-                    <span class="mx-media-box__title mx-time mx-time-f">9-30</span>
+                    <span class="mx-media-box__title mx-time mx-time-f">2017-01-14</span>
                 </div>
                 
                 <div class="mx-media-box mx-media-box_appmsg">
                     <div class="mx-media-box__hd" >
-                       <img class="img" src="">
+                       <img class="img" src="images/3.jpg">
                     </div>
-                    <div class="mx-media-box__bd">
-                        <h4 class="mx-media-box__title mx-name"></h4>
+                    <div class="mx-media-box__bd" style="margin-left: 4px;">
+                        <h4 class="mx-media-box__title mx-name">李明超</h4>
                         <p class="mx-media-box__desc mx-mg-t">勇敢面对任何挑战</p>
                          <!-- <time class="mx-media-box__desc">时间：09-13 08:52</time> -->
                     </div>
                     <!-- <a href="#" class="mx-btn mx-btn_mini mx-btn_primary">下载</a> -->
-                    <span class="mx-media-box__title mx-time mx-time-f">9-30</span>
+                    <span class="mx-media-box__title mx-time mx-time-f">1016-12-14</span>
                 </div>
                 <div class="mx-media-box mx-media-box_appmsg">
                       <div class="mx-media-box__hd" >
-                          <img class="img" src="">
+                          <img class="img" src="images/4.jpg">
                       </div>
-                      <div class="mx-media-box__bd">
-                          <h4 class="mx-media-box__title mx-name"></h4>
+                      <div class="mx-media-box__bd" style="margin-left: 4px;">
+                          <h4 class="mx-media-box__title mx-name">关艾艾</h4>
                           <p class="mx-media-box__desc mx-mg-t">喜欢跑步，摄影</p>
                            <!-- <time class="mx-media-box__desc">时间：09-13 08:52</time> -->
                       </div>
                       <!-- <a href="#" class="mx-btn mx-btn_mini mx-btn_primary">下载</a> -->
-                      <span class="mx-media-box__title mx-time mx-time-f">9-30</span>
+                      <span class="mx-media-box__title mx-time mx-time-f">2016-12-01</span>
                   </div>
                   <div class="mx-media-box mx-media-box_appmsg">
                       <div class="mx-media-box__hd" >
-                          <img class="img" src="">
+                          <img class="img" src="images/5.jpg">
                       </div>
-                      <div class="mx-media-box__bd">
-                          <h4 class="mx-media-box__title mx-name"></h4>
+                      <div class="mx-media-box__bd" style="margin-left: 4px;">
+                          <h4 class="mx-media-box__title mx-name">李秀丽</h4>
                           <p class="mx-media-box__desc mx-mg-t">对自己好一点</p>
                            <!-- <time class="mx-media-box__desc">时间：09-13 08:52</time> -->
                       </div>
                       <!-- <a href="#" class="mx-btn mx-btn_mini mx-btn_primary">下载</a> -->
-                      <span class="mx-media-box__title mx-time mx-time-f">9-30</span>
+                      <span class="mx-media-box__title mx-time mx-time-f">2016-11-11</span>
                   </div>
           </div>
         </div>
 
         <!-- 侧边栏内容 -->
-        <div id="my-offcanvas" class="am-offcanvas">
-          <div class="am-offcanvas-bar">
+        <div id="my-offcanvas" class="mxin-offcanvas">
+          <div class="mxin-offcanvas-bar">
         
           <div class="slider-container_box">
                 <div class="mx-panel__bd">
@@ -236,7 +219,7 @@
                             <img class="mx-media-box__thumb" src="images/1.jpg" alt="">
                         </div>
                         <div class="mx-media-box__bd">
-                            <h4 class="mx-media-box__title">OA综合系统</h4>
+                            <h4 class="mx-media-box__title mx-oa-sey">OA综合系统</h4>
                         </div>
                     </a>
                 </div>
@@ -244,8 +227,8 @@
                 <div class="mx-cells mx-cells_radio mx-mt-0"> 
                   <label class="mx-cell mx-check__label mx-mb-0" data-rel="close" for="x11">
                       <div class="mx-cell__bd">
-                          <i class="am-icon-building"></i>
-                          <p class="mx-media-box__title mx-slider-l">我的工作</p>
+                          <p class="mxin-icon-work mxin-icon-oa"></p>
+                          <p class="mx-media-box__title mx-slider-l" style="padding-top: 7px;">我的工作</p>
                       </div>
                       <div class="mx-cell__ft">
                           <input type="radio" class="mx-check" name="radio1" id="x11">
@@ -255,8 +238,8 @@
                   <label class="mx-cell mx-check__label mx-mb-0" data-rel="close" for="x12">
 
                       <div class="mx-cell__bd">
-                          <i class="am-icon-building"></i>
-                          <p class="mx-media-box__title mx-slider-l">待办事宜</p>
+                          <p class="mxin-icon-ban mxin-icon-oa"></p>
+                          <p class="mx-media-box__title mx-slider-l" style="padding-top: 7px;">待办事宜</p>
                       </div>
                       <div class="mx-cell__ft">
                           <input type="radio" name="radio1" class="mx-check" id="x12" checked="checked">
@@ -266,8 +249,8 @@
                   <label class="mx-cell mx-check__label mx-mb-0" data-rel="close" for="x13">
 
                       <div class="mx-cell__bd">
-                          <i class="am-icon-building"></i>
-                          <p class="mx-media-box__title mx-slider-l">待阅事宜</p>
+                          <p class="mxin-icon-yue mxin-icon-oa"></p>
+                          <p class="mx-media-box__title mx-slider-l" style="padding-top: 7px;">待阅事宜</p>
                       </div>
                       <div class="mx-cell__ft">
                           <input type="radio" name="radio1" class="mx-check" id="x13" checked="checked">
@@ -277,8 +260,8 @@
                   <label class="mx-cell mx-check__label mx-mb-0" data-rel="close" for="x14">
 
                       <div class="mx-cell__bd">
-                          <i class="am-icon-building"></i>
-                          <p class="mx-media-box__title mx-slider-l">发文管理</p>
+                          <p class="mxin-icon-fa mxin-icon-oa"></p>
+                          <p class="mx-media-box__title mx-slider-l" style="padding-top: 7px;">发文管理</p>
                       </div>
                       <div class="mx-cell__ft">
                           <input type="radio" name="radio1" class="mx-check" id="x14" checked="checked">
@@ -288,8 +271,8 @@
                   <label class="mx-cell mx-check__label mx-mb-0" data-rel="close" for="x15">
 
                       <div class="mx-cell__bd">
-                          <i class="am-icon-building"></i>
-                          <p class="mx-media-box__title mx-slider-l">收文管理</p>
+                          <p class="mxin-icon-shou mxin-icon-oa"></p>
+                          <p class="mx-media-box__title mx-slider-l" style="padding-top: 7px;">收文管理</p>
                       </div>
                       <div class="mx-cell__ft">
                           <input type="radio" name="radio1" class="mx-check" id="x15" checked="checked">
@@ -299,8 +282,8 @@
                   <label class="mx-cell mx-check__label mx-mb-0" data-rel="close" for="x16">
 
                       <div class="mx-cell__bd">
-                          <i class="am-icon-building"></i>
-                          <p class="mx-media-box__title mx-slider-l">通知公告</p>
+                          <p class="mxin-icon-mes mxin-icon-oa"></p>
+                          <p class="mx-media-box__title mx-slider-l" style="padding-top: 7px;">通知公告</p>
                       </div>
                       <div class="mx-cell__ft">
                           <input type="radio" name="radio1" class="mx-check" id="x16" checked="checked">
@@ -313,10 +296,10 @@
         
         </div>
         <!-- 搜索 dialog -->
-        <div class="am-modal search-dialog am-modal-no-btn" tabindex="-1" id="your-modal">
+        <div class="mxin-modal search-dialog mxin-modal-no-btn" tabindex="-1" id="your-modal">
           
               <div class="mx-container">
-                  <i class="am-icon-close mx-close" id="mx-close"></i>
+                  <i class="mxin-icon-close mx-close" id="mx-close"></i>
                   <div class="mx-cells mx-bg-no">
                       <div class="mx-cell">
                           <div class="mx-cell__bd">
@@ -342,14 +325,14 @@
                    <div class="mx-cells">
                         <span class="mx-cell mx-cell_access" href="javascript:;">
                             <div class="mx-cell__bd">
-                                <p class="mx-text_lf" id="showDatePicker">文件开始时间</p>
+                                <p class="mx-text_lf" id="showDatePicker">文件开始时间<span id="startT" class="mx-startT"></span></p>
                             </div>
                             <div class="mx-cell__ft">
                             </div>
                         </span>
                         <span class="mx-cell mx-cell_access" href="javascript:;">
                             <div class="mx-cell__bd">
-                                <p class="mx-text_lf" id="endDatePicker">文件结束时间</p>
+                                <p class="mx-text_lf" id="endDatePicker">文件结束时间<span id="endT" class="mx-startT"></span></p>
                             </div>
                             <div class="mx-cell__ft">
                             </div>
@@ -365,7 +348,7 @@
                         </div>
                     </div>
                     <div class="mx-cells mx-cells_checkbox">
-                        <label class="mx-cell mx-check__label" for="s11">
+                        <label class="mx-cell mx-check__label" style="padding-right: 0px;" for="s11">
                             <div class="mx-cell__bd">
                                 <p class="mx-text_lf">发文</p>
                             </div>
@@ -374,54 +357,53 @@
                                 <i class="mx-icon-checked"></i>
                             </div>
                         </label>
-                        <label class="mx-cell mx-check__label" for="s12">
+                        <label class="mx-cell mx-check__label" style="padding-right: 0px;" for="s12">
                             <div class="mx-cell__bd">
                                 <p class="mx-text_lf">收文</p>
                             </div>
                              <div class="mx-cell__hd">
-                                <input type="checkbox" name="checkbox1" class="mx-check" id="s12">
-                                <i class="mx-icon-checked"></i>
+                                <input type="checkbox" name="checkbox2" class="mx-check" id="s12">
+                                <i class="mx-icon-checked" style="margin-left: 10px;"></i>
                             </div>
                         </label>
-                         <label class="mx-cell mx-check__label" for="s13">
+                         <label class="mx-cell mx-check__label" style="padding-right: 0px;" for="s13">
                             <div class="mx-cell__bd">
                                 <p class="mx-text_lf">收文</p>
                             </div>
                              <div class="mx-cell__hd">
-                                <input type="checkbox" name="checkbox1" class="mx-check" id="s13">
+                                <input type="checkbox" name="checkbox3" class="mx-check" id="s13">
                                 <i class="mx-icon-checked"></i>
                             </div>
                         </label>
                     </div>
-                    <div class="mx-btn mx-btn_mini mx-btn_primary" id="mx-inquire">查询</div>
+                    <div class="mx-btn mx-btn_mini mx-btn_primary" id="mx-inquire" style="background-color: #1a85ff">查询</div>
+                    <div class="mx-btn mx-btn_mini mx-btn_default" id="mx-btn-cancel" style="margin-left: 10px;border-right: 1px solid #f8f8f8;">取消</div>
               </div>
         </div>   
     </div>
-
-
+    <div class="mxin-dimmer"></div>
     <script src="libs/jquery.min.js"></script>
     <script src="libs/jquery.hashchange.js"></script>
     <script src="libs/minxing.mock.data.js"></script>
     <script src="libs/minxing.mock.lib.js"></script>
-    <script src="libs/amazeui.js"></script>
-    <script src="scripts/main.js"></script>
-    <script src="scripts/view/date.js"></script>
-    <script src="scripts/view/iscroll.js"></script>
-    <script src="scripts/view/checkbox.js"></script>
-    <script src="scripts/view/oa.js"></script>
+    <script src="libs/mx-l.js"></script>
     <script src="scripts/jump.js"></script>
-    <script src="scripts/view/jquery.magnific-popup.js"></script>
+    <script src="libs/fastclick.js"></script>
     <script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
 	  <script>
+    //调用fastClick.js 解决点击延迟300ms
+        window.addEventListener('load', function() {
+          FastClick.attach(document.body);
+        }, false);
         $('#showDatePicker').on('click', function () {
             weui.datePicker({
                 start: 1990,
                 end: new Date().getFullYear(),
-                onChange: function (result) {
-                    console.log(result);
+                onChange: function (end) {
+                    console.log(end);
                 },
                 onConfirm: function (result) {
-                    console.log(result);
+                    $('#startT').html(result.join('-'));
                 }
             });
         }); 
@@ -433,21 +415,19 @@
                     console.log(result);
                 },
                 onConfirm: function (result) {
-                    console.log(result);
+                    $('#endT').html(result.join('-'));
                 }
             });
         }); 
     </script>
     <script>
-        
+        //侧边栏打开和关闭
         $(function() {
             var id = '#my-offcanvas';
             var $myOc = $(id);
-            $(document).on('click','.doc-oc-js', function() {
-               console.log(1)
-              $myOc.offCanvas($(this).data('rel'));
+            $('.mx-oa-js').bind('click', function(){
+                $myOc.offCanvas($(this).data('rel'));
             });
-
             $myOc.on('open.offcanvas.amui', function() {
               console.log(id + ' 打开了。');
             }).on('close.offcanvas.amui', function() {
@@ -455,74 +435,57 @@
             });
 
             $(document).on('click','.mx-cells_radio label',function(){
-
+                console.log(12323);
                 $(".mx-cells_radio label").removeClass('current');
                 $(this).addClass('current');
                 $myOc.offCanvas($(this).data('rel'));
                 var i = $(this).index()
                 console.log(i)
                 console.log($('.mx-slider-l').eq(i).html())
-                $('#am-header-title').html($('.mx-slider-l').eq(i).html())
+                $('#mxin-header-title').html($('.mx-slider-l').eq(i).html())
             });
 
             var $modal = $('#your-modal');
             $(document).on('click','.search-btn' , function(e) {
-              var $target = $(e.target);
-              if (($target).hasClass('js-modal-open')) {
-                $modal.modal();
-              } else if (($target).hasClass('js-modal-close')) {
-                $modal.modal('close');
-              } else {
-                $modal.modal('toggle');
-              }
+                  console.log(1)
+                  $modal.fadeIn(100).addClass('mx-fadeIn');
+                  $modal.addClass('mxin-modal-active');
+                  $('.mxin-dimmer').addClass('mxin-active').css('display','block');
+                   $('.mxin-dimmer').click(function(){
+                        console.log(11111)
+                          $(this).hide();
+                          $modal.hide();
+                  })
             });
 
-            $('.search ul li').click(function(e) {
-                if (!$(this).find('i').hasClass('am-icon-check-circle')) {
-                  $(this).find('i').removeClass('am-icon-check-circle-o');
-                  $(this).find('i').addClass('am-icon-check-circle');
-                } else {
-                  $(this).find('i').removeClass('am-icon-check-circle');
-                  $(this).find('i').addClass('am-icon-check-circle-o');
-                }
-            });
+            //点击跳转到test页面
             $('.mx-media-box').click(function(){
                 window.location.href = '#test';
             });
-            $('#mx-close').click(function(){
-                $modal.modal('close');
-            });
+           
             $('#mx-inquire').click(function(){
-                $modal.modal('close');
+                  $modal.fadeOut(100).removeClass('mx-fadeIn');
+                  $modal.removeClass('mxin-modal-active');
+                  $('.mxin-dimmer').removeClass('mxin-active').css('display','none');
+
+                  
+            })
+             $('#mx-btn-cancel').click(function(){
+                  $modal.fadeOut(100).removeClass('mx-fadeIn');
+                  $modal.removeClass('mxin-modal-active');
+                  $('.mxin-dimmer').removeClass('mxin-active').css('display','none');         
             })
         });
         var mxName = document.getElementsByClassName('.mx-name')
-        $.getJSON('config_flavor.json',function(data){
-          console.log(data)
-          for (var i = 0; i < data.length; i++) {
-             $('.mx-name').eq(i).html(data[i].username);
-             $('.mx-time').eq(i).html(data[i].startTime);
-             $('.img').eq(i).attr('src',data[i].img_url);
-          }
-        })
+        
     </script>
     <!--解决在ios header中显示bug，增加ios单独的样式-->
     <script type="text/javascript">
-      // (function() {
-      //   var agent = navigator.userAgent;
-      //   if (/iphone|ipad|ipod/i.test(agent)) {
-      //       $('body').addClass('ios');
-      //   }
-      // }());
        (function() {
         var agent = navigator.userAgent;
         if (/iphone|ipad|ipod/i.test(agent)) {
             $('body').addClass('ios'); 
-            $('.mx-container').css('paddingBottom','10px');
-        }else{
-            $('#mx-an').removeClass('mx-mg-t60');
-            $('.mx-an').addClass('mx-mg-t46');
-            $('.slider-container_box').css('marginTop','49px');
+
         }
       }());
     </script>

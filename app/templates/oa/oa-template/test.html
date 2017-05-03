@@ -1,14 +1,21 @@
-<header data-am-widget="header" class="am-header am-header-default">
-    <div class="am-header-left am-header-nav jumpgo">
-        <a><img class="am-header-icon-custom" src="data:image/svg+xml;charset=utf-8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 12 20&quot;&gt;&lt;path d=&quot;M10,0l2,2l-8,8l8,8l-2,2L0,10L10,0z&quot; fill=&quot;%23fff&quot;/&gt;&lt;/svg&gt;" alt=""/></a>
+<header data-mxin-widget="header" class="mxin-header mxin-header-default">
+    <div class="mxin-header-left mxin-header-nav jumpgo" style="width: 50px;">
+        <a><img class="mxin-header-icon-custom" src="data:image/svg+xml;charset=utf-8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 12 20&quot;&gt;&lt;path d=&quot;M10,0l2,2l-8,8l8,8l-2,2L0,10L10,0z&quot; fill=&quot;%23fff&quot;/&gt;&lt;/svg&gt;" alt=""/></a>
     </div>
-    <h1 class="am-header-title">
+    <h1 class="mxin-header-title">
         我的工作
     </h1>
 </header>
-<link rel="stylesheet" href="styles/mx.min.css" />
+<link rel="stylesheet" href="styles/mx.css" />
 <style>
-
+	.mxin-header-icon-custom{
+		height: 16px;
+		width: auto;
+		vertical-align: middle;
+	}
+	.slider-container_box{
+		margin-top: 4.9rem;
+	}
 	.mx-body{
 		margin-top: .7em;
 		padding: 0 0 1.2rem;
@@ -26,14 +33,14 @@
 		font-size: 12px;
 	}
 	.mx-cell{
-		padding: 0.6rem 1.5rem;
+		padding: 0.8rem 1.5rem;
 	}
 	.mx-sp{
 		color: #333;
 	}
 	.mx-ft{
-		background-color: #f8f8f8;
-		padding: 1.5rem;
+		background-color: #f0f1f2;
+		padding-top: 1.5rem;
 	}
 	.mx-cells{
 		margin-top: 0;
@@ -58,9 +65,9 @@
 		padding: 0px 2rem;
 		margin-top: .8rem;
 	}
-	.mx-btn_default{
+	/*.mx-btn_default{
 		border-bottom: 1px solid #d9d9d9;
-	}
+	}*/
 	.mx-text-c{
 		text-align: center;
 	}
@@ -89,31 +96,62 @@
 	.mx-mask{
 		display: none;
 	}
-	.mx-mg-t60{
+	.ios .mx-mg-t60{
 		margin-top: 6.5rem;
 	}
 	.mx-mg-l{
 		margin-left: .5rem;
-		border: 1px solid #d9d9d9;
 	}
-	
+	.mx-font-color{
+		color: #fff;
+	}
+	.mx-margin-l{
+		margin-left: 40px;
+	}
+	@media screen and (min-width: 380px) {
+		.mx-media-box__title{
+			font-size: 18px;
+		}
+		.mx-media-box__desc{
+			font-size: 15px;
+		}
+		.mx-cells__title{
+			font-size: 16px;
+		}
+		.mx-font-14{
+			font-size: 16px;
+		}
+		.mx-cell__ft{
+			font-size: 15px;
+		}
+		.mx-btn_mini{
+			font-size: 15px;
+			padding: 0 2.3rem;
+		}
+		.mx-margin-l{
+			margin-left: 29px;
+		}
+		.mx-cell{
+			padding: 1rem 1.5rem;
+		}
+	}
 </style>
 <div class="mx-panel__bd" style="margin-top: 4.8rem;">
-	<div class="mx-media-box mx-media-box_appmsg mx-mg-t60 mx-an">
+	<div class="mx-media-box mx-media-box_appmsg mx-mg-t60 mx-mg-t46 mx-an">
 	        <div class="mx-media-box__hd" >
 	            <img src="images/1.jpg">
 	        </div>
-	        <div class="mx-media-box__bd">
+	        <div class="mx-media-box__bd" style="margin-left: 4px;">
 	            <h4 class="mx-media-box__title" id="head_name">王震</h4>
 	            <p class="mx-media-box__desc" style="margin-top: .5rem;">开发部</p>
 	             <!-- <time class="mx-media-box__desc">时间：09-13 08:52</time> -->
 	        </div>
-	        <button class="mx-btn mx-btn_mini mx-btn_plain-disabled">待审批</button>
+	        <button class="mx-btn mx-btn_mini mx-btn_plain-disabled" style="margin-top: 0px;">待审批</button>
 	        <!-- <a href="#" class="mx-btn mx-btn_mini mx-btn_primary">下载</a> -->
 	</div>
 </div>
 <div class="mx-body">
-	<p class="mx-cells__title">请假类型：<span class="mx-sp">年假</span></p>
+	<p class="mx-cells__title">请假类型: <span class="mx-sp">年假</span></p>
 	<p class="mx-cells__title">开始时间: <span class="mx-sp">2017-2-11 13:13</span></p>
 	<p class="mx-cells__title">结束时间: <span class="mx-sp">2017-2-26 14:10</span></p>
 	<p class="mx-cells__title">请假天数: <span class="mx-sp">15天</span></p>
@@ -123,7 +161,6 @@
 	<div class="mx-cells mx-br-t">
             <div class="mx-cell">
                 <div class="mx-cell__bd keys">
-                    <!-- <p class="mx-font-14 " id="name"></p> -->
                     <p data-id="" href="#" class="mx-font-14">王震</p>
                 </div>
                 <div class="mx-cell__ft">13:13</div>
@@ -139,7 +176,7 @@
 		<div class="mx-cells mx-br-t mx-mr-t">
             <div class="mx-cell">
                 <div class="mx-cell__bd keys">
-                    <!-- <p class="mx-font-14 "><a data-id="" href="#" class="am-icon-comment">&nbsp;</a><span class="mx-cell__ft">副总裁</span></p> -->
+                   
                     <p data-id="" href="#" class="mx-font-14">刘磊</p>
                 </div>
             </div>
@@ -154,7 +191,7 @@
         <div class="mx-cells mx-br-t mx-mr-t">
             <div class="mx-cell">
                 <div class="mx-cell__bd keys">
-                    <!-- <p class="mx-font-14"> <span class="mx-cell__ft">总裁</span></p> -->
+                    
                     <p data-id="" href="#" class="mx-font-14">于浩</p>
                 </div>
             </div>
@@ -167,54 +204,47 @@
             </div>
         </div>
         <div class="mx-text-c">
-        	  <a href="javascript:;" class="mx-btn mx-btn_default mx-btn_mini mx-mg-l" id="commit">提交</a>
-	          <a href="javascript:;" class="mx-btn mx-btn_default mx-btn_mini mx-mg-l">转发</a>
-	          <a href="javascript:;" class="mx-btn mx-btn_default mx-btn_mini mx-mg-l" id="approval">同意</a>
+        	  <a href="javascript:;" class="mx-btn mx-btn_default mx-btn_mini mx-mg-l" style="border-right: 1px solid #d9d9d9;" id="commit">提&nbsp;&nbsp;&nbsp;交</a>
+	          <a href="javascript:;" class="mx-btn mx-btn_default mx-btn_mini mx-mg-l mx-margin-l">转&nbsp;&nbsp;&nbsp;发</a>
+	          <span href="javascript:;" class="mx-btn mx-btn_default mx-btn_mini mx-mg-l mx-font-color mx-margin-l" style="background-color: #1a85ff;border-right: 1px solid #d9d9d9;" id="approval">同&nbsp;&nbsp;&nbsp;意</span>
 	          <div class="mx-mask" id="mx-mask">
-                    <div class="mx-alert" style="z-index: 99">
-                    	<p class="approval">您确定要同意吗？</p>
-                    	<div class="btn">
-                    		<button id="yes">确定</button>
-                    		<button id="no">取消</button>
+                    <div class="mx-dialog" style="z-index: 99">
+                    	<div class="mx-dialog__hd">
+                    		<strong class="mx-dialog__title" style="font-size: 15px;">您确定要同意吗？</strong>
+                    	</div>
+                    	<div class="weui-dialog__ft" style="padding-bottom: 10px;">
+                    		<button id="yes" style="margin-right: 5px;">确定</button>
+                    		<button id="no" >取消</button>
                     	</div>
                     </div>
                 </div>
         </div>
 </div>
 <script>
-	$(function(){
-		console.log(window.location.hash)
-		var hash = window.location.hash;
-		var id = hash.split('=')[1];
-		console.log('id:::', id);
-	})
+	
 	$('#approval').click(function(){
-		$('#mx-mask').css({
-			'display':'block'
-		})
-	});
-	$('#yes').click(function(){
-		$('#mx-mask').css({
-			'display':'none'
-		})
 		window.location.href = '#warp'
 	});
-	$('#no').click(function(){
-		$('#mx-mask').css({
-			'display':'none'
-		})
-	});
-	 (function() {
-        var agent = navigator.userAgent;
-        if (/iphone|ipad|ipod/i.test(agent)) {
-            $('body').addClass('ios'); 
-        }else{
-            $('.mx-an').removeClass('mx-mg-t60');
-            $('.mx-an').addClass('mx-mg-t46');
-            $('.slider-container_box').css('marginTop','4.9rem')
-        }
-      }());
-	 var onDeviceReady = function onDeviceReady() {
+	// $('#yes').click(function(){
+	// 	$('#mx-mask').css({
+	// 		'display':'none'
+	// 	})
+	// 	window.location.href = '#warp'
+	// });
+	// $('#no').click(function(){
+	// 	$('#mx-mask').css({
+	// 		'display':'none'
+	// 	})
+	// });
+	//处理header在ios高度的bug
+	 // (function() {
+  //       var agent = navigator.userAgent;
+  //       if (/iphone|ipad|ipod/i.test(agent)) {
+  //           $('body').addClass('ios'); 
+  //       }
+  //     }());
+	 //cordova加载完成
+var onDeviceReady = function onDeviceReady() {
     var network_id = "";
     var keys = [];
     var values = [];
@@ -224,6 +254,7 @@
         var ocuSecret = json_data.ocuSecret;
         var appName = json_data.appName;
         var accessToken = json_data.appAccessToken;
+        //获取服务器地址
         MXCommon.getServerUrl(function(serverUrl) {
             MXCommon.api({
                 method:'get', //调用api请求的method:'get'/'post'
@@ -240,6 +271,7 @@
                 }
             });
         })
+        //点击提交调用选人接口
         $("#commit").off("click.commit").on("click.commit", function() {
 
             var current_user_login_name = "";
@@ -248,6 +280,7 @@
                 console.log(d)
                 current_user_login_name = d.login_name;
                 var user_id = d.id;
+                //这里可以处理通讯录获取到的人员以及部门数据
                 MXContacts.selectUsers(function(a) {
                     console.log(a)
                     var _login_ids = new Array();
@@ -256,6 +289,7 @@
                     }
                     _login_ids.push(user_id);
                     var _login_ids_str = _login_ids.join(",") ;
+                    //推送部分
                     $.sendOcuMessage(accessToken, ocuId, ocuSecret, _login_ids_str,user_id, [{
                         title: $("#title").val(),
                         description: "当前环节：办公室核稿<br>提交人：马青冈<br>提交时间：2015-1-25",
@@ -284,5 +318,5 @@
         });
     });
 };
-document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReady, false);//等待cordova加载
 </script>

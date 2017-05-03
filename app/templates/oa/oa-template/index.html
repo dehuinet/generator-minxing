@@ -1,27 +1,112 @@
-<header data-am-widget="header" class="am-header am-header-default">
-  <div class="am-header-left am-header-nav">
-      <a class="am-btn am-btn-primary doc-oc-js" data-rel="open">
-        <i class="am-header-icon am-icon-bars"></i>
-      </a>
+<link rel="stylesheet" href="styles/main.css"/>
+<link rel="stylesheet" href="styles/mx.css" />
+  <style>
+       html,body{
+                min-height: 100%;
+              }
+              html{
+                height: 100%;
+              }
+             .mx-cells:before{
+                  border-top: none;
+              }
+              .mx-startT{
+                  margin-left: 26px;
+              }
+              .mx-mask-1{
+                  background-color: rgba(0,0,0,0.6);
+                  z-index: 9999;
+              }
+              .mx-fadeIn{
+                  margin-top: -189px;
+                  opacity: 1;
+              }
+            .ios .mxin-header  .mxin-header-icon-l{
+                  background: url('images/tu2.png') no-repeat left center;
+                  background-size: 100% 100%;
+                  height: 25px;
+                  width: 25px;
+                  top: 12px;
+              }
+              .mxin-header  .mxin-header-icon-l{
+                  background: url('images/tu2.png') no-repeat left center;
+                  background-size: 100% 100%;
+                  height: 25px;
+                  width: 25px;
+                  top: 12px;
+              }
+            .ios .mxin-header-icon-r{
+                  background: url('images/tu1.png') no-repeat left center;
+                  background-size: 92% 100%;
+                  width: 10px;
+              }
+              .mxin-header-icon-r{
+                  background: url('images/tu1.png') no-repeat left center;
+                  background-size: 92% 100%;
+                  width: 10px;
+                  margin-top: 11px;
+              }
+              .mxin-icon-oa{
+                   width: 17px;
+                   height: 17px;
+                   display: inline-block;
+              }
+              
+              .mx-margin-t{
+                  margin-top: 11px;
+              }
+              .mx-mg-t7{
+                  margin-top: 7px;
+              }
+              @media screen and (min-width: 380px) {
+                  .mx-media-box__title{
+                    font-size: 17px;
+                  }
+                  .mx-media-box__desc{
+                    font-size: 15px;
+                  }
+                  .mx-cells__title{
+                    font-size: 14px;
+                  }
+                  .mx-time-f{
+                    font-size: 15px;
+                  }
+                  .mx-text_lf{
+                      font-size: 16px;
+                  }
+                  .mx-btn_mini{ 
+                      font-size: 15px;
+                  }
+                  .mx-cell{
+                      padding: 10px 15px;
+                  }
+                  .mx-oa-sey{
+                    font-size: 18px;
+                  }
+              }
+  </style>
+  <header data-mxin-widget="header" class="mxin-header mxin-header-default">
+  <div class="mxin-header-left doc-oc-js mxin-header-nav  mxin-header-icon-l mx-oa-js" data-rel="open" id="mx-nav-open" style="z-index: 99999999999999999;">
+     
   </div>
-  <h1 class="am-header-title" id="am-header-title">
+  <h1 class="mxin-header-title" id="mxin-header-title">
       我的工作
   </h1>
-  <div class="am-header-right am-header-nav">
-      <a class="am-btn search-btn am-btn-primary js-modal-open">
-        <i class="am-icon-search"></i>
-      </a>
-      <a href="#" class="am-btn">
-        <i class="am-icon-close" onclick="MXWebui.closeWindow();"></i>
-      </a>
-  </div>
+  <div class="mxin-header-right mxin-header-nav">
+                  <a class="mxin-btn search-btn mxin-btn-primary js-modal-open">
+                    <i class="mx-icon-search" style="color: #eeeeee"></i>
+                  </a>
+                  <a href="javascript:;" class="mxin-btn mxin-header-icon-r" onclick="MXWebui.closeWindow();">
+                   
+                  </a>
+              </div>
 </header>
           
                 <div class="mx-media-box mx-media-box_appmsg mx-mg-t60 mx-an" id="mx-an">
                     <div class="mx-media-box__hd" >
                         <img src="images/1.jpg">
                     </div>
-                    <div class="mx-media-box__bd">
+                    <div class="mx-media-box__bd" style="margin-left: 4px;">
                         <h4 class="mx-media-box__title mx-name">王震</h4>
                         <p class="mx-media-box__desc mx-mg-t">人生就像一场旅行</p>
                          
@@ -33,7 +118,7 @@
                     <div class="mx-media-box__hd" >
                         <img src="images/2.jpg">
                     </div>
-                    <div class="mx-media-box__bd">
+                    <div class="mx-media-box__bd" style="margin-left: 4px;">
                         <h4 class="mx-media-box__title mx-name">冯宇鹏</h4>
                         <span class="mx-media-box__desc mx-mg-t">永不放弃自己</span>
                          
@@ -45,7 +130,7 @@
                     <div class="mx-media-box__hd" >
                         <img src="images/3.jpg">
                     </div>
-                    <div class="mx-media-box__bd">
+                    <div class="mx-media-box__bd" style="margin-left: 4px;">
                         <h4 class="mx-media-box__title mx-name">李明超</h4>
                         <p class="mx-media-box__desc mx-mg-t">勇敢面对任何挑战</p>
                          
@@ -57,7 +142,7 @@
                       <div class="mx-media-box__hd" >
                           <img src="images/4.jpg">
                       </div>
-                      <div class="mx-media-box__bd">
+                      <div class="mx-media-box__bd" style="margin-left: 4px;">
                           <h4 class="mx-media-box__title mx-name">关艾艾</h4>
                           <p class="mx-media-box__desc mx-mg-t">喜欢跑步，摄影</p>
                            
@@ -69,7 +154,7 @@
                       <div class="mx-media-box__hd" >
                           <img src="images/5.jpg">
                       </div>
-                      <div class="mx-media-box__bd">
+                      <div class="mx-media-box__bd" style="margin-left: 4px;">
                           <h4 class="mx-media-box__title mx-name">李秀丽</h4>
                           <p class="mx-media-box__desc mx-mg-t">对自己好一点</p>
                            <!-- <time class="mx-media-box__desc">时间：09-13 08:52</time> -->
@@ -81,12 +166,19 @@
     $('.mx-media-box').click(function(){
           window.location.href = '#test';
       })
-
+            var id = '#my-offcanvas';
+            var $myOc = $(id);
+            $('.mx-oa-js').bind('click', function(){
+                $myOc.offCanvas($(this).data('rel'));
+            });
        (function() {
         var agent = navigator.userAgent;
         if (/iphone|ipad|ipod/i.test(agent)) {
             $('body').addClass('ios'); 
             $('.mx-container').css('paddingBottom','.7rem');
+            $('#mx-nav-open').css('top','32px');
+            $('.mxin-header-icon-r').css('marginTop','11px');
+           
         }else{
             $('#mx-an').removeClass('mx-mg-t60');
             $('.mx-an').addClass('mx-mg-t46');

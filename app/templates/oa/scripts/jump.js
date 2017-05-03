@@ -7,6 +7,7 @@
 
 
 //$.locationHash()是读取当前页面的hash，$.locationHash("a")是设置当前页面的hash，$(window).hashchange()监听hash改变事件（在第一次绑定事件的时候如果页面有hash值，则立即触发一次事件）。
+
 $.extend({
     initMXPage: {
         intoHtml : function(className){
@@ -24,7 +25,7 @@ $.extend({
         //监听hash
         $(window).hashchange(function() {
             var hash = location.hash; //获取跳转页面
-            hash = hash.split('?')[0];
+            // hash = hash.split('?')[0];
             if(hash.length < 15){
                 console.info('hash::', hash)
                 hash = hash.substring(1,hash.Length);
@@ -88,6 +89,6 @@ $.extend({
 });
 
 
-;!$(function(){
+(function(){
    $.initJump();
-});
+})();

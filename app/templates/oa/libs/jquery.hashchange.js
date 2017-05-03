@@ -1,5 +1,7 @@
 (function($) {
-
+    // $.fn.extend = function(obj) {
+    //     $.extend($.fn, obj);
+    // };
     $.fn.extend({
         hashchange: function(callback) {
             this.bind('hashchange', callback);

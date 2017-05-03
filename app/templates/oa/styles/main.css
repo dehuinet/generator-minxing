@@ -70,30 +70,31 @@
     margin: 0;
     padding: 0;
 }
-.am-btn-primary,.am-header-default{
+.mxin-btn-primary,.mxin-header-default{
     background: #1a85ff !important;
 }
-.am-btn-primary{
+.mxin-btn-primary{
     border-color: #1a85ff !important;
 }
-.mx_header .am-header{
+.mx_header .mxin-header{
     z-index: 20;
 }
-.am-header-left a{
+.mxin-header-left a{
     padding: 0 0.5em;
 }
-.am-header .am-header-right{
+.mxin-header .mxin-header-right{
     right: 8px !important;
-    width: 61px !important;
+    width: 124px !important;
 }
-.am-header-default .am-header-nav .am-btn{
-    padding: 0 0.4em !important;
+.mxin-header-default .mxin-header-nav .mxin-btn{
+    padding: 0 0.7em !important;
+    margin-left: 1em;
 }
-.am-header-default .am-header-nav .am-icon-close{
+.mxin-header-default .mxin-header-nav .mxin-icon-close{
     font-size: 18px !important;
     margin-top: -2px !important;
 }
-.am-icon-search{
+.mxin-icon-search{
     margin-left: 9px
 }
 .mx_page{
@@ -113,13 +114,13 @@
 .load-right{
     left: 100%;
 }
-.ios .am-header{
+.ios .mxin-header{
     height: 70px;
 }
-.ios .am-header .am-header-nav{
+.ios .mxin-header .mxin-header-nav{
     top: 20px;
 }
-.ios .am-header .am-header-title{
+.ios .mxin-header .mxin-header-title{
     height: 80px;
     line-height: 85px;
 }
