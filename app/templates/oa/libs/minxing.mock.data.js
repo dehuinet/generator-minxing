@@ -21,7 +21,7 @@
             selectUsers: [{
                 id: 2,
                 name: "李刚",
-                login_name: "oajcs3@js.chinamobile.com"
+                login_name: "ligang@qq.com"
             }, {
                 id: 4,
                 name: "周杰",
